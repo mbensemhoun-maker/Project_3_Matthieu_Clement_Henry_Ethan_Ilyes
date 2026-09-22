@@ -1,12 +1,25 @@
 # Prompt d'extraction CV — Admissions Albert School
 
-Version 2. Base de travail : n'hésitez pas à la modifier, l'enrichir ou la casser.
+Version 3, alignée sur la **grille v2** (repondération des critères 1, 2, 3, 7, 8).
+Base de travail : n'hésitez pas à la modifier, l'enrichir ou la casser.
 
 ## Objectif
 
 À partir du texte brut d'un CV (sortie OCR), extraire les informations
 nécessaires pour noter le candidat avec la [grille de notation](grille-notation-cv.md).
 L'extraction ne note pas : elle collecte les faits, la notation vient après.
+
+## Ce que la grille v2 change pour l'extraction
+
+Les 8 critères sont inchangés, seuls leurs poids bougent — la repondération se
+joue donc à l'étape de notation, pas ici. Une chose change quand même côté
+extraction : la grille v2 précise que **l'absence d'une expérience rare (stage
+data, séjour international) ne doit pas être notée 0 d'office**.
+
+Pour appliquer cette règle, l'étape de notation doit pouvoir distinguer
+« le candidat n'a pas cette expérience » de « on n'a pas réussi à lire cette
+partie du CV ». Un champ vide ne dit pas lequel des deux. D'où le bloc
+`qualite_extraction` ajouté en v3.
 
 ## Le prompt
 
@@ -31,6 +44,17 @@ RÈGLES
   expérience. Tu extrais, tu ne notes pas.
 - Si l'OCR est illisible ou ambigu à un endroit, mets null plutôt que deviner.
 - Réponds uniquement avec le JSON, sans texte autour.
+
+ABSENCE ≠ ILLISIBLE — POINT D'ATTENTION
+Ces deux situations produisent toutes les deux un champ vide, mais elles seront
+notées différemment. Tu dois permettre de les distinguer :
+- Rubrique lisible, que le candidat n'a simplement pas remplie (il n'a pas fait
+  de stage, pas de séjour à l'étranger) → champ vide, et tu ne signales rien.
+  C'est une absence réelle, l'information est fiable.
+- Rubrique visiblement présente sur le CV mais que l'OCR a rendue inexploitable
+  (bloc tronqué, caractères illisibles, colonne mélangée) → champ vide ET tu
+  ajoutes le nom de la rubrique dans qualite_extraction.sections_illisibles.
+Ne fais jamais passer une absence pour une illisibilité, ni l'inverse.
 
 NOMS D'ÉTABLISSEMENTS — POINT D'ATTENTION
 Le nom exact de chaque établissement fréquenté compte dans l'évaluation. Pour
@@ -137,7 +161,13 @@ FORMAT DE SORTIE
   "international": [
     { "type": null, "etablissement": null, "pays": null, "periode": null, "duree": null }
   ],
-  "elements_non_classes": []
+  "elements_non_classes": [],
+  "qualite_extraction": {
+    "sections_illisibles": [],
+    "qualite_ocr_globale": null,
+    "cv_tronque": false,
+    "langue_du_cv": null
+  }
 }
 
 PRÉCISIONS SUR LES CHAMPS
@@ -168,6 +198,15 @@ PRÉCISIONS SUR LES CHAMPS
   pertinent pour une candidature mais n'entre dans aucun champ ci-dessus
   (distinctions, publications, permis, disponibilité…). Recopie la ligne du CV
   telle quelle.
+- qualite_extraction.sections_illisibles : les rubriques que tu vois sur le CV
+  mais que tu n'as pas pu exploiter. Valeurs possibles : "formation",
+  "quantitatif", "competences_tech", "langues", "experiences", "engagement",
+  "international". Liste vide si tout était lisible.
+- qualite_extraction.qualite_ocr_globale : "bonne", "moyenne" ou "mauvaise",
+  selon la proportion du texte que tu as pu exploiter.
+- qualite_extraction.cv_tronque : true si le CV s'arrête visiblement au milieu
+  d'une phrase ou d'une rubrique (page manquante, scan coupé).
+- qualite_extraction.langue_du_cv : "français", "anglais", "bilingue"…
 
 CV À TRAITER :
 <<< {texte_ocr} >>>
@@ -180,8 +219,9 @@ CV À TRAITER :
 - Tester sur des CV en anglais.
 - Vérifier ce que ça donne sur les CV en deux colonnes, là où l'OCR mélange
   souvent les blocs.
-- Mesurer la fiabilité du champ `ocr_incertain` : est-ce que le modèle le
-  déclenche quand il faut, ou jamais / tout le temps ?
+- Mesurer la fiabilité des champs `ocr_incertain` et `sections_illisibles` :
+  est-ce que le modèle les déclenche quand il faut, ou jamais / tout le temps ?
+  À tester en dégradant volontairement un CV des `cv-test/`.
 - Décider quoi faire des informations personnelles (photo, date de naissance,
   nationalité) : on ne les extrait pas pour l'instant, à discuter.
 - Question ouverte : faut-il une liste de référence des lycées et prépas pour
