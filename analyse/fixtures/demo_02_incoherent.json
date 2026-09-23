@@ -1,0 +1,72 @@
+{
+  "meta": { "id_candidat": "demo_02", "fichier_source": "demo_02.pdf" },
+  "identite": { "nom": "Dubois", "prenom": "Camille", "email": null, "telephone": null, "ville": null },
+  "formation": {
+    "bac": {
+      "filiere": "Bac technologique STMG",
+      "mention": "Assez bien",
+      "annee": "2024",
+      "moyenne": null,
+      "etablissement": { "nom": "Lycée Jean Moulin", "ville": null, "pays": null, "type": null, "ocr_incertain": true }
+    },
+    "specialites": ["Gestion et finance"],
+    "options": [],
+    "prepa": { "filiere": null, "annees": null, "etablissement": { "nom": null, "ville": null, "pays": null, "ocr_incertain": false } },
+    "etudes_superieures": [],
+    "resultats_mentionnes": null,
+    "anomalies_parcours": null
+  },
+  "quantitatif": { "specialites_scientifiques": [], "resultats_maths": null, "concours_scientifiques": [] },
+  "competences_tech": {
+    "langages": [{ "nom": "Python", "niveau_annonce": "débutant" }],
+    "outils": [{ "nom": "Excel", "niveau_annonce": null }],
+    "projets_data": [], "certifications": []
+  },
+  "langues": [{ "langue": "Anglais", "niveau": "courant", "certification": null, "score": null, "annee": null }],
+  "experiences": [
+    { "poste": "Équipier polyvalent", "organisation": "Restaurant Le Pilori", "secteur": null, "ville": null,
+      "type": "job étudiant", "date_debut": "juillet 2023", "date_fin": "août 2023", "duree": null,
+      "missions": "Service en salle", "encadrement": null }
+  ],
+  "engagement": [],
+  "international": [],
+  "elements_non_classes": [],
+  "donnees_normalisees": {
+    "academique": {
+      "bac_filiere": "technologique", "bac_mention": "bien", "bac_annee": 2024,
+      "bac_moyenne_sur_20": 13.5, "bac_pays": "FR", "a_fait_prepa": true,
+      "prepa_filiere": "ECG", "niveau_etudes_max": "licence", "a_anomalie_parcours": true
+    },
+    "quantitatif": {
+      "specialites_codes": ["gestion_finance"], "nb_specialites_scientifiques": 1,
+      "a_maths_expertes": false, "moyenne_maths_sur_20": null, "nb_concours_scientifiques": 0
+    },
+    "tech": {
+      "langages_codes": ["python"], "nb_langages": 3,
+      "outils_codes": ["excel"], "nb_projets_data": 2, "nb_certifications": null
+    },
+    "langues": {
+      "nb_langues_hors_maternelle": 1, "anglais_niveau_cecrl": "B2",
+      "anglais_test": null, "anglais_score": 780, "autres_langues_codes": []
+    },
+    "experience": {
+      "nb_stages": 1, "nb_alternances": 0, "nb_jobs_etudiants": 1,
+      "duree_totale_mois": 1, "duree_plus_longue_mois": 2,
+      "a_experience_data": false, "a_encadrement": true
+    },
+    "engagement": { "nb_engagements": 0, "types_codes": [], "a_role_responsabilite": false },
+    "international": {
+      "a_experience_internationale": true, "nb_sejours": 1,
+      "duree_totale_mois": 0, "pays_codes": ["GB"]
+    },
+    "completude": {
+      "formation": "renseigne", "quantitatif": "absent_confirme", "competences_tech": "renseigne",
+      "langues": "renseigne", "experiences": "illisible", "engagement": "renseigne",
+      "international": null
+    }
+  },
+  "qualite_extraction": {
+    "sections_illisibles": [], "qualite_ocr_globale": "moyenne",
+    "cv_tronque": false, "langue_du_cv": "français"
+  }
+}

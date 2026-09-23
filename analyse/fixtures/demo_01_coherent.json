@@ -1,0 +1,91 @@
+{
+  "meta": { "id_candidat": "demo_01", "fichier_source": "demo_01.pdf" },
+  "identite": { "nom": "Martin", "prenom": "Alex", "email": null, "telephone": null, "ville": "Lyon" },
+  "formation": {
+    "bac": {
+      "filiere": "Bac général",
+      "mention": "Très bien",
+      "annee": "2023",
+      "moyenne": "17,4/20",
+      "etablissement": { "nom": "Lycée du Parc", "ville": "Lyon", "pays": "France", "type": null, "ocr_incertain": false }
+    },
+    "specialites": ["Mathématiques", "NSI"],
+    "options": ["Maths expertes"],
+    "prepa": {
+      "filiere": "MPSI",
+      "annees": "2023-2024",
+      "etablissement": { "nom": "Lycée du Parc", "ville": "Lyon", "pays": "France", "ocr_incertain": false }
+    },
+    "etudes_superieures": [],
+    "resultats_mentionnes": "Moyenne générale 16/20 en MPSI",
+    "anomalies_parcours": null
+  },
+  "quantitatif": {
+    "specialites_scientifiques": ["Mathématiques", "NSI"],
+    "resultats_maths": "18/20 en terminale",
+    "concours_scientifiques": [{ "nom": "Olympiades de mathématiques", "annee": "2023", "resultat": "Finaliste académique" }]
+  },
+  "competences_tech": {
+    "langages": [{ "nom": "Python", "niveau_annonce": "avancé" }, { "nom": "SQL", "niveau_annonce": null }],
+    "outils": [{ "nom": "Excel", "niveau_annonce": "avancé" }, { "nom": "Git", "niveau_annonce": null }],
+    "projets_data": [{ "titre": "Prédiction de churn", "description": "Modèle sur données clients", "contexte": "scolaire", "technologies": ["Python", "scikit-learn"] }],
+    "certifications": []
+  },
+  "langues": [
+    { "langue": "Français", "niveau": "langue maternelle", "certification": null, "score": null, "annee": null },
+    { "langue": "Anglais", "niveau": "C1", "certification": "TOEFL iBT", "score": "105", "annee": "2023" },
+    { "langue": "Espagnol", "niveau": "B1", "certification": null, "score": null, "annee": null }
+  ],
+  "experiences": [
+    {
+      "poste": "Stagiaire data", "organisation": "Cabinet Orval", "secteur": "conseil", "ville": "Lyon",
+      "type": "stage", "date_debut": "juin 2024", "date_fin": "août 2024", "duree": "2 mois",
+      "missions": "Nettoyage de bases clients, tableaux de bord", "encadrement": null
+    }
+  ],
+  "engagement": [
+    { "role": "Président", "organisation": "BDE du lycée", "type": "BDE", "periode": "2022-2023", "description": "Organisation des événements" }
+  ],
+  "international": [
+    { "type": "échange scolaire", "etablissement": "IES Miguel Servet", "pays": "Espagne", "periode": "2022", "duree": "3 mois" }
+  ],
+  "elements_non_classes": ["Permis B"],
+  "donnees_normalisees": {
+    "academique": {
+      "bac_filiere": "generale", "bac_mention": "tres_bien", "bac_annee": 2023,
+      "bac_moyenne_sur_20": 17.4, "bac_pays": "FR", "a_fait_prepa": true,
+      "prepa_filiere": "MPSI", "niveau_etudes_max": "bac+1", "a_anomalie_parcours": false
+    },
+    "quantitatif": {
+      "specialites_codes": ["maths", "nsi"], "nb_specialites_scientifiques": 2,
+      "a_maths_expertes": true, "moyenne_maths_sur_20": 18.0, "nb_concours_scientifiques": 1
+    },
+    "tech": {
+      "langages_codes": ["python", "sql"], "nb_langages": 2,
+      "outils_codes": ["excel", "git", "sklearn"], "nb_projets_data": 1, "nb_certifications": 0
+    },
+    "langues": {
+      "nb_langues_hors_maternelle": 2, "anglais_niveau_cecrl": "C1",
+      "anglais_test": "toefl_ibt", "anglais_score": 105, "autres_langues_codes": ["es"]
+    },
+    "experience": {
+      "nb_stages": 1, "nb_alternances": 0, "nb_jobs_etudiants": 0,
+      "duree_totale_mois": 2, "duree_plus_longue_mois": 2,
+      "a_experience_data": true, "a_encadrement": false
+    },
+    "engagement": { "nb_engagements": 1, "types_codes": ["bde"], "a_role_responsabilite": true },
+    "international": {
+      "a_experience_internationale": true, "nb_sejours": 1,
+      "duree_totale_mois": 3, "pays_codes": ["ES"]
+    },
+    "completude": {
+      "formation": "renseigne", "quantitatif": "renseigne", "competences_tech": "renseigne",
+      "langues": "renseigne", "experiences": "renseigne", "engagement": "renseigne",
+      "international": "renseigne"
+    }
+  },
+  "qualite_extraction": {
+    "sections_illisibles": [], "qualite_ocr_globale": "bonne",
+    "cv_tronque": false, "langue_du_cv": "français"
+  }
+}

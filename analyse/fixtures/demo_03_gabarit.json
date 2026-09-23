@@ -1,0 +1,69 @@
+{
+  "meta": { "id_candidat": "demo_03", "fichier_source": "demo_03.pdf" },
+  "identite": { "nom": "Rossi", "prenom": "Yanis", "email": null, "telephone": null, "ville": null },
+  "formation": {
+    "bac": {
+      "filiere": "Bac général", "mention": null, "annee": "2024", "moyenne": null,
+      "etablissement": { "nom": "Lycée Victor Hugo", "ville": "Marseille", "pays": null, "type": null, "ocr_incertain": false }
+    },
+    "specialites": ["Mathématiques", "SES"],
+    "options": [],
+    "prepa": { "filiere": null, "annees": null, "etablissement": { "nom": null, "ville": null, "pays": null, "ocr_incertain": false } },
+    "etudes_superieures": [],
+    "resultats_mentionnes": null,
+    "anomalies_parcours": null
+  },
+  "quantitatif": { "specialites_scientifiques": ["Mathématiques"], "resultats_maths": null, "concours_scientifiques": [{ "nom": null, "annee": null, "resultat": null }] },
+  "competences_tech": {
+    "langages": [{ "nom": null, "niveau_annonce": null }],
+    "outils": [{ "nom": null, "niveau_annonce": null }],
+    "projets_data": [{ "titre": null, "description": null, "contexte": null, "technologies": [] }],
+    "certifications": [{ "nom": null, "organisme": null, "annee": null }]
+  },
+  "langues": [{ "langue": null, "niveau": null, "certification": null, "score": null, "annee": null }],
+  "experiences": [
+    { "poste": null, "organisation": null, "secteur": null, "ville": null, "type": null,
+      "date_debut": null, "date_fin": null, "duree": null, "missions": null, "encadrement": null }
+  ],
+  "engagement": [{ "role": null, "organisation": null, "type": null, "periode": null, "description": null }],
+  "international": [{ "type": null, "etablissement": null, "pays": null, "periode": null, "duree": null }],
+  "elements_non_classes": [],
+  "donnees_normalisees": {
+    "academique": {
+      "bac_filiere": "generale", "bac_mention": null, "bac_annee": 2024,
+      "bac_moyenne_sur_20": null, "bac_pays": "FR", "a_fait_prepa": false,
+      "prepa_filiere": null, "niveau_etudes_max": "bac", "a_anomalie_parcours": false
+    },
+    "quantitatif": {
+      "specialites_codes": ["maths", "ses"], "nb_specialites_scientifiques": 1,
+      "a_maths_expertes": false, "moyenne_maths_sur_20": null, "nb_concours_scientifiques": 0
+    },
+    "tech": {
+      "langages_codes": [], "nb_langages": 0,
+      "outils_codes": [], "nb_projets_data": 0, "nb_certifications": 0
+    },
+    "langues": {
+      "nb_langues_hors_maternelle": 0, "anglais_niveau_cecrl": null,
+      "anglais_test": null, "anglais_score": null, "autres_langues_codes": []
+    },
+    "experience": {
+      "nb_stages": 0, "nb_alternances": 0, "nb_jobs_etudiants": 0,
+      "duree_totale_mois": null, "duree_plus_longue_mois": null,
+      "a_experience_data": false, "a_encadrement": false
+    },
+    "engagement": { "nb_engagements": 0, "types_codes": [], "a_role_responsabilite": false },
+    "international": {
+      "a_experience_internationale": false, "nb_sejours": 0,
+      "duree_totale_mois": null, "pays_codes": []
+    },
+    "completude": {
+      "formation": "renseigne", "quantitatif": "renseigne", "competences_tech": "illisible",
+      "langues": "absent_confirme", "experiences": "absent_confirme", "engagement": "absent_confirme",
+      "international": "absent_confirme"
+    }
+  },
+  "qualite_extraction": {
+    "sections_illisibles": ["competences_tech"], "qualite_ocr_globale": "moyenne",
+    "cv_tronque": true, "langue_du_cv": "français"
+  }
+}

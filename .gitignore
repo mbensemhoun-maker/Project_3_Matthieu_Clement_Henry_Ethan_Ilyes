@@ -1,0 +1,7 @@
+# Fichiers derives, regenerables par analyse/agrege.py
+analyse/candidats.csv
+analyse/codes.csv
+
+__pycache__/
+*.pyc
+.DS_Store
