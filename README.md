@@ -11,11 +11,11 @@ candidat à l'autre pour faire des statistiques sur la promo.
 ```
   cv-test/*.pdf
         │
-        │  OCR                                    ← à brancher
+        │  extraction/pipeline.py  ─ étape 1 : couche texte du PDF (pypdf)
         ▼
    texte brut
         │
-        │  prompt.md                              ← à brancher (appel LLM)
+        │  extraction/pipeline.py  ─ étape 2 : LangChain + prompt.md
         ▼
   sorties/*.json          un fichier par CV, deux blocs :
         │                   · verbatim        → sert à noter
@@ -35,8 +35,11 @@ candidat à l'autre pour faire des statistiques sur la promo.
            statistiques de promo + croisement avec les notes de référence
 ```
 
-Deux étapes restent à brancher : l'OCR et l'appel LLM. Tout ce qui est en aval
-existe et tourne, sur des CV fabriqués à la main en attendant les vrais.
+Tout est branché, sauf l'OCR au sens strict. `pipeline.py` lit la **couche
+texte** des PDF — ce qui suffit pour les 11 CV de `cv-test/`, qui en ont tous
+une. Un CV réellement scanné, lui, ressortirait vide : le script le signale au
+lieu d'envoyer une chaîne vide au LLM. Brancher un vrai OCR (tesseract, ou une
+API de reconnaissance) revient à remplacer la fonction `texte_du_pdf`.
 
 ## Pourquoi deux blocs dans le JSON
 
@@ -80,12 +83,30 @@ combien de CV ont été écartés.
 | [prompt.md](prompt.md) | le prompt d'extraction, avec son format de sortie et ses règles |
 | [grille-notation-cv.md](grille-notation-cv.md) | la grille de notation sur 20, 8 critères pondérés |
 | [cv-test/](cv-test/) | 11 CV de test + `notes-reference.csv`, les notes attendues |
+| [extraction/](extraction/) | le pipeline LangChain : PDF → texte → LLM → JSON |
 | [sorties/](sorties/) | les JSON d'extraction, un par CV — vide pour l'instant |
 | [analyse/](analyse/) | contrôle de cohérence, agrégation, statistiques |
 
 ## Lancer la chaîne
 
-Une fois les JSON dans `sorties/` :
+Installation :
+
+```bash
+pip install -r extraction/requirements.txt
+export OPENAI_API_KEY=sk-...
+```
+
+Extraction. **Chaque CV est un appel LLM facturé** — commencer par deux :
+
+```bash
+python3 extraction/pipeline.py cv-test/ --texte-seul   # aucun appel, vérifie les PDF
+python3 extraction/pipeline.py cv-test/ --limite 2     # 2 CV pour voir
+python3 extraction/pipeline.py cv-test/                # les 11
+```
+
+Les CV déjà extraits sont ignorés au relancement, `--force` les refait.
+
+Puis, une fois les JSON dans `sorties/` :
 
 ```bash
 python3 analyse/controle_coherence.py sorties/   # les JSON sont-ils fiables ?
@@ -100,7 +121,10 @@ python3 analyse/controle_coherence.py analyse/fixtures
 python3 analyse/agrege.py analyse/fixtures && python3 analyse/stats.py
 ```
 
-Dépendance : `pandas`.
+Dépendances : `pandas` pour l'analyse, `langchain-openai` et `pypdf` pour
+l'extraction. Le modèle par défaut est `gpt-4o-mini`, surchargeable avec
+`--modele`. La température est à 0 : sans ça, on ne peut pas savoir si un
+changement de résultat vient du prompt qu'on vient de modifier ou du hasard.
 
 ## Contrôler avant de compter
 
@@ -127,17 +151,23 @@ Fait :
 - [x] contrôle de cohérence, testé sur 3 CV fabriqués
 - [x] agrégation en CSV et statistiques descriptives
 
+- [x] pipeline LangChain PDF → texte → LLM → JSON
+
 À faire :
 
-- [ ] OCR des PDF vers du texte brut
-- [ ] appel LLM qui applique `prompt.md` et écrit dans `sorties/`
-- [ ] faire tourner la chaîne sur les 11 CV de `cv-test/`
+- [ ] faire tourner la chaîne sur les 11 CV de `cv-test/` (aucun appel LLM n'a
+      encore été lancé)
+- [ ] vrai OCR pour les CV sans couche texte
 - [ ] comparer les notes obtenues à `notes-reference.csv`
 - [ ] l'étape de notation elle-même : rien ne note encore, le prompt extrait
       seulement
 
 ## Points ouverts
 
+- **Le prompt vit dans `prompt.md`, pas dans le code.** `pipeline.py` va
+  chercher le premier bloc ``` du fichier. C'est fragile si quelqu'un ajoute un
+  bloc de code avant le prompt, mais ça évite qu'une copie dans un `.py`
+  diverge de la version que l'équipe relit.
 - **Notation en un ou deux temps ?** Aujourd'hui le prompt extrait sans noter.
   Reste à décider si la notation est un second appel LLM sur le JSON, des règles
   déterministes sur les champs normalisés, ou un mélange : la grille signale

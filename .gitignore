@@ -5,3 +5,6 @@ analyse/codes.csv
 __pycache__/
 *.pyc
 .DS_Store
+
+# Reponses brutes conservees quand le JSON est invalide
+sorties/*.brut.txt
