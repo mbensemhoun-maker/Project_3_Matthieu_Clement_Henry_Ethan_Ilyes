@@ -11,11 +11,11 @@ candidat à l'autre pour faire des statistiques sur la promo.
 ```
   cv-test/*.pdf
         │
-        │  extraction/pipeline.py  ─ étape 1 : couche texte du PDF (pypdf)
+        │  extraction/extrait_texte.py      gratuit, rejouable
         ▼
-   texte brut
+  data/txt/*.txt          ce que le modèle va réellement lire
         │
-        │  extraction/pipeline.py  ─ étape 2 : LangChain + prompt.md
+        │  extraction/pipeline.py           LangChain + prompt.md — FACTURÉ
         ▼
   sorties/*.json          un fichier par CV, deux blocs :
         │                   · verbatim        → sert à noter
@@ -35,11 +35,19 @@ candidat à l'autre pour faire des statistiques sur la promo.
            statistiques de promo + croisement avec les notes de référence
 ```
 
-Tout est branché, sauf l'OCR au sens strict. `pipeline.py` lit la **couche
+`run.py` enchaîne les cinq étapes et s'arrête dès que l'une échoue.
+
+Tout est branché, sauf l'OCR au sens strict. `extrait_texte.py` lit la **couche
 texte** des PDF — ce qui suffit pour les 11 CV de `cv-test/`, qui en ont tous
 une. Un CV réellement scanné, lui, ressortirait vide : le script le signale au
 lieu d'envoyer une chaîne vide au LLM. Brancher un vrai OCR (tesseract, ou une
 API de reconnaissance) revient à remplacer la fonction `texte_du_pdf`.
+
+Le texte passe par des fichiers plutôt que d'enchaîner directement sur le LLM,
+pour une raison simple : on peut ouvrir `data/txt/` et voir ce que le modèle va
+vraiment lire. Un CV mal lu se repère là, avant de payer l'appel, et se corrige
+à la main si besoin. C'est aussi ce qui permet de relancer l'extraction LLM sans
+relire les PDF.
 
 ## Pourquoi deux blocs dans le JSON
 
@@ -83,7 +91,9 @@ combien de CV ont été écartés.
 | [prompt.md](prompt.md) | le prompt d'extraction, avec son format de sortie et ses règles |
 | [grille-notation-cv.md](grille-notation-cv.md) | la grille de notation sur 20, 8 critères pondérés |
 | [cv-test/](cv-test/) | 11 CV de test + `notes-reference.csv`, les notes attendues |
-| [extraction/](extraction/) | le pipeline LangChain : PDF → texte → LLM → JSON |
+| [run.py](run.py) | le lanceur, enchaîne les cinq étapes |
+| [extraction/](extraction/) | extraction texte puis pipeline LangChain |
+| [data/txt/](data/txt/) | le texte brut de chaque CV, commité pour que tout le monde parte des mêmes entrées |
 | [sorties/](sorties/) | les JSON d'extraction, un par CV — vide pour l'instant |
 | [analyse/](analyse/) | contrôle de cohérence, agrégation, statistiques |
 
@@ -96,23 +106,32 @@ pip install -r extraction/requirements.txt
 export OPENAI_API_KEY=sk-...
 ```
 
-Extraction. **Chaque CV est un appel LLM facturé** — commencer par deux :
+Tout lancer. **L'étape LLM est facturée, un appel par CV** — commencer petit :
 
 ```bash
-python3 extraction/pipeline.py cv-test/ --texte-seul   # aucun appel, vérifie les PDF
-python3 extraction/pipeline.py cv-test/ --limite 2     # 2 CV pour voir
-python3 extraction/pipeline.py cv-test/                # les 11
+python3 run.py --limite 2    # 2 CV, pour voir
+python3 run.py               # les 11
 ```
 
-Les CV déjà extraits sont ignorés au relancement, `--force` les refait.
-
-Puis, une fois les JSON dans `sorties/` :
+Reprendre à une étape, ou s'arrêter avant :
 
 ```bash
+python3 run.py --jusqua txt       # extraction texte seule, gratuite
+python3 run.py --depuis controle  # les JSON existent déjà
+```
+
+Étape par étape, si besoin :
+
+```bash
+python3 extraction/extrait_texte.py cv-test/     # → data/txt/
+python3 extraction/pipeline.py --texte-seul      # montre ce qui partirait, sans appel
+python3 extraction/pipeline.py --limite 2        # → sorties/
 python3 analyse/controle_coherence.py sorties/   # les JSON sont-ils fiables ?
 python3 analyse/agrege.py sorties/               # → candidats.csv + codes.csv
 python3 analyse/stats.py                         # → le rapport de promo
 ```
+
+Les CV déjà traités sont ignorés au relancement, `--force` les refait.
 
 Sans JSON, les scripts tournent sur les fixtures :
 
@@ -139,8 +158,8 @@ Ce qu'il ne fait pas : dire si l'extraction est *juste*. Un CV dont la mention a
 recopie fidèlement cette erreur. La justesse se vérifie en comparant au PDF, et
 `cv-test/notes-reference.csv` est là pour ça.
 
-Il retourne 1 s'il reste une erreur, donc il peut servir de garde avant de
-publier des statistiques.
+Il retourne 1 s'il reste une erreur, et `run.py` s'arrête là : mieux vaut pas de
+chiffres que des chiffres faux. `--ignorer-controle` passe outre.
 
 ## État d'avancement
 
@@ -151,7 +170,9 @@ Fait :
 - [x] contrôle de cohérence, testé sur 3 CV fabriqués
 - [x] agrégation en CSV et statistiques descriptives
 
-- [x] pipeline LangChain PDF → texte → LLM → JSON
+- [x] extraction texte des 11 CV vers `data/txt/`
+- [x] pipeline LangChain texte → LLM → JSON
+- [x] lanceur `run.py`
 
 À faire :
 

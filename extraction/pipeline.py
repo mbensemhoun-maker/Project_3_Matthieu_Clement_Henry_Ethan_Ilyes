@@ -1,13 +1,14 @@
-"""Pipeline LangChain : PDF -> texte -> LLM -> sorties/*.json
+"""Etape 2 : texte -> LLM -> sorties/*.json
 
-    python3 extraction/pipeline.py cv-test/ -o sorties/
-
-Applique le prompt de prompt.md a chaque CV et ecrit un JSON par candidat.
-C'est l'etape qui manquait entre les PDF et la chaine d'analyse.
-
+    python3 extraction/extrait_texte.py cv-test/    # etape 1, d'abord
     export OPENAI_API_KEY=sk-...
-    python3 extraction/pipeline.py cv-test/ --limite 2   # essai sur 2 CV
-    python3 extraction/pipeline.py cv-test/              # les 11
+    python3 extraction/pipeline.py --limite 2       # essai sur 2 CV
+    python3 extraction/pipeline.py                  # les 11
+
+Applique le prompt de prompt.md a chaque texte de data/txt/ et ecrit un JSON
+par candidat. Ne lit jamais les PDF : c'est extrait_texte.py qui s'en charge,
+ce qui permet de relancer l'extraction LLM autant qu'on veut sans les relire,
+et de corriger un texte a la main avant de le passer au modele.
 
 Puis :
 
@@ -37,23 +38,6 @@ def prompt_depuis_markdown(chemin: Path) -> str:
         raise SystemExit(f"Aucun bloc ``` trouve dans {chemin}")
     # Le premier bloc est le prompt ; les suivants sont des exemples de code.
     return blocs[0].strip()
-
-
-def texte_du_pdf(chemin: Path) -> str:
-    """Couche texte du PDF.
-
-    Ce n'est PAS de l'OCR : ca ne lit que les PDF qui contiennent deja du texte.
-    Un CV scanne en image ressortira vide, et le script le signale. Pour ces
-    cas-la il faudra brancher un vrai OCR (tesseract, ou une API type Mistral
-    OCR / Azure Document Intelligence) a la place de cette fonction.
-    """
-    try:
-        from pypdf import PdfReader
-    except ImportError:
-        raise SystemExit("pypdf manquant : pip install -r extraction/requirements.txt")
-
-    reader = PdfReader(str(chemin))
-    return "\n".join(page.extract_text() or "" for page in reader.pages).strip()
 
 
 def construit_message(entree: dict) -> str:
@@ -113,7 +97,7 @@ def construit_chaine(modele: str, temperature: float):
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("dossier", nargs="?", default=RACINE / "cv-test", type=Path)
+    parser.add_argument("dossier", nargs="?", default=RACINE / "data" / "txt", type=Path)
     parser.add_argument("-o", "--sortie", default=RACINE / "sorties", type=Path)
     parser.add_argument("-p", "--prompt", default=RACINE / "prompt.md", type=Path)
     parser.add_argument("-m", "--modele", default="gpt-4o-mini")
@@ -124,41 +108,45 @@ def main() -> int:
     parser.add_argument(
         "--texte-seul",
         action="store_true",
-        help="extraire le texte des PDF et s'arreter, sans appeler le LLM (ni cle ni cout)",
+        help="montrer ce qui partirait au LLM et s'arreter (ni cle ni cout)",
     )
     args = parser.parse_args()
 
-    pdfs = sorted(args.dossier.glob("*.pdf"))
+    fichiers = sorted(args.dossier.glob("*.txt"))
     if args.limite:
-        pdfs = pdfs[: args.limite]
-    if not pdfs:
-        print(f"Aucun PDF dans {args.dossier}/", file=sys.stderr)
+        fichiers = fichiers[: args.limite]
+    if not fichiers:
+        print(f"Aucun .txt dans {args.dossier}/", file=sys.stderr)
+        if list(args.dossier.glob("*.pdf")):
+            print("Ce dossier contient des PDF : lancer d'abord", file=sys.stderr)
+            print(f"  python3 extraction/extrait_texte.py {args.dossier}", file=sys.stderr)
         return 1
 
     prompt = prompt_depuis_markdown(args.prompt)
     args.sortie.mkdir(parents=True, exist_ok=True)
 
     entrees, ignores = [], []
-    for pdf in pdfs:
-        destination = args.sortie / f"{pdf.stem}.json"
+    for fichier in fichiers:
+        destination = args.sortie / f"{fichier.stem}.json"
         if destination.exists() and not args.force:
-            ignores.append(pdf.name)
+            ignores.append(fichier.name)
             continue
-        texte = texte_du_pdf(pdf)
+        texte = fichier.read_text(encoding="utf-8").strip()
         if not texte:
-            # Pas de couche texte : c'est un scan. Le signaler plutot que
-            # d'envoyer une chaine vide au LLM, qui repondrait un JSON tout
-            # null indistinguable d'un CV reellement vide.
-            print(f"  {pdf.name} : aucune couche texte, OCR necessaire", file=sys.stderr)
+            # extrait_texte.py ecrit un .txt vide quand le PDF n'a pas de couche
+            # texte. Envoyer ca au LLM produirait un JSON tout null,
+            # indistinguable d'un CV reellement vide -- et facture.
+            print(f"  {fichier.name} : vide, OCR necessaire sur le PDF", file=sys.stderr)
             continue
         entrees.append(
             {
                 "prompt": prompt,
                 "texte_ocr": texte,
-                "id_candidat": pdf.stem,
-                "fichier_source": pdf.name,
+                "id_candidat": fichier.stem,
+                # Le nom du PDF d'origine, cle de jointure avec notes-reference.csv.
+                "fichier_source": f"{fichier.stem}.pdf",
                 "_destination": destination,
-                "_nom": pdf.name,
+                "_nom": fichier.name,
             }
         )
 
@@ -172,7 +160,7 @@ def main() -> int:
         for entree in entrees:
             texte = entree["texte_ocr"]
             print(f"  {entree['_nom']:28} {len(texte):6} caracteres, {len(texte.splitlines()):3} lignes")
-        print(f"\n{len(entrees)} PDF lisibles. Sans --texte-seul, ils partiraient au LLM.")
+        print(f"\n{len(entrees)} CV prets. Sans --texte-seul, ils partiraient au {args.modele}.")
         return 0
 
     chaine = construit_chaine(args.modele, args.temperature)
