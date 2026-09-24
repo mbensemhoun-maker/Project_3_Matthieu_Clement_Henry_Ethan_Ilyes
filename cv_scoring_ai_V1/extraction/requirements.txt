@@ -5,3 +5,4 @@ pypdf>=5.0
 
 # Chaine d'analyse
 pandas>=2.0
+matplotlib>=3.7
