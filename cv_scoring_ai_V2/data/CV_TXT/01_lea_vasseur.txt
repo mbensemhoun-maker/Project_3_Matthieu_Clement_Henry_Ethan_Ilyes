@@ -1,0 +1,60 @@
+LÉA
+VASSEUR
+Candidate — Programme
+Business & Data
+CONTACT
+18 ans — Paris 5e
+06 41 82 57 03
+lea.vasseur@gmail.com
+github.com/leavsr
+Permis B en cours
+COMPÉTENCES TECHNIQUES
+ Python (pandas, matplotlib) —
+bon niveau
+ SQL — requêtes, jointures
+ Power BI — tableaux de bord
+ Excel avancé (TCD,
+recherchev)
+ Git / GitHub
+LANGUES
+ Anglais — TOEFL iBT
+112/120
+ Espagnol — niveau B1
+CENTRES D'INTÉRÊT
+ Analyse de données sportives
+ Escalade (club, 4 ans)
+ Podcasts économie / tech
+FORMATION
+Juin 2026
+Baccalauréat Général — Mention Très Bien
+Lycée Henri IV, Paris — Spécialités : Mathématiques, Physique-Chimie, NSI (+ Maths
+Expertes)
+ – Moyenne générale de Terminale : 17,4/20
+– Moyenne en mathématiques : 18,2/20
+– Grand oral : projet sur la modélisation prédictive en sport
+2025
+Olympiades Académiques de Mathématiques
+Qualifiée pour la seconde phase — académie de Paris
+EXPÉRIENCE PROFESSIONNELLE
+Juillet 2026
+Stagiaire Data — Nivo Finance (start-up fintech, 12 pers.)
+Paris — stage d'observation et de contribution, 2 semaines
+ – Nettoyage et consolidation d'un jeu de données clients (environ 30 000 lignes) sous
+Python
+– Construction de deux tableaux de bord Power BI suivis par l'équipe commerciale
+– Restitution orale des résultats devant 4 collaborateurs
+PROJETS PERSONNELS
+2025 – 2026
+StatsLigue1 — analyse de données du championnat de
+football
+Projet personnel publié en open source sur GitHub
+ – Scraping et traitement de 5 saisons de statistiques de match
+– Visualisations et modèle simple de prédiction de résultats
+– environ 40 étoiles sur le dépôt
+ENGAGEMENT & INTERNATIONAL
+2024 – 2026
+Vice-présidente — Club Entrepreneuriat du lycée
+Organisation de 3 conférences et d'un concours de pitch (environ 80 participants)
+2025
+Échange scolaire — Toronto, Canada
+Un semestre en immersion, Northern Secondary School

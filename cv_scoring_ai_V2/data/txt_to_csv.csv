@@ -1,5 +1,5 @@
-﻿candidate_id,source_file,cv_text
-01_lea_vasseur,01_lea_vasseur.pdf,"LÉA
+﻿Name,Content
+01_lea_vasseur.txt,"LÉA
 VASSEUR
 Candidate — Programme
 Business & Data
@@ -60,7 +60,7 @@ Organisation de 3 conférences et d'un concours de pitch (environ 80 participant
 Échange scolaire — Toronto, Canada
 Un semestre en immersion, Northern Secondary School
 "
-02_nathan_girard,02_nathan_girard.pdf,"NATHAN
+02_nathan_girard.txt,"NATHAN
 GIRARD
 Bachelier 2026 — Profil
 Business & Data
@@ -117,7 +117,7 @@ INTERNATIONAL
 Immersion linguistique — Hambourg, Allemagne
 Séjour d'échange de 2 semaines en famille d'accueil
 "
-03_camille_roussel,03_camille_roussel.pdf,"Camille Roussel
+03_camille_roussel.txt,"Camille Roussel
 Bachelière scientifique — candidature Business & Data
 Strasbourg (67)    06 22 91 07 38    camille.roussel@laposte.net
 FORMATION
@@ -154,7 +154,7 @@ LANGUES
 Anglais — niveau B2 (auto-évalué, pas de certification)
 Allemand — niveau B1 (section européenne au collège)
 "
-04_hugo_lefebvre,04_hugo_lefebvre.pdf,"Hugo Lefebvre
+04_hugo_lefebvre.txt,"Hugo Lefebvre
  Candidature post-bac
 Angers (49)    07 51 30 26 84    hugo.lefebvre49@gmail.com
 FORMATION
@@ -187,7 +187,7 @@ Membre, participation aux deux représentations annuelles
 Football en club — US Angers
 Licencié, catégorie U18
 "
-05_ines_benali,05_ines_benali.pdf,"Inès Benali
+05_ines_benali.txt,"Inès Benali
 Saint-Maur-des-Fossés (94)
 06 73 15 88 42
 ines.benali2008@gmail.com
@@ -212,7 +212,7 @@ Arabe : parlé (langue familiale)
 CENTRES D'INTÉRÊT
 Lecture, séries, natation en loisir
 "
-06_theo_barbier,06_theo_barbier.pdf,"Théo Barbier
+06_theo_barbier.txt,"Théo Barbier
 Étudiant — candidature rentrée 2026
 Bordeaux (33)    06 09 74 51 20    theo.barbier@gmail.com
 FORMATION
@@ -240,7 +240,7 @@ Voyages
 Séjours familiaux en Espagne et au Portugal
 Tennis en club (loisir)
 "
-07_manon_petit,07_manon_petit.pdf,"Manon Petit
+07_manon_petit.txt,"Manon Petit
 Lille (59)
 07 82 44 16 09
 manon.petit.59@gmail.com
@@ -264,7 +264,7 @@ ACTIVITÉS
 Club photo du lycée
 Membre depuis la Seconde, participation à l'exposition de fin d'année
 "
-08_adam_fontaine,08_adam_fontaine.pdf,"Adam Fontaine
+08_adam_fontaine.txt,"Adam Fontaine
 Candidature programme Business & Data
 Clermont-Ferrand (63)    06 55 81 39 74    adam.fontaine63@orange.fr
 FORMATION
@@ -290,7 +290,7 @@ Pack Office. Pas de langage de programmation pratiqué.
 Handball — ASM Clermont
 Licencié en club depuis 6 ans, sans responsabilité d'encadrement
 "
-09_sarah_da_silva,09_sarah_da_silva.pdf,"Sarah Da Silva
+09_sarah_da_silva.txt,"Sarah Da Silva
 Bordeaux (33)
 07 60 22 48 15
 sarahdasilva.pro@gmail.com
@@ -315,7 +315,7 @@ LANGUES
 Anglais : niveau B1
 Portugais : compréhension orale (langue familiale)
 "
-10_kevin_dubreuil,10_kevin_dubreuil.pdf,"Kevin Dubreuil
+10_kevin_dubreuil.txt,"Kevin Dubreuil
 Orléans (45)
 06 12 65 90 37
 kev.dbr@hotmail.fr
@@ -329,7 +329,7 @@ Anglais : niveau scolaire.
 LOISIRS
 Dessin, jeux vidéo, musique.
 "
-11_chloe_renard,11_chloe_renard.pdf,"Chloé Renard
+11_chloe_renard.txt,"Chloé Renard
 Savigny-sur-Orge (91)
 07 44 28 61 53
 chloe.renard91@gmail.com
