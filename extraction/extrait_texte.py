@@ -1,6 +1,6 @@
 """Etape 1 : PDF -> texte brut, un .txt par CV.
 
-    python3 extraction/extrait_texte.py cv-test/ -o data/txt/
+    python3 extraction/extrait_texte.py cv-test/ -o datas_extract/
 
 Aucun appel LLM, donc gratuit et rejouable autant qu'on veut.
 
@@ -34,7 +34,7 @@ def texte_du_pdf(chemin: Path) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("dossier", nargs="?", default=RACINE / "cv-test", type=Path)
-    parser.add_argument("-o", "--sortie", default=RACINE / "data" / "txt", type=Path)
+    parser.add_argument("-o", "--sortie", default=RACINE / "datas_extract", type=Path)
     parser.add_argument("--force", action="store_true", help="reecrire les .txt existants")
     args = parser.parse_args()
 

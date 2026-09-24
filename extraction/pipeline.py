@@ -5,7 +5,7 @@
     python3 extraction/pipeline.py --limite 2       # essai sur 2 CV
     python3 extraction/pipeline.py                  # les 11
 
-Applique le prompt de prompt.md a chaque texte de data/txt/ et ecrit un JSON
+Applique le prompt de prompt.md a chaque texte de datas_extract/ et ecrit un JSON
 par candidat. Ne lit jamais les PDF : c'est extrait_texte.py qui s'en charge,
 ce qui permet de relancer l'extraction LLM autant qu'on veut sans les relire,
 et de corriger un texte a la main avant de le passer au modele.
@@ -97,7 +97,7 @@ def construit_chaine(modele: str, temperature: float):
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("dossier", nargs="?", default=RACINE / "data" / "txt", type=Path)
+    parser.add_argument("dossier", nargs="?", default=RACINE / "datas_extract", type=Path)
     parser.add_argument("-o", "--sortie", default=RACINE / "sorties", type=Path)
     parser.add_argument("-p", "--prompt", default=RACINE / "prompt.md", type=Path)
     parser.add_argument("-m", "--modele", default="gpt-4o-mini")

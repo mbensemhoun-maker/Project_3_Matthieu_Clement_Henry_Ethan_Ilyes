@@ -7,8 +7,8 @@
 
 Les etapes, dans l'ordre :
 
-    txt       cv-test/*.pdf   -> data/txt/*.txt      gratuit
-    llm       data/txt/*.txt  -> sorties/*.json      FACTURE, un appel par CV
+    txt       cv-test/*.pdf        -> datas_extract/*.txt   gratuit
+    llm       datas_extract/*.txt -> sorties/*.json        FACTURE, un appel par CV
     controle  verifie les JSON                       gratuit
     agrege    sorties/*.json  -> analyse/*.csv       gratuit
     stats     analyse/*.csv   -> rapport             gratuit
