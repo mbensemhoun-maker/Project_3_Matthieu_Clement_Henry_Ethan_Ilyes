@@ -1,6 +1,8 @@
 # Fichiers derives, regenerables par analyse/agrege.py
 analyse/candidats.csv
 analyse/codes.csv
+analyse/demo/
+.ipynb_checkpoints/
 
 __pycache__/
 *.pyc

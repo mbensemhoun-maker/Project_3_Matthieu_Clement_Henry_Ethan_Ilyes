@@ -1,23 +1,24 @@
-# sorties/
+# Réponses JSON du modèle
 
-Un JSON par CV, produit par [prompt.md](../prompt.md).
+Un JSON court par CV : `<id_candidat>.json`, produit par
+`extraction/pipeline.py` avec le [prompt](../prompt.md).
+Les faits ne sont pas doublés et le modèle ne renvoie aucun compteur.
 
-Le dossier est vide : le pipeline OCR + appel LLM qui lit `cv-test/*.pdf` et
-écrit ici reste à brancher. En attendant, les scripts d'analyse tournent sur
-`analyse/fixtures/`.
+Les textes d'entrée sont dans `datas_extract/`. Une clé `OPENAI_API_KEY` est
+nécessaire pour appeler le modèle. Aucun JSON réel n'est inclus pour le moment.
+Les trois exemples manuels se trouvent séparément dans `analyse/exemples/`.
 
-Attendu pour chaque fichier :
+`meta.id_candidat` et `meta.fichier_source` sont renseignés par le pipeline.
+Le second conserve le nom du PDF, utilisé pour joindre les notes de référence.
 
-- un JSON valide, sans texte autour (le mode d'échec le plus courant est un
-  modèle qui encadre sa réponse de ``` ou d'une phrase d'introduction) ;
-- `meta.id_candidat` renseigné, sinon le nom du fichier sert d'identifiant ;
-- `meta.fichier_source` avec le nom du PDF d'origine (`01_lea_vasseur.pdf`),
-  qui sert de clé de jointure avec `cv-test/notes-reference.csv`.
+Ouvrir `analyse_cv.ipynb` pour l'analyse ou lancer :
 
-Une fois les JSON en place :
-
-```
+```bash
 python3 analyse/controle_coherence.py sorties/
 python3 analyse/agrege.py sorties/
 python3 analyse/stats.py
 ```
+
+Les anciennes réponses avec `donnees_normalisees` doivent être régénérées
+avec `--force`. Une réponse non conforme est enregistrée en `.brut.txt`,
+ignorée par l'analyse et par Git, pour permettre son diagnostic.

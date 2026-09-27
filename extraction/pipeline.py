@@ -24,6 +24,8 @@ import sys
 from pathlib import Path
 
 RACINE = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(RACINE))
+from analyse.donnees import valide_cv
 
 
 def prompt_depuis_markdown(chemin: Path) -> str:
@@ -33,7 +35,7 @@ def prompt_depuis_markdown(chemin: Path) -> str:
     relit et modifie, et une copie dans un .py finirait par diverger.
     """
     texte = chemin.read_text(encoding="utf-8")
-    blocs = re.findall(r"^```\n(.*?)^```", texte, re.MULTILINE | re.DOTALL)
+    blocs = re.findall(r"^```(?:text)?\n(.*?)^```", texte, re.MULTILINE | re.DOTALL)
     if not blocs:
         raise SystemExit(f"Aucun bloc ``` trouve dans {chemin}")
     # Le premier bloc est le prompt ; les suivants sont des exemples de code.
@@ -48,14 +50,12 @@ def construit_message(entree: dict) -> str:
     que le moteur de template prendrait pour des variables. Il faudrait toutes
     les echapper en {{ }}, ce qui rendrait prompt.md illisible pour l'equipe.
     """
-    message = entree["prompt"]
-    for cle, valeur in (
-        ("{texte_ocr}", entree["texte_ocr"]),
-        ("{id_candidat}", entree["id_candidat"]),
-        ("{fichier_source}", entree["fichier_source"]),
-    ):
-        message = message.replace(cle, valeur)
-    return message
+    # Une seule passe conserve les eventuelles accolades du CV telles quelles.
+    return re.sub(
+        r"\{(donnees_extraites|id_candidat|fichier_source)\}",
+        lambda match: entree[match[1]],
+        entree["prompt"],
+    )
 
 
 def nettoie_json(reponse: str) -> str:
@@ -66,6 +66,9 @@ def nettoie_json(reponse: str) -> str:
     """
     texte = reponse.strip()
     texte = re.sub(r"^```(?:json)?\s*|\s*```$", "", texte, flags=re.MULTILINE).strip()
+    # Laisser le parseur refuser une liste, meme si elle contient un objet.
+    if texte.startswith("["):
+        return texte
     debut, fin = texte.find("{"), texte.rfind("}")
     if debut == -1 or fin == -1:
         raise ValueError("aucun objet JSON dans la reponse")
@@ -86,9 +89,7 @@ def construit_chaine(modele: str, temperature: float):
 
     llm = ChatOpenAI(
         model=modele,
-        # temperature 0 : l'extraction doit etre reproductible d'un run a
-        # l'autre, sinon on ne peut pas savoir si un changement de resultat
-        # vient du prompt qu'on vient de modifier ou du hasard.
+        # Reduit la variabilite des reponses, sans garantir leur identite.
         temperature=temperature,
         model_kwargs={"response_format": {"type": "json_object"}},
     )
@@ -111,6 +112,10 @@ def main() -> int:
         help="montrer ce qui partirait au LLM et s'arreter (ni cle ni cout)",
     )
     args = parser.parse_args()
+    if args.limite is not None and args.limite < 1:
+        parser.error("--limite doit etre positif")
+    if args.concurrence < 1:
+        parser.error("--concurrence doit etre positif")
 
     fichiers = sorted(args.dossier.glob("*.txt"))
     if args.limite:
@@ -123,12 +128,24 @@ def main() -> int:
         return 1
 
     prompt = prompt_depuis_markdown(args.prompt)
+    for variable in ["{donnees_extraites}", "{id_candidat}", "{fichier_source}"]:
+        if variable not in prompt:
+            parser.error(f"Le prompt doit contenir {variable}. Utiliser le nouveau prompt.md.")
     args.sortie.mkdir(parents=True, exist_ok=True)
 
-    entrees, ignores = [], []
+    entrees, ignores, erreurs_entree = [], [], []
     for fichier in fichiers:
         destination = args.sortie / f"{fichier.stem}.json"
         if destination.exists() and not args.force:
+            try:
+                existant = json.loads(destination.read_text(encoding="utf-8"))
+                erreurs = valide_cv(existant)
+                if erreurs:
+                    raise ValueError("; ".join(erreurs))
+                if existant["meta"] != {"id_candidat": fichier.stem, "fichier_source": f"{fichier.stem}.pdf"}:
+                    raise ValueError("Identifiants du JSON incompatibles avec son fichier source")
+            except (OSError, UnicodeError, ValueError) as erreur:
+                erreurs_entree.append(f"{destination.name} : {erreur}. Corriger ou regenerer avec --force.")
             ignores.append(fichier.name)
             continue
         texte = fichier.read_text(encoding="utf-8").strip()
@@ -136,12 +153,12 @@ def main() -> int:
             # extrait_texte.py ecrit un .txt vide quand le PDF n'a pas de couche
             # texte. Envoyer ca au LLM produirait un JSON tout null,
             # indistinguable d'un CV reellement vide -- et facture.
-            print(f"  {fichier.name} : vide, OCR necessaire sur le PDF", file=sys.stderr)
+            erreurs_entree.append(f"{fichier.name} : texte vide, verifier l'extraction du PDF")
             continue
         entrees.append(
             {
                 "prompt": prompt,
-                "texte_ocr": texte,
+                "donnees_extraites": texte,
                 "id_candidat": fichier.stem,
                 # Le nom du PDF d'origine, cle de jointure avec notes-reference.csv.
                 "fichier_source": f"{fichier.stem}.pdf",
@@ -152,13 +169,16 @@ def main() -> int:
 
     if ignores:
         print(f"{len(ignores)} CV deja extrait(s), ignore(s) (--force pour refaire)")
+    if erreurs_entree:
+        print("\n".join(erreurs_entree), file=sys.stderr)
+        return 1
     if not entrees:
         print("Rien a traiter.")
         return 0
 
     if args.texte_seul:
         for entree in entrees:
-            texte = entree["texte_ocr"]
+            texte = entree["donnees_extraites"]
             print(f"  {entree['_nom']:28} {len(texte):6} caracteres, {len(texte.splitlines()):3} lignes")
         print(f"\n{len(entrees)} CV prets. Sans --texte-seul, ils partiraient au {args.modele}.")
         return 0
@@ -172,6 +192,13 @@ def main() -> int:
     for entree, reponse in zip(entrees, reponses):
         try:
             donnees = json.loads(nettoie_json(reponse))
+            if not isinstance(donnees, dict):
+                raise ValueError("La reponse doit etre un objet JSON")
+            # Les identifiants viennent du fichier, pas du modele.
+            donnees["meta"] = {"id_candidat": entree["id_candidat"], "fichier_source": entree["fichier_source"]}
+            erreurs = valide_cv(donnees)
+            if erreurs:
+                raise ValueError("; ".join(erreurs))
         except (ValueError, json.JSONDecodeError) as e:
             echecs.append((entree["_nom"], str(e)))
             # On garde la reponse brute : sans elle, impossible de savoir si le
@@ -179,12 +206,6 @@ def main() -> int:
             brut = entree["_destination"].with_suffix(".brut.txt")
             brut.write_text(reponse, encoding="utf-8")
             continue
-
-        # Le modele oublie souvent meta malgre le gabarit : on le remplit ici,
-        # c'est la seule information qu'on connait mieux que lui.
-        donnees.setdefault("meta", {})
-        donnees["meta"]["id_candidat"] = entree["id_candidat"]
-        donnees["meta"]["fichier_source"] = entree["fichier_source"]
 
         entree["_destination"].write_text(
             json.dumps(donnees, ensure_ascii=False, indent=2), encoding="utf-8"

@@ -1,122 +1,69 @@
-"""Rassemble les JSON d'extraction en deux tables exploitables.
+"""Calcule en Python les indicateurs du JSON court et exporte deux CSV.
 
-    python3 analyse/agrege.py [dossier_json] [-o dossier_sortie]
-
-Produit :
-  candidats.csv  une ligne par candidat, une colonne par champ scalaire de
-                 donnees_normalisees (prefixe par son bloc : academique_bac_mention).
-  codes.csv      format long (id_candidat, champ, code) pour les champs qui
-                 sont des listes. Un value_counts() sur ce fichier compte
-                 directement les occurrences, ce qu'une colonne de listes
-                 dans candidats.csv ne permet pas.
-
-Le verbatim n'est pas aplati : il n'est pas comparable d'un CV a l'autre,
-c'est precisement la raison d'etre de donnees_normalisees.
+Le notebook analyse_cv.ipynb montre ces memes boucles avec des explications.
 """
 
 import argparse
-import json
 import sys
 from pathlib import Path
 
 import pandas as pd
 
-from vocabulaire import CHAMPS_LISTES
+if __package__:
+    from .donnees import RACINE, charge_dossier, mention_standard, valeurs_uniques
+else:
+    from donnees import RACINE, charge_dossier, mention_standard, valeurs_uniques
 
 
-def charge(chemin: Path) -> dict:
-    with chemin.open(encoding="utf-8") as f:
-        return json.load(f)
-
-
-def aplatit(cv: dict, chemin: Path) -> tuple[dict, list[dict]]:
-    """Retourne (ligne scalaire, lignes longues pour les champs listes)."""
-    meta = cv.get("meta") or {}
-    # Sans meta.id_candidat, le nom du fichier fait office d'identifiant.
-    id_candidat = meta.get("id_candidat") or chemin.stem
-
-    ligne = {
-        "id_candidat": id_candidat,
-        "fichier_source": meta.get("fichier_source"),
-    }
-    codes = []
-
-    normalisees = cv.get("donnees_normalisees") or {}
-    for bloc, contenu in normalisees.items():
-        if not isinstance(contenu, dict):
-            continue
-        for champ, valeur in contenu.items():
-            if isinstance(valeur, list):
-                for code in valeur:
-                    codes.append(
-                        {
-                            "id_candidat": id_candidat,
-                            "champ": f"{bloc}.{champ}",
-                            "code": code,
-                        }
-                    )
-            else:
-                ligne[f"{bloc}_{champ}"] = valeur
-
-    # La qualite OCR conditionne la lecture de tout le reste : elle voyage
-    # avec les donnees plutot que dans un fichier a part.
-    qualite = cv.get("qualite_extraction") or {}
-    ligne["ocr_qualite"] = qualite.get("qualite_ocr_globale")
-    ligne["ocr_cv_tronque"] = qualite.get("cv_tronque")
-    ligne["ocr_langue_cv"] = qualite.get("langue_du_cv")
-    ligne["ocr_nb_sections_illisibles"] = len(qualite.get("sections_illisibles") or [])
-
-    return ligne, codes
-
-
-def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("dossier", nargs="?", default="sorties", type=Path)
-    parser.add_argument("-o", "--sortie", default=Path("analyse"), type=Path)
-    args = parser.parse_args()
-
-    fichiers = sorted(args.dossier.glob("*.json"))
-    if not fichiers:
-        print(f"Aucun JSON dans {args.dossier}/", file=sys.stderr)
-        return 1
-
+def construit_tables(candidats):
     lignes, codes = [], []
-    illisibles = []
-    for chemin in fichiers:
-        try:
-            cv = charge(chemin)
-        except json.JSONDecodeError as e:
-            # Un JSON casse est le mode d'echec le plus courant quand le LLM
-            # entoure sa reponse de texte. On le signale sans tout arreter.
-            illisibles.append((chemin.name, str(e)))
-            continue
-        ligne, codes_cv = aplatit(cv, chemin)
+    for cv in candidats:
+        illisibles = cv["rubriques_illisibles"]
+        ligne = {"id_candidat": cv["meta"]["id_candidat"], "fichier_source": cv["meta"]["fichier_source"]}
+        ligne["mention_bac"] = None if "formation" in illisibles else mention_standard(cv["formation"]["mention_bac"])
+        ligne["nb_specialites"] = None if "formation" in illisibles else len(valeurs_uniques(cv["formation"]["specialites"]))
+        for champ in ["langages", "outils", "projets", "certifications"]:
+            valeurs = valeurs_uniques(cv["competences"][champ])
+            ligne[f"nb_{champ}"] = None if "competences" in illisibles else len(valeurs)
+            if champ in ["langages", "outils"] and "competences" not in illisibles:
+                for valeur in valeurs:
+                    codes.append({"id_candidat": ligne["id_candidat"], "champ": champ, "code": valeur})
+        ligne["nb_experiences"] = None if "experiences" in illisibles else len(cv["experiences"])
+        nb_stages, nb_jobs = 0, 0
+        types_connus = True
+        for experience in cv["experiences"]:
+            if experience["type"] is None:
+                types_connus = False
+            if experience["type"] == "stage":
+                nb_stages += 1
+            if experience["type"] == "job_etudiant":
+                nb_jobs += 1
+        ligne["nb_stages"] = nb_stages if types_connus and "experiences" not in illisibles else None
+        ligne["nb_jobs_etudiants"] = nb_jobs if types_connus and "experiences" not in illisibles else None
+        ligne["nb_langues"] = None if "langues" in illisibles else len(valeurs_uniques([x["langue"] for x in cv["langues"]]))
+        ligne["nb_engagements"] = None if "engagements" in illisibles else len(cv["engagements"])
+        ligne["nb_sejours"] = None if "international" in illisibles else len(cv["international"])
+        ligne["rubriques_illisibles"] = ", ".join(illisibles)
         lignes.append(ligne)
-        codes.extend(codes_cv)
+    return pd.DataFrame(lignes), pd.DataFrame(codes, columns=["id_candidat", "champ", "code"])
 
-    df = pd.DataFrame(lignes).set_index("id_candidat").sort_index()
-    df_codes = pd.DataFrame(codes, columns=["id_candidat", "champ", "code"])
 
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("dossier", nargs="?", type=Path, default=RACINE / "sorties")
+    parser.add_argument("-o", "--sortie", type=Path, default=RACINE / "analyse")
+    args = parser.parse_args()
+    try:
+        candidats = charge_dossier(args.dossier)
+    except ValueError as erreur:
+        print(erreur, file=sys.stderr)
+        return 1
+    tableau, codes = construit_tables(candidats)
     args.sortie.mkdir(parents=True, exist_ok=True)
-    chemin_candidats = args.sortie / "candidats.csv"
-    chemin_codes = args.sortie / "codes.csv"
-    df.to_csv(chemin_candidats)
-    df_codes.to_csv(chemin_codes, index=False)
-
-    print(f"{len(df)} candidats, {len(df.columns)} colonnes -> {chemin_candidats}")
-    print(f"{len(df_codes)} codes -> {chemin_codes}")
-
-    champs_vus = set(df_codes["champ"].unique())
-    manquants = sorted(set(CHAMPS_LISTES) - champs_vus)
-    if manquants:
-        # Pas une erreur : un champ liste vide chez tout le monde est possible.
-        # Mais c'est le symptome d'un prompt qui ne remplit jamais ce champ.
-        print(f"Champs listes jamais remplis : {', '.join(manquants)}")
-
-    for nom, erreur in illisibles:
-        print(f"JSON illisible, ignore : {nom} ({erreur})", file=sys.stderr)
-
-    return 1 if illisibles else 0
+    tableau.to_csv(args.sortie / "candidats.csv", index=False)
+    codes.to_csv(args.sortie / "codes.csv", index=False)
+    print(f"{len(tableau)} candidats -> {args.sortie}/candidats.csv et codes.csv")
+    return 0
 
 
 if __name__ == "__main__":

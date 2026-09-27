@@ -13,9 +13,8 @@ Les etapes, dans l'ordre :
     agrege    sorties/*.json  -> analyse/*.csv       gratuit
     stats     analyse/*.csv   -> rapport             gratuit
 
-La chaine s'arrete des qu'une etape echoue. En particulier, un controle de
-coherence en erreur bloque les statistiques : mieux vaut pas de chiffres que
-des chiffres faux. --ignorer-controle passe outre.
+Un echec du controle de format bloque les statistiques : les indicateurs
+exigent un JSON valide. Les PDF sans couche texte demandent un OCR separe.
 """
 
 import argparse
@@ -53,11 +52,6 @@ def main() -> int:
     parser.add_argument("-m", "--modele", default="gpt-4o-mini")
     parser.add_argument("--limite", type=int, help="ne traiter que les N premiers CV")
     parser.add_argument("--force", action="store_true", help="refaire meme si les sorties existent")
-    parser.add_argument(
-        "--ignorer-controle",
-        action="store_true",
-        help="continuer malgre des erreurs de coherence (les stats seront fausses)",
-    )
     args = parser.parse_args()
 
     debut, fin = ETAPES.index(args.depuis), ETAPES.index(args.jusqua)
@@ -78,12 +72,9 @@ def main() -> int:
         if code == 0:
             continue
         if etape == "controle":
-            if args.ignorer_controle:
-                print("\nControle en erreur, poursuite demandee : les stats seront fausses.")
-                continue
             print(
-                "\nControle de coherence en erreur : la chaine s'arrete.\n"
-                "Corriger le prompt et relancer, ou --ignorer-controle pour passer outre.",
+                "\nJSON non conforme : la chaine s'arrete.\n"
+                "Corriger les fichiers ou les regenerer avec le nouveau prompt et --force.",
                 file=sys.stderr,
             )
             return 1

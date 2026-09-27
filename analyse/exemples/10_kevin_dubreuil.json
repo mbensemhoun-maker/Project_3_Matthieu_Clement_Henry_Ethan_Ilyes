@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "id_candidat": "10_kevin_dubreuil",
+    "fichier_source": "10_kevin_dubreuil.pdf"
+  },
+  "formation": {
+    "filiere_bac": "Baccalauréat Général",
+    "mention_bac": "sans mention",
+    "etablissement": "Lycée Voltaire, Orléans",
+    "specialites": [
+      "Arts Plastiques",
+      "Histoire-Géographie",
+      "SES"
+    ],
+    "options": [],
+    "prepa": null,
+    "etudes_superieures": [],
+    "anomalies_parcours": null,
+    "concours": [],
+    "resultats": [
+      {
+        "intitule": "Moyenne générale",
+        "note_sur_20": 12.1
+      }
+    ]
+  },
+  "competences": {
+    "langages": [],
+    "outils": [
+      "Word",
+      "PowerPoint"
+    ],
+    "projets": [],
+    "certifications": []
+  },
+  "langues": [
+    {
+      "langue": "Anglais",
+      "niveau": "scolaire",
+      "certification": null,
+      "score": null
+    }
+  ],
+  "experiences": [],
+  "engagements": [],
+  "international": [],
+  "rubriques_illisibles": []
+}

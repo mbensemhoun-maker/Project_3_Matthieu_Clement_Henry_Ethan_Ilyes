@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "id_candidat": "01_lea_vasseur",
+    "fichier_source": "01_lea_vasseur.pdf"
+  },
+  "formation": {
+    "filiere_bac": "Baccalauréat Général",
+    "mention_bac": "Très Bien",
+    "etablissement": "Lycée Henri IV, Paris",
+    "specialites": [
+      "Mathématiques",
+      "Physique-Chimie",
+      "NSI"
+    ],
+    "options": [
+      "Maths Expertes"
+    ],
+    "prepa": null,
+    "etudes_superieures": [],
+    "anomalies_parcours": null,
+    "concours": [
+      "Olympiades Académiques de Mathématiques (2025) — qualifiée pour la seconde phase, académie de Paris"
+    ],
+    "resultats": [
+      {
+        "intitule": "Moyenne générale de Terminale",
+        "note_sur_20": 17.4
+      },
+      {
+        "intitule": "Moyenne en mathématiques",
+        "note_sur_20": 18.2
+      }
+    ]
+  },
+  "competences": {
+    "langages": [
+      "Python",
+      "SQL"
+    ],
+    "outils": [
+      "pandas",
+      "matplotlib",
+      "Power BI",
+      "Excel",
+      "Git",
+      "GitHub"
+    ],
+    "projets": [
+      "StatsLigue1 : analyse de données du championnat de football ; scraping de 5 saisons, visualisations et modèle de prédiction ; environ 40 étoiles sur GitHub"
+    ],
+    "certifications": []
+  },
+  "langues": [
+    {
+      "langue": "Anglais",
+      "niveau": null,
+      "certification": "TOEFL iBT",
+      "score": "112/120"
+    },
+    {
+      "langue": "Espagnol",
+      "niveau": "B1",
+      "certification": null,
+      "score": null
+    }
+  ],
+  "experiences": [
+    {
+      "type": "stage",
+      "poste": "Stagiaire Data",
+      "organisation": "Nivo Finance",
+      "duree": "2 semaines",
+      "missions": "Nettoyage de données clients sous Python, deux tableaux de bord Power BI, restitution devant 4 collaborateurs"
+    }
+  ],
+  "engagements": [
+    {
+      "role": "Vice-présidente",
+      "organisation": "Club Entrepreneuriat du lycée",
+      "description": "Organisation de 3 conférences et d’un concours de pitch (environ 80 participants)"
+    },
+    {
+      "role": "Escalade",
+      "organisation": "club",
+      "description": "4 ans"
+    }
+  ],
+  "international": [
+    {
+      "pays": "Canada",
+      "motif": "Échange scolaire à Toronto, Northern Secondary School",
+      "duree": "Un semestre"
+    }
+  ],
+  "rubriques_illisibles": []
+}

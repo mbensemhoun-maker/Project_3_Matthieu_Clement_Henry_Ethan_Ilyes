@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "id_candidat": "04_hugo_lefebvre",
+    "fichier_source": "04_hugo_lefebvre.pdf"
+  },
+  "formation": {
+    "filiere_bac": "Baccalauréat Général",
+    "mention_bac": "Bien",
+    "etablissement": "Lycée Jean Moulin, Angers",
+    "specialites": [
+      "Mathématiques",
+      "SES",
+      "Histoire-Géographie"
+    ],
+    "options": [],
+    "prepa": null,
+    "etudes_superieures": [],
+    "anomalies_parcours": null,
+    "concours": [],
+    "resultats": [
+      {
+        "intitule": "Moyenne générale",
+        "note_sur_20": 14.8
+      }
+    ]
+  },
+  "competences": {
+    "langages": [],
+    "outils": [
+      "Word",
+      "Excel",
+      "PowerPoint"
+    ],
+    "projets": [],
+    "certifications": []
+  },
+  "langues": [
+    {
+      "langue": "Anglais",
+      "niveau": "scolaire (LV1)",
+      "certification": null,
+      "score": null
+    },
+    {
+      "langue": "Espagnol",
+      "niveau": "scolaire (LV2)",
+      "certification": null,
+      "score": null
+    }
+  ],
+  "experiences": [
+    {
+      "type": "job_etudiant",
+      "poste": "Vendeur",
+      "organisation": "Boulangerie Le Fournil d’Anjou",
+      "duree": "2025 – 2026, les samedis et dimanches matin",
+      "missions": "Accueil et conseil client, tenue de caisse, gestion de l’affluence"
+    },
+    {
+      "type": "stage",
+      "poste": "Stage de 3e",
+      "organisation": "Agence immobilière Foncia",
+      "duree": "une semaine",
+      "missions": "Observation"
+    }
+  ],
+  "engagements": [
+    {
+      "role": "Membre",
+      "organisation": "Club théâtre du lycée",
+      "description": "2024 – 2026, participation aux deux représentations annuelles"
+    },
+    {
+      "role": "Licencié, catégorie U18",
+      "organisation": "US Angers",
+      "description": "Football en club, 2021 – 2024"
+    }
+  ],
+  "international": [],
+  "rubriques_illisibles": []
+}
