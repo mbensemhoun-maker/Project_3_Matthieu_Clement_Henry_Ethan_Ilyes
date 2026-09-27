@@ -1,0 +1,9 @@
+# Notebook et lecture des PDF
+pypdf>=5,<7
+pandas>=2.2,<4
+matplotlib>=3.8,<4
+requests>=2.31,<3
+ipykernel>=6,<8
+# Verification reproductible du notebook
+nbformat>=5.9,<6
+nbclient>=0.10,<1

@@ -1,12 +1,14 @@
-# Fichiers derives, regenerables par analyse/agrege.py
-analyse/candidats.csv
-analyse/codes.csv
-analyse/demo/
-.ipynb_checkpoints/
-
 __pycache__/
 *.pyc
 .DS_Store
+.ipynb_checkpoints/
+.venv/
+.env
+.env.*
+!.env.example
 
-# Reponses brutes conservees quand le JSON est invalide
+# Reponses non conformes conservees localement pour diagnostic
 sorties/*.brut.txt
+sorties/*.tmp
+sorties/json/*.tmp
+sorties/.travail/

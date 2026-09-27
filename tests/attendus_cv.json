@@ -1,0 +1,95 @@
+{
+  "01_lea_vasseur": {
+    "mention": "tres bien",
+    "langages": [
+      "python",
+      "sql"
+    ],
+    "stages": 1,
+    "notes_maths": [
+      18.2
+    ]
+  },
+  "02_nathan_girard": {
+    "mention": "tres bien",
+    "langages": [
+      "python",
+      "sql"
+    ],
+    "stages": 1,
+    "notes_maths": [
+      16.5
+    ]
+  },
+  "03_camille_roussel": {
+    "mention": "bien",
+    "langages": [
+      "python"
+    ],
+    "stages": 1,
+    "notes_maths": [
+      16.1
+    ]
+  },
+  "04_hugo_lefebvre": {
+    "mention": "bien",
+    "langages": [],
+    "stages": 1,
+    "notes_maths": []
+  },
+  "05_ines_benali": {
+    "mention": "assez bien",
+    "langages": [
+      "python"
+    ],
+    "stages": 0,
+    "notes_maths": []
+  },
+  "06_theo_barbier": {
+    "mention": "bien",
+    "langages": [],
+    "stages": 0,
+    "notes_maths": [
+      12.8
+    ]
+  },
+  "07_manon_petit": {
+    "mention": "assez bien",
+    "langages": [
+      "html",
+      "css",
+      "python"
+    ],
+    "stages": 0,
+    "notes_maths": [
+      11.4,
+      13.8
+    ]
+  },
+  "08_adam_fontaine": {
+    "mention": "bien",
+    "langages": [],
+    "stages": 1,
+    "notes_maths": [
+      12.1
+    ]
+  },
+  "09_sarah_da_silva": {
+    "mention": "assez bien",
+    "langages": [],
+    "stages": 1,
+    "notes_maths": []
+  },
+  "10_kevin_dubreuil": {
+    "mention": "sans mention",
+    "langages": [],
+    "stages": 0,
+    "notes_maths": []
+  },
+  "11_chloe_renard": {
+    "mention": "sans mention",
+    "langages": [],
+    "stages": 0,
+    "notes_maths": []
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "id_candidat": "10_kevin_dubreuil",
+    "fichier_source": "10_kevin_dubreuil.pdf"
+  },
+  "formation": {
+    "filiere_bac": "Baccalauréat Général",
+    "mention_bac": "sans mention",
+    "etablissement": "Lycée Voltaire, Orléans",
+    "specialites": [
+      "Arts Plastiques",
+      "Histoire-Géographie"
+    ],
+    "options": [],
+    "prepa": "null",
+    "etudes_superieures": [],
+    "anomalies_parcours": "null",
+    "concours": [],
+    "resultats": [
+      {
+        "intitule": "Moyenne générale",
+        "note_sur_20": 12.1
+      },
+      {
+        "intitule": "Brevet des collèges",
+        "note_sur_20": null
+      }
+    ]
+  },
+  "competences": {
+    "langages": [
+      "Word",
+      "PowerPoint"
+    ],
+    "outils": [
+      "Anglais",
+      "niveau scolaire"
+    ],
+    "projets": [],
+    "certifications": []
+  },
+  "langues": [
+    {
+      "langue": "anglais",
+      "niveau": "scolaire",
+      "certification": "test de langue",
+      "score": null
+    },
+    {
+      "langue": "français",
+      "niveau": null,
+      "certification": "français",
+      "score": null
+    }
+  ],
+  "experiences": [
+    {
+      "type": "stage",
+      "poste": "Stagiaire",
+      "organisation": "Lycée Voltaire",
+      "duree": "2026-2027",
+      "missions": "Travail de projet de dessin, réalisation de projets de jeux vidéo"
+    },
+    {
+      "type": "job_etudiant",
+      "poste": "Baby-sitter régulier",
+      "organisation": "Famille",
+      "duree": "2023-2026",
+      "missions": "Prendre soin d'enfants"
+    },
+    {
+      "type": "emploi",
+      "poste": "Travail étudiant",
+      "organisation": "Entreprise",
+      "duree": "2023",
+      "missions": "Travail de projet de dessin"
+    },
+    {
+      "type": "benevolat",
+      "poste": "Volontariat",
+      "organisation": "Organisation",
+      "duree": "2023",
+      "missions": "Aide à un projet de dessin"
+    }
+  ],
+  "engagements": [
+    {
+      "role": "Membre",
+      "organisation": "Club de dessin",
+      "description": "Activités associatives et sportives collectives"
+    },
+    {
+      "role": "Membre",
+      "organisation": "Équipe de jeux vidéo",
+      "description": "Activités associatives et sportives collectives"
+    },
+    {
+      "role": "Membre",
+      "organisation": "Orchestre scolaire",
+      "description": "Activités associatives et sportives collectives"
+    }
+  ],
+  "international": [],
+  "rubriques_illisibles": []
+}

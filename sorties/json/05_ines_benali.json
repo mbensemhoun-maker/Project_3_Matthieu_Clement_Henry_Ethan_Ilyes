@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "id_candidat": "05_ines_benali",
+    "fichier_source": "05_ines_benali.pdf"
+  },
+  "formation": {
+    "filiere_bac": "Baccalauréat Général",
+    "mention_bac": "Assez Bien",
+    "etablissement": "Lycée Marcelin Berthelot",
+    "specialites": [
+      "Mathématiques",
+      "SES",
+      "NSI"
+    ],
+    "options": [],
+    "prepa": null,
+    "etudes_superieures": [],
+    "anomalies_parcours": null,
+    "concours": [],
+    "resultats": [
+      {
+        "intitule": "Moyenne générale",
+        "note_sur_20": 13.2
+      },
+      {
+        "intitule": "Encaissement",
+        "note_sur_20": null
+      },
+      {
+        "intitule": "Gestion des files d'attente",
+        "note_sur_20": null
+      },
+      {
+        "intitule": "Travail en équipe",
+        "note_sur_20": null
+      }
+    ]
+  },
+  "competences": {
+    "langages": [
+      "Excel",
+      "Python"
+    ],
+    "outils": [
+      "Word",
+      "PowerPoint",
+      "Google Sheets"
+    ],
+    "projets": [
+      "Tableaux croisés dynamiques réalisés pour un exposé de SES sur les inégalités de revenus"
+    ],
+    "certifications": []
+  },
+  "langues": [
+    {
+      "langue": "anglais",
+      "niveau": "B1",
+      "certification": null,
+      "score": null
+    },
+    {
+      "langue": "espagnol",
+      "niveau": "B2",
+      "certification": null,
+      "score": null
+    },
+    {
+      "langue": "arabe",
+      "niveau": null,
+      "certification": null,
+      "score": null
+    }
+  ],
+  "experiences": [
+    {
+      "type": "job_etudiant",
+      "poste": "Hôtesse de caisse",
+      "organisation": "Carrefour Market",
+      "duree": "Étés 2024 et 2025",
+      "missions": "Encaissement, gestion des files d'attente; Travail en équipe sur des horaires variables"
+    },
+    {
+      "type": "stage",
+      "poste": "null",
+      "organisation": "null",
+      "duree": "null",
+      "missions": "null"
+    }
+  ],
+  "engagements": [
+    {
+      "role": "Hôtesse de caisse",
+      "organisation": "Carrefour Market",
+      "description": "Encaissement, gestion des files d'attente, travail en équipe sur des horaires variables"
+    },
+    {
+      "role": "Travailleur stagiaire",
+      "organisation": "Lycée Marcelin Berthelot",
+      "description": "Travail en équipe sur des horaires variables"
+    }
+  ],
+  "international": [
+    {
+      "pays": "États-Unis",
+      "motif": "études",
+      "duree": "2026-2030"
+    },
+    {
+      "pays": "Espagne",
+      "motif": "études",
+      "duree": "2026-2030"
+    },
+    {
+      "pays": "Maroc",
+      "motif": "études",
+      "duree": "2026-2030"
+    },
+    {
+      "pays": "France",
+      "motif": "études",
+      "duree": "2026-2030"
+    },
+    {
+      "pays": "États-Unis",
+      "motif": "études",
+      "duree": "2026-2030"
+    },
+    {
+      "pays": "Espagne",
+      "motif": "études",
+      "duree": "2026-2030"
+    },
+    {
+      "pays": "Maroc",
+      "motif": "études",
+      "duree": "2026-2030"
+    },
+    {
+      "pays": "France",
+      "motif": "études",
+      "duree": "2026-2030"
+    }
+  ],
+  "rubriques_illisibles": []
+}

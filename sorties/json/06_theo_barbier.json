@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "id_candidat": "06_theo_barbier",
+    "fichier_source": "06_theo_barbier.pdf"
+  },
+  "formation": {
+    "filiere_bac": "Baccalauréat Général",
+    "mention_bac": "Mention Bien",
+    "etablissement": "Lycée Montaigne, Bordeaux",
+    "specialites": [
+      "HGGSP",
+      "SES",
+      "Mathématiques"
+    ],
+    "options": [],
+    "prepa": null,
+    "etudes_superieures": [],
+    "anomalies_parcours": null,
+    "concours": [],
+    "resultats": [
+      {
+        "intitule": "Moyenne générale",
+        "note_sur_20": 14.6
+      },
+      {
+        "intitule": "Mathématiques",
+        "note_sur_20": 12.8
+      },
+      {
+        "intitule": "HGGSP",
+        "note_sur_20": 16.2
+      },
+      {
+        "intitule": "Grand oral",
+        "note_sur_20": null
+      }
+    ]
+  },
+  "competences": {
+    "langages": [
+      "Anglais scolaire (LV1)",
+      "Italien scolaire (LV2)"
+    ],
+    "outils": [
+      "Word",
+      "PowerPoint",
+      "Excel"
+    ],
+    "projets": [
+      "Bénévole — Banque Alimentaire de Gironde"
+    ],
+    "certifications": [
+      "aucun"
+    ]
+  },
+  "langues": [
+    {
+      "langue": "anglais",
+      "niveau": "LV1",
+      "certification": "scolaire",
+      "score": null
+    },
+    {
+      "langue": "italien",
+      "niveau": "LV2",
+      "certification": "scolaire",
+      "score": null
+    }
+  ],
+  "experiences": [
+    {
+      "type": "stage",
+      "poste": "Bénévole",
+      "organisation": "Banque Alimentaire de Gironde",
+      "duree": "2024-2026",
+      "missions": "Participation aux collectes nationales, environ 4 journées par an"
+    },
+    {
+      "type": "job_etudiant",
+      "poste": "Baby-sitter régulier",
+      "organisation": "null",
+      "duree": "2024-2026",
+      "missions": "null"
+    },
+    {
+      "type": "emploi",
+      "poste": "Baccalauréat Général",
+      "organisation": "Lycée Montaigne, Bordeaux",
+      "duree": "Juin 2026",
+      "missions": "Spécialités : HGGSP, SES, Mathématiques"
+    },
+    {
+      "type": "emploi",
+      "poste": "Baccalauréat Général",
+      "organisation": "Lycée Montaigne, Bordeaux",
+      "duree": "Juin 2026",
+      "missions": "Moyenne générale : 14,6/20, Mathématiques : 12,8/20, HGGSP : 16,2/20, Grand oral : « Les frontières ont-elles encore un sens à l'ère numérique ? »"
+    }
+  ],
+  "engagements": [
+    {
+      "role": "Bénévole",
+      "organisation": "Banque Alimentaire de Gironde",
+      "description": "Participation aux collectes nationales, environ 4 journées par an"
+    },
+    {
+      "role": "Tennis en club",
+      "organisation": "Club de Tennis",
+      "description": "Loisir"
+    }
+  ],
+  "international": [
+    {
+      "pays": "Espagne",
+      "motif": "famille",
+      "duree": "séjour familial"
+    },
+    {
+      "pays": "Portugal",
+      "motif": "famille",
+      "duree": "séjour familial"
+    }
+  ],
+  "rubriques_illisibles": []
+}

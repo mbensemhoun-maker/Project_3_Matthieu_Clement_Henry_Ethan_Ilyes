@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "id_candidat": "09_sarah_da_silva",
+    "fichier_source": "09_sarah_da_silva.pdf"
+  },
+  "formation": {
+    "filiere_bac": "Baccalauréat Technologique STMG",
+    "mention_bac": "Assez Bien",
+    "etablissement": "Lycée Gustave Eiffel, Bordeaux",
+    "specialites": [
+      "Gestion et Finance"
+    ],
+    "options": [],
+    "prepa": null,
+    "etudes_superieures": [],
+    "anomalies_parcours": null,
+    "concours": [],
+    "resultats": [
+      {
+        "intitule": "Moyenne générale",
+        "note_sur_20": 13.4
+      },
+      {
+        "intitule": "Épreuve de spécialité Gestion et Finance",
+        "note_sur_20": 14
+      }
+    ]
+  },
+  "competences": {
+    "langages": [
+      "Excel",
+      "Word",
+      "PowerPoint"
+    ],
+    "outils": [
+      "Formules de base",
+      "Mise en forme de tableaux de gestion"
+    ],
+    "projets": [
+      "Stage de Première STMG",
+      "Vendeuse"
+    ],
+    "certifications": [
+      "Notions de comptabilité générale"
+    ]
+  },
+  "langues": [
+    {
+      "langue": "anglais",
+      "niveau": "B1",
+      "certification": "test de langue",
+      "score": null
+    },
+    {
+      "langue": "portugais",
+      "niveau": null,
+      "certification": "compréhension orale",
+      "score": null
+    }
+  ],
+  "experiences": [
+    {
+      "type": "stage",
+      "poste": "Saisie de pièces comptables, classement",
+      "organisation": "Cabinet comptable Ducasse & Associés",
+      "duree": "2 semaines",
+      "missions": "Conseil client et mise en rayon"
+    },
+    {
+      "type": "job_etudiant",
+      "poste": "Vendeuse",
+      "organisation": "Jennyfer",
+      "duree": "5 semaines",
+      "missions": "Conseil client et mise en rayon, Tenue de caisse et opérations de soldes"
+    }
+  ],
+  "engagements": [
+    {
+      "role": "Vendeuse",
+      "organisation": "Jennyfer",
+      "description": "centre commercial Mériadeck, Bordeaux - contrat saisonnier d'été, 5 semaines - Conseil client et mise en rayon - Tenue de caisse et opérations de soldes"
+    },
+    {
+      "role": "Stage de Première STMG",
+      "organisation": "Cabinet comptable Ducasse & Associés",
+      "description": "Bordeaux - 2 semaines. Saisie de pièces comptables, classement"
+    }
+  ],
+  "international": [],
+  "rubriques_illisibles": []
+}

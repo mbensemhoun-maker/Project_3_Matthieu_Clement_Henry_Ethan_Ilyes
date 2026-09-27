@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "id_candidat": "03_camille_roussel",
+    "fichier_source": "03_camille_roussel.pdf"
+  },
+  "formation": {
+    "filiere_bac": "Bachelière scientifique",
+    "mention_bac": "Mention Bien",
+    "etablissement": "Lycée Kléber, Strasbourg",
+    "specialites": [
+      "Mathématiques",
+      "Physique-Chimie",
+      "Sciences de l'Ingénieur"
+    ],
+    "options": [],
+    "prepa": null,
+    "etudes_superieures": [],
+    "anomalies_parcours": null,
+    "concours": [],
+    "resultats": [
+      {
+        "intitule": "Moyenne générale",
+        "note_sur_20": null
+      },
+      {
+        "intitule": "Mathématiques",
+        "note_sur_20": null
+      },
+      {
+        "intitule": "Physique-Chimie",
+        "note_sur_20": null
+      },
+      {
+        "intitule": "Sciences de l'Ingénieur",
+        "note_sur_20": null
+      }
+    ]
+  },
+  "competences": {
+    "langages": [
+      "Python"
+    ],
+    "outils": [
+      "Excel avancé (TCD, graphiques)",
+      "SolidWorks (cours de SI)"
+    ],
+    "projets": [
+      "Compétition Kaggle « Titanic » (niveau débutant)"
+    ],
+    "certifications": [
+      "Niveau B2 en anglais",
+      "Niveau B1 en allemand"
+    ]
+  },
+  "langues": [
+    {
+      "langue": "anglais",
+      "niveau": "B2",
+      "certification": null,
+      "score": null
+    },
+    {
+      "langue": "allemand",
+      "niveau": "B1",
+      "certification": "section européenne au collège",
+      "score": null
+    }
+  ],
+  "experiences": [
+    {
+      "type": "stage",
+      "poste": "service qualité",
+      "organisation": "Hartmann Industries",
+      "duree": "3 jours",
+      "missions": "Saisie et mise en forme d'indicateurs de production sous Excel, Découverte du suivi de performance en atelier"
+    },
+    {
+      "type": "job_etudiant",
+      "poste": "Baby-sitting régulier",
+      "organisation": "Deux familles",
+      "duree": "4 h par semaine sur deux années scolaires",
+      "missions": "Garde de deux familles, 4 h par semaine"
+    },
+    {
+      "type": "job_etudiant",
+      "poste": "Baby-sitting régulier",
+      "organisation": "Deux familles",
+      "duree": "4 h par semaine sur deux années scolaires",
+      "missions": "Garde de deux familles, 4 h par semaine"
+    }
+  ],
+  "engagements": [
+    {
+      "role": "Trésorière",
+      "organisation": "Conseil de Vie Lycéenne",
+      "description": "Gestion d'un budget annuel de 2 500 € pour les projets élèves"
+    },
+    {
+      "role": "Capitaine",
+      "organisation": "Équipe de basket, ASPTT Strasbourg",
+      "description": "Championnat régional U18, 3 entraînements hebdomadaires"
+    }
+  ],
+  "international": [
+    {
+      "pays": "États-Unis",
+      "motif": "Stage découverte",
+      "duree": "3 jours"
+    },
+    {
+      "pays": "France",
+      "motif": "Famille",
+      "duree": "2 ans"
+    },
+    {
+      "pays": "France",
+      "motif": "Famille",
+      "duree": "2 ans"
+    },
+    {
+      "pays": "États-Unis",
+      "motif": "Compétition Kaggle",
+      "duree": "inconnue"
+    }
+  ],
+  "rubriques_illisibles": []
+}

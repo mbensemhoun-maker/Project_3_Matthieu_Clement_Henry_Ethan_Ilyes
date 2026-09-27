@@ -1,0 +1,1146 @@
+{
+  "01_lea_vasseur": {
+    "pdf_sha256": "9a88f9579e496d59c966b0efc8b504c18ce3b30d13a02985747d0dcade2f70a7",
+    "texte_sha256": "bc231e5ffa169487e016d75e5302e32db734e07d69fe6598d0eabb97afaa3469",
+    "prompt_sha256": "66a29e53819325e5b825aa1a23e6c75dee90d5fc731680427c2b9905edc19a82",
+    "schema_sha256": "86ff5ce1744c90b5b80ef32c5a989715549e3be14429fd14f07f660ec16ae268",
+    "modele": "llama3.2:3b",
+    "moteur": "ollama",
+    "strategie": "six_rubriques",
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 4096,
+      "num_predict": 2048
+    },
+    "origine": "reponses_modele_assemblees",
+    "fichier_source": "01_lea_vasseur.pdf",
+    "date_utc": "2026-09-27T13:56:18.913907+00:00",
+    "json_sha256": "c2ab9fcfdfb8a968cf12dad4c929a2fdc5331ca227c0c6075221ad3bad653440",
+    "appels": [
+      {
+        "rubrique": "formation",
+        "reponse_sha256": "d9447e2fb6aaafaf489c3bb63c5a098fac5dd61008c26d9a4611140c6d917c21",
+        "tentatives": 1,
+        "tokens_entree": 1154,
+        "tokens_sortie": 215,
+        "duree_secondes": 50.63
+      },
+      {
+        "rubrique": "competences",
+        "reponse_sha256": "dcfe467cce85d1e412d56e2457a03c5dabc2acec4fc955b3404dbe5b1df02031",
+        "tentatives": 1,
+        "tokens_entree": 1039,
+        "tokens_sortie": 58,
+        "duree_secondes": 22.32
+      },
+      {
+        "rubrique": "langues",
+        "reponse_sha256": "b5af76d67f373aa10e51b174712ac7150a2ff6cfacf5af40683d834db63cb17f",
+        "tentatives": 1,
+        "tokens_entree": 950,
+        "tokens_sortie": 69,
+        "duree_secondes": 22.75
+      },
+      {
+        "rubrique": "experiences",
+        "reponse_sha256": "3300cda80b037843c59ec1a2af212846ef937a2559f7e252961ce2af855fd5d1",
+        "tentatives": 1,
+        "tokens_entree": 1010,
+        "tokens_sortie": 98,
+        "duree_secondes": 28.89
+      },
+      {
+        "rubrique": "engagements",
+        "reponse_sha256": "14225f4c4d48edd31e01572ad816318b28b74cd9f96de9c8d841bdf1bd699b40",
+        "tentatives": 1,
+        "tokens_entree": 934,
+        "tokens_sortie": 89,
+        "duree_secondes": 25.52
+      },
+      {
+        "rubrique": "international",
+        "reponse_sha256": "b554bbbbb54375bc4f71b7008120eed2e4ea047c7f35db3ade569b41f350ce4c",
+        "tentatives": 1,
+        "tokens_entree": 940,
+        "tokens_sortie": 33,
+        "duree_secondes": 18.42
+      }
+    ]
+  },
+  "02_nathan_girard": {
+    "pdf_sha256": "d4a59a1e74bcbb9488768c9bf24eca1dd478dda4ad56969bbc917ea71c355d64",
+    "texte_sha256": "5de3dafa053b0566f9f63d4014566efc4d76e59682a981a2b6253ae421a06125",
+    "prompt_sha256": "66a29e53819325e5b825aa1a23e6c75dee90d5fc731680427c2b9905edc19a82",
+    "schema_sha256": "86ff5ce1744c90b5b80ef32c5a989715549e3be14429fd14f07f660ec16ae268",
+    "modele": "llama3.2:3b",
+    "moteur": "ollama",
+    "strategie": "six_rubriques",
+    "options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 4096,
+      "num_predict": 2048
+    },
+    "origine": "reponses_modele_assemblees",
+    "fichier_source": "02_nathan_girard.pdf",
+    "date_utc": "2026-09-27T14:00:47.121364+00:00",
+    "json_sha256": "d6d085325d0b28c41ef6ff91bd6018a96e50f72d687f3cbebb5a9bdce73fc08e",
+    "appels": [
+      {
+        "rubrique": "formation",
+        "reponse_sha256": "47e2ced54f157dea99631043615fa15f34d770bf75bc011665001299a3d26e6d",
+        "tentatives": 1,
+        "tokens_entree": 1100,
+        "tokens_sortie": 170,
+        "duree_secondes": 37.59
+      },
+      {
+        "rubrique": "competences",
+        "reponse_sha256": "5e2677c148a75cdb19d062f6c5f397ac66d6ae01cc2bbc5c0054d4fa3a40750c",
+        "tentatives": 1,
+        "tokens_entree": 985,
+        "tokens_sortie": 83,
+        "duree_secondes": 26.76
+      },
+      {
+        "rubrique": "langues",
+        "reponse_sha256": "6ffdda7615f3b34f701a39028d64cec2f2e8c6bffaa6d14ac9c3378059f164b7",
+        "tentatives": 1,
+        "tokens_entree": 896,
+        "tokens_sortie": 64,
+        "duree_secondes": 21.02
+      },
+      {
+        "rubrique": "experiences",
+        "reponse_sha256": "1dfa0f1641883843fca72b1ff9859a563064dbe18520d95cd004245559f5db45",
+        "tentatives": 1,
+        "tokens_entree": 956,
+        "tokens_sortie": 131,
+        "duree_secondes": 27.03
+      },
+      {
+        "rubrique": "engagements",
+        "reponse_sha256": "5c474eb371b6dec7181e59fb68c426f554fcd594ad78e5cb2af88937162c2847",
+        "tentatives": 1,
+        "tokens_entree": 880,
+        "tokens_sortie": 179,
+        "duree_secondes": 33.73
+      },
+      {
+        "rubrique": "international",
+        "reponse_sha256": "ab4d88662af4e7505b5045324d0dfac79fbb693d24bb1e52a1f463e66bfcb96a",
+        "tentatives": 1,
+        "tokens_entree": 886,
+        "tokens_sortie": 34,
+        "duree_secondes": 13.49
+      }
+    ]
+  },
+  "03_camille_roussel": {
+    "pdf_sha256": "b5756d13f6d2cb9eeceb9d40b2b5710be728ef74f6a5d0129c4842ad4ced3861",
+    "texte_sha256": "1eae39645a3644aff5f6fd64b6045a15ecfaa0494bc7b22f88bd298e9f550c5b",
+    "prompt_sha256": "66a29e53819325e5b825aa1a23e6c75dee90d5fc731680427c2b9905edc19a82",
+    "schema_sha256": "86ff5ce1744c90b5b80ef32c5a989715549e3be14429fd14f07f660ec16ae268",
+    "modele": "llama3.2:3b",
+    "moteur": "ollama",
+    "strategie": "six_rubriques",
+    "origine": "reponses_modele_assemblees",
+    "fichier_source": "03_camille_roussel.pdf",
+    "date_utc": "2026-09-27T14:12:18.854944+00:00",
+    "json_sha256": "2f3a1965bdb9d5496e476216e113af5b497a2566ec24fe4698616266167a4b2f",
+    "appels": [
+      {
+        "rubrique": "formation",
+        "reponse_sha256": "602c2af9148ee4bdf3b804a0fcfedb9d74e2b8fbe11512edac3fd48f724ac992",
+        "tentatives": 1,
+        "tokens_entree": 1039,
+        "tokens_sortie": 192,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "71506bb83073c057098de32bc4c49868b0ab5075ac65fec5858d62ea6d79ce42",
+        "duree_secondes": 44.71
+      },
+      {
+        "rubrique": "competences",
+        "reponse_sha256": "84051a6d2e78b61e373974ff523fce76c8545711f7576af67be7380d82c61e35",
+        "tentatives": 1,
+        "tokens_entree": 939,
+        "tokens_sortie": 80,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "70d7fb6b902b4479c213a9e2afc0ca0c6aebc87cc88c6c0e9fe6c4d13446506f",
+        "duree_secondes": 13.52
+      },
+      {
+        "rubrique": "langues",
+        "reponse_sha256": "f128465994007aa96fbb30501511dacae2a3fb4693d41cd171021d65c28d5c7c",
+        "tentatives": 1,
+        "tokens_entree": 828,
+        "tokens_sortie": 69,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "50263ab516dddeb6b3e1423f5b47b2ef3a5e03a8f85cef5d1953dbdacc59399a",
+        "duree_secondes": 22.13
+      },
+      {
+        "rubrique": "experiences",
+        "reponse_sha256": "cccfd1b5155d74b517fcc2aece2257e982143f2bf908267064aa2144b994cc14",
+        "tentatives": 1,
+        "tokens_entree": 883,
+        "tokens_sortie": 202,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "893e04c314eb6ec869a85405381fd17b7912970637931c4b36a3b5e0e9217ddb",
+        "duree_secondes": 47.26
+      },
+      {
+        "rubrique": "engagements",
+        "reponse_sha256": "73dfa3f899b1a5febdd3f7fa2e45dd2658cde943aeb8c034edb0f5cdfe517cb3",
+        "tentatives": 1,
+        "tokens_entree": 820,
+        "tokens_sortie": 105,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "a5bf774f6416536bea46812a27b02ffda8fd8702cece172d740d9ad597ae9409",
+        "duree_secondes": 29.77
+      },
+      {
+        "rubrique": "international",
+        "reponse_sha256": "38432d71b0c9d57ed0e7f45d104cb7c9420a9f389abe307427c6d7ac79f13fc5",
+        "tentatives": 1,
+        "tokens_entree": 822,
+        "tokens_sortie": 122,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "5301c6c88a8dd1e292ebb173a1a0bcc5148805eb1a625ef4f452790ea5e60904",
+        "duree_secondes": 30.82
+      }
+    ]
+  },
+  "05_ines_benali": {
+    "pdf_sha256": "958146c91a41a844751136a6efa5518c5eaf30e267d10d8121c4c46b9943fe40",
+    "texte_sha256": "dda203041509197c102b88fc9c5d6caa6de5b27427f716454cb2c18723eaf9cb",
+    "prompt_sha256": "66a29e53819325e5b825aa1a23e6c75dee90d5fc731680427c2b9905edc19a82",
+    "schema_sha256": "86ff5ce1744c90b5b80ef32c5a989715549e3be14429fd14f07f660ec16ae268",
+    "modele": "llama3.2:3b",
+    "moteur": "ollama",
+    "strategie": "six_rubriques",
+    "origine": "reponses_modele_assemblees",
+    "fichier_source": "05_ines_benali.pdf",
+    "date_utc": "2026-09-27T14:21:08.961299+00:00",
+    "json_sha256": "d41209d5431cf9f9b78019941e053232f22b2824d0866e03adeea863e71e2717",
+    "appels": [
+      {
+        "rubrique": "formation",
+        "reponse_sha256": "d55ce3b38bcb2ff444e46ca820143b8c7cfef4b6f2f87c952cfa27e0122b9060",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "82b3f63377e1a2177e0b92e69ab622da3a232ce932be851251eeb7ff08f22327",
+        "arret": "objet_json_complet",
+        "duree_secondes": 31.61
+      },
+      {
+        "rubrique": "competences",
+        "reponse_sha256": "81e6b375e884e85f310109ec89a782c57511ab06d6af8900a0d1d071a4661fe0",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "be0c3c097b801867a50e3de9d328761c77d545f591b4ac7679ac2df25caf2c7f",
+        "arret": "objet_json_complet",
+        "duree_secondes": 14.6
+      },
+      {
+        "rubrique": "langues",
+        "reponse_sha256": "2b9142a7fc0621a8d7c69b2d5da3e6634bb4ce4575efba15df030b22ca266634",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "b6412663e6fd012035be50a51c46ee28c531b77a57d710bf54b29219ad3162d6",
+        "arret": "objet_json_complet",
+        "duree_secondes": 16.78
+      },
+      {
+        "rubrique": "experiences",
+        "reponse_sha256": "d13f6df3edfcf655bf158c83f5e598cee75bf807be81e32e09ac05e84190ac1a",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "59fe557c6f222c30f789c60dae9210e46dba506952cf448c2ddd87fc34f49838",
+        "arret": "objet_json_complet",
+        "duree_secondes": 21.12
+      },
+      {
+        "rubrique": "engagements",
+        "reponse_sha256": "43592e52789203822ce9758a99e1c5bcd41b0bf6f882b2c15a6ee9fbc701f805",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "d2216bb92db046535516086ba25458f0b8b15ec9b59541e20c04ae12957190aa",
+        "arret": "objet_json_complet",
+        "duree_secondes": 16.78
+      },
+      {
+        "rubrique": "international",
+        "reponse_sha256": "435e9df875f3e36eb2939a213181105157937550261b90a8c3220d7d1de2aac3",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "43838cda2316a551248122fddeb896e6ed1b2127e04e1d6353fde8a2752906a1",
+        "arret": "objet_json_complet",
+        "duree_secondes": 38.9
+      }
+    ]
+  },
+  "06_theo_barbier": {
+    "pdf_sha256": "09fd025c0dc8c366bce7f301eef471f53f26826648be63a9bf75f4379b8a884a",
+    "texte_sha256": "be355e3ad7143bf2700bcd38f61b77cd89b8268cbcfa48b50b5c261e85de2a4a",
+    "prompt_sha256": "66a29e53819325e5b825aa1a23e6c75dee90d5fc731680427c2b9905edc19a82",
+    "schema_sha256": "86ff5ce1744c90b5b80ef32c5a989715549e3be14429fd14f07f660ec16ae268",
+    "modele": "llama3.2:3b",
+    "moteur": "ollama",
+    "strategie": "six_rubriques",
+    "origine": "reponses_modele_assemblees",
+    "fichier_source": "06_theo_barbier.pdf",
+    "date_utc": "2026-09-27T14:23:32.543360+00:00",
+    "json_sha256": "c4dadaa835e4a92a58a83d4f09074500a9b34c25c2674111412884a15a8810a1",
+    "appels": [
+      {
+        "rubrique": "formation",
+        "reponse_sha256": "7429491ebd460d1d7b43554dddd3dc5e9dadc4b89d2fdc514507f8be76cea9e1",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "2bd52e0ef4a9e767bef91196e500d99df88bdb16de2c920a85046716ec87e651",
+        "arret": "objet_json_complet",
+        "duree_secondes": 32.18
+      },
+      {
+        "rubrique": "competences",
+        "reponse_sha256": "8b03c10a68a23f82cff54664960f6d6335e5dee8b026de23f18e20763d00d613",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "6fcb0207a2ee8534cc446b89357bd139a846fbd021813a0840b9aaeabef68b1f",
+        "arret": "objet_json_complet",
+        "duree_secondes": 16.07
+      },
+      {
+        "rubrique": "langues",
+        "reponse_sha256": "11ab0be2947fd087c75813e6f5c02634ec10e22613e00d3f4f7743071cb4e718",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "10502f2542a4e68e35e5d9cb414859172c98fd174f0e5f01fda88f1959e5cd76",
+        "arret": "objet_json_complet",
+        "duree_secondes": 15.36
+      },
+      {
+        "rubrique": "experiences",
+        "reponse_sha256": "4dc65edc985fa0e7036fe651f09ebe4b1a9ee3fa6a2d93ead1ce870291ba263b",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "53d0effbcb9c89d8ac62eebf63ea68373512b5491d7c69e45daebedb5206aee8",
+        "arret": "objet_json_complet",
+        "duree_secondes": 49.0
+      },
+      {
+        "rubrique": "engagements",
+        "reponse_sha256": "6266a575cd7029a9eb2bf554c2172decf1c5754dce5f844578764187ed090cec",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "5ed0ee1076a305d136bb0333c730dd5f63e95ab2c70fdb66c458dab3f0934f20",
+        "arret": "objet_json_complet",
+        "duree_secondes": 16.54
+      },
+      {
+        "rubrique": "international",
+        "reponse_sha256": "34311a5044aa17ccc73240d088715b56f96d557ce0ba8b30ed7c11a69e02c20d",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "1da1c8651bda89d57e1928d5c6b0f8a2c9a67bef1a14f6bdf8ab5c4c95ec706f",
+        "arret": "objet_json_complet",
+        "duree_secondes": 14.37
+      }
+    ]
+  },
+  "07_manon_petit": {
+    "pdf_sha256": "f4f9207ad1fd0b17270cc63921ef8960426127235c0be0a04a0f124690de9cab",
+    "texte_sha256": "a33e045aa20adf53f3c824edea6c11e86c40e8bd1a5e2d7814095595a5d4b3fa",
+    "prompt_sha256": "66a29e53819325e5b825aa1a23e6c75dee90d5fc731680427c2b9905edc19a82",
+    "schema_sha256": "86ff5ce1744c90b5b80ef32c5a989715549e3be14429fd14f07f660ec16ae268",
+    "modele": "llama3.2:3b",
+    "moteur": "ollama",
+    "strategie": "six_rubriques",
+    "origine": "reponses_modele_assemblees",
+    "fichier_source": "07_manon_petit.pdf",
+    "date_utc": "2026-09-27T14:25:51.346480+00:00",
+    "json_sha256": "83bccd9228e5504f4a6cc696667dc0910a65627172eade8c25793c2d15d41bc5",
+    "appels": [
+      {
+        "rubrique": "formation",
+        "reponse_sha256": "92abc0aaa0cb145301426480b3df7341220357ad21bdb88739c71052e352c0da",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "f7099a6295aa0f5f39ec6334f5ba210831fab6b8ae357d618fe444d7e9e49890",
+        "arret": "objet_json_complet",
+        "duree_secondes": 36.43
+      },
+      {
+        "rubrique": "competences",
+        "reponse_sha256": "b745def80d046ffb9fcb60032bdd32a9cedfd6980b25ad10e33f90bafbd929d1",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "c8d8e207d68b0a3de2a47380e255809d875c1fadf279d8d8792a5148eeec6223",
+        "arret": "objet_json_complet",
+        "duree_secondes": 12.3
+      },
+      {
+        "rubrique": "langues",
+        "reponse_sha256": "667e249b5abab6cac4f2adf893b38845f343879cf9cda8d7f4d398688a924eea",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "056c71eb116c50c253079d240232ef47590242ea30470b734b3d35519a1bdd30",
+        "arret": "objet_json_complet",
+        "duree_secondes": 14.21
+      },
+      {
+        "rubrique": "experiences",
+        "reponse_sha256": "2f9e96a20a6ddf0808dd43aabc7242d1c15926e4a0db389ceea70014bc8c67da",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "33bf7e61920de63834e33bf0b3104caa22c4723ba073dd6d6a25375f72457fa5",
+        "arret": "objet_json_complet",
+        "duree_secondes": 40.52
+      },
+      {
+        "rubrique": "engagements",
+        "reponse_sha256": "026a5fcd23c8a0e59a8d25a6c4f0c99fb661053592e51bb03976f90970c01e35",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "668ae9042502886d68d981df8a4cacce4a9f52025688ad47c107e3380724fb05",
+        "arret": "objet_json_complet",
+        "duree_secondes": 16.13
+      },
+      {
+        "rubrique": "international",
+        "reponse_sha256": "bd33ad62b25e9944a5cfed0f35a0286fbafa3e07258096fb9c95faeb9f863810",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "840dde0e13004a4d61c975aa7b968eadbf9a45e0eaf74599b717706c42a9724e",
+        "arret": "objet_json_complet",
+        "duree_secondes": 19.03
+      }
+    ]
+  },
+  "08_adam_fontaine": {
+    "pdf_sha256": "2fe62137f422e47710e02a365b3b82d3a7ce000a0ebd2c3a3429479bb8452f23",
+    "texte_sha256": "a0b18221f756f1ab0e2d19f0edd93cfcb34f2a62de81b5a03e4fba6baf20ca79",
+    "prompt_sha256": "66a29e53819325e5b825aa1a23e6c75dee90d5fc731680427c2b9905edc19a82",
+    "schema_sha256": "86ff5ce1744c90b5b80ef32c5a989715549e3be14429fd14f07f660ec16ae268",
+    "modele": "llama3.2:3b",
+    "moteur": "ollama",
+    "strategie": "six_rubriques",
+    "origine": "reponses_modele_assemblees",
+    "fichier_source": "08_adam_fontaine.pdf",
+    "date_utc": "2026-09-27T14:27:51.860187+00:00",
+    "json_sha256": "d48c3aed172cccde172c6b742f4a1dda9ae28d52a86110293b7dd762ec7492ec",
+    "appels": [
+      {
+        "rubrique": "formation",
+        "reponse_sha256": "248324c21557ae2b1ee0d546def8f2b5acbd3ee3d9bb7e14692512c404e18227",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "63391faccef3cc9c0f458e36f5a1ef60cf886060df973f737b6cd9c84d1d8907",
+        "arret": "objet_json_complet",
+        "duree_secondes": 28.74
+      },
+      {
+        "rubrique": "competences",
+        "reponse_sha256": "fd8f58ca6fe4344c7f0d6bca29f6c620652c7c991284f55ef17e4a4c22ce02af",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "d5f798a991dd1d24d52296e490a7c229585ca688190fdcae8a6afc0a941e92d0",
+        "arret": "objet_json_complet",
+        "duree_secondes": 11.55
+      },
+      {
+        "rubrique": "langues",
+        "reponse_sha256": "959414eb618a6ea3ed439c08a8fbf82d29087b0bff8e89a3433ec7e1880c9f36",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "f8bdc5a792d4f6b0782908b6335fcfdfca0b56d115b8f5f019bb4b1c425fb8ab",
+        "arret": "objet_json_complet",
+        "duree_secondes": 15.34
+      },
+      {
+        "rubrique": "experiences",
+        "reponse_sha256": "5baa5a19f35d844f11a6c599fdf01bd887f5a1917f9828d95236c14f5bcc9494",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "9411b762e21633118c44d09149102c8cbe2d23b6b41197e2b3e585d87431eaa8",
+        "arret": "objet_json_complet",
+        "duree_secondes": 21.49
+      },
+      {
+        "rubrique": "engagements",
+        "reponse_sha256": "4a408d320c69216ca02ab4ea37cac31706aca3b051b1d1728c8b6abff7fcc167",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "b7ba2dbc0f4d7f548e4b3aa7cb9b5e8f0920fdb688f4d76b6dab5791d242f09f",
+        "arret": "objet_json_complet",
+        "duree_secondes": 24.58
+      },
+      {
+        "rubrique": "international",
+        "reponse_sha256": "a765ad8c769a6117483a5138a614a7af2471cf5acd6c7ea916014fba9da6dab4",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "d95e7bfc0740b4f09cc64090151250c3fb5e46dcc4cbe1e75ef8fdd9c4374bc7",
+        "arret": "objet_json_complet",
+        "duree_secondes": 18.69
+      }
+    ]
+  },
+  "11_chloe_renard": {
+    "pdf_sha256": "9a8d59903d4ddd2a513268d6c16876541a8b3371a3f2895667a07ddc1224c864",
+    "texte_sha256": "6829dfbb1dc144cf455ee27bd8b8c630ea9fc3c7c2b8f8a6529bf9f7d33c0d02",
+    "prompt_sha256": "66a29e53819325e5b825aa1a23e6c75dee90d5fc731680427c2b9905edc19a82",
+    "schema_sha256": "86ff5ce1744c90b5b80ef32c5a989715549e3be14429fd14f07f660ec16ae268",
+    "modele": "llama3.2:3b",
+    "moteur": "ollama",
+    "strategie": "six_rubriques",
+    "origine": "reponses_modele_assemblees",
+    "fichier_source": "11_chloe_renard.pdf",
+    "date_utc": "2026-09-27T14:36:45.872809+00:00",
+    "json_sha256": "d97b9996118e06bfedea33ebfe5eceaea14d003fc22b61c8c966092b2abfd906",
+    "appels": [
+      {
+        "rubrique": "formation",
+        "reponse_sha256": "9a6b9f25906c5251801f5bc286419834bc8b2da9a8be08b16cdc26527875e25f",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "1c851fbc11ae507e3e7f2b285f134d1438add4550a92b60e487b0caf3348aa74",
+        "arret": "objet_json_complet",
+        "duree_secondes": 30.56
+      },
+      {
+        "rubrique": "competences",
+        "reponse_sha256": "0f1b614c7b8a85da79fe075afc6db4b48061a6bc6d6d58f4d32dc95609d19197",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "6c26f1a9998b0b243310371484f7c1f2076ecd2f4680d4a3e6a00567a7a7ceaf",
+        "arret": "objet_json_complet",
+        "duree_secondes": 8.38
+      },
+      {
+        "rubrique": "langues",
+        "reponse_sha256": "97419063062936d593d89ba39db9830558421dd41605824bb9164220fd73435c",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "f2796fd50cf00588ee64dd8241ed109ab7f749efeb04771e0d90c176c096d452",
+        "arret": "objet_json_complet",
+        "duree_secondes": 12.38
+      },
+      {
+        "rubrique": "experiences",
+        "reponse_sha256": "8a505f7af12e04f6b13d19133d725554a9ce7d8e1fa64be50011ab5fe2628741",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "4e69e702e687a9554b7a1c7ca1877b68918107fe7474a6258648a51d35105dc4",
+        "arret": "objet_json_complet",
+        "duree_secondes": 21.94
+      },
+      {
+        "rubrique": "engagements",
+        "reponse_sha256": "a163f428fdc24ab7a9cb28b6ab145a33cda585cf7468dd2d83172d866160851b",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "e8ada6777157d2a2b062a61e3e36cd08a70f6eb1ee1ed90568bcf117aff57f22",
+        "arret": "objet_json_complet",
+        "duree_secondes": 18.24
+      },
+      {
+        "rubrique": "international",
+        "reponse_sha256": "3c2a75f719e3f28092beac4cd5758e26a0d8671b73383310e5ceb95dae442b28",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "61bf5e2286154cd75b5b3deab43b636934d486ddd1b5ad07c94fb5a6a47459b9",
+        "arret": "objet_json_complet",
+        "duree_secondes": 13.09
+      }
+    ]
+  },
+  "04_hugo_lefebvre": {
+    "pdf_sha256": "154e07e782eb1606c2ddae2f44e2f534bea623312e470c08dfc5895de51cc9aa",
+    "texte_sha256": "d70c4b9858e1cf7b12c1439e91bd2395a84ffbfda4d1ae41472c4f4ba67a7f15",
+    "prompt_sha256": "66a29e53819325e5b825aa1a23e6c75dee90d5fc731680427c2b9905edc19a82",
+    "schema_sha256": "86ff5ce1744c90b5b80ef32c5a989715549e3be14429fd14f07f660ec16ae268",
+    "modele": "llama3.2:3b",
+    "moteur": "ollama",
+    "strategie": "six_rubriques",
+    "origine": "reponses_modele_assemblees",
+    "fichier_source": "04_hugo_lefebvre.pdf",
+    "date_utc": "2026-09-27T14:37:41.592697+00:00",
+    "json_sha256": "924bd581df880df8792f9c50ef84d7a8624cad249cd810331cd9612e814f26c9",
+    "appels": [
+      {
+        "rubrique": "formation",
+        "reponse_sha256": "ab536dbf0a794185a2011dd8fd18df3a6b83e6e0313a2def817f3807ef8f978c",
+        "tentatives": 1,
+        "tokens_entree": 905,
+        "tokens_sortie": 156,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "f47bc8948ff8970681d3d6a8120736e1197db50670bc60ecbf8405b634bae50a",
+        "duree_secondes": 32.43
+      },
+      {
+        "rubrique": "competences",
+        "reponse_sha256": "521ef8c2a20f889bbb655c9e1c88b2f4984a4b58fa852cc1c3be8fd97fb229a6",
+        "tentatives": 1,
+        "tokens_entree": 805,
+        "tokens_sortie": 87,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "bab91d76e4fee5d2447488ed862ee4bedd6aaf1d655e927dfac12470cf1cedb7",
+        "duree_secondes": 18.52
+      },
+      {
+        "rubrique": "langues",
+        "reponse_sha256": "50a387295cfe6e569bf553463758bcc5c804287f6c3839c7828a1933bff72dc5",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "57591ecbbec3d5dfb18e8768ee0d4b482fe4336f5a67913e429b7bb522a48fe8",
+        "arret": "objet_json_complet",
+        "duree_secondes": 9.85
+      },
+      {
+        "rubrique": "experiences",
+        "reponse_sha256": "24d39f7f1efafcc1c7f099a039eee4e36631e3feedc79d0dfc7eb491ee8167cd",
+        "tentatives": 2,
+        "normalisations_types": [
+          {
+            "index": 0,
+            "avant": "emploi étudiant",
+            "apres": "job_etudiant"
+          },
+          {
+            "index": 2,
+            "avant": "job étudiant",
+            "apres": "job_etudiant"
+          },
+          {
+            "index": 3,
+            "avant": "job étudiant",
+            "apres": "job_etudiant"
+          }
+        ],
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "duree_secondes": null,
+        "arret": "reponse_complete_conservee_apres_erreur_de_libelle",
+        "note": "Reprise de la vraie réponse conservée dans le diagnostic ; seules les variantes emploi étudiant/job étudiant ont été normalisées en job_etudiant. Aucune mesure de durée conservée."
+      },
+      {
+        "rubrique": "engagements",
+        "reponse_sha256": "00714e0715fb92b89f3ebde61dd8f4ec9a370b489065d22e5245c883444010e1",
+        "tentatives": 1,
+        "normalisations_types": [],
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "9bf642f58fdd7f85780865bec4364a49cfa0ff042da84d3514db2642090820a4",
+        "arret": "objet_json_complet",
+        "duree_secondes": 16.63
+      },
+      {
+        "rubrique": "international",
+        "reponse_sha256": "c57127f4f9abfbb2b635b47fd79cecbd8602bc20e1aaba168d89f07d431191b9",
+        "tentatives": 1,
+        "normalisations_types": [],
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "1948e161a13f2e1c8ef5cca76629a7cd52367cdc379ba92b26bc9783282f7ee6",
+        "arret": "objet_json_complet",
+        "duree_secondes": 6.93
+      }
+    ]
+  },
+  "09_sarah_da_silva": {
+    "pdf_sha256": "c5cf7e4215b2bf657610ff9f3a27f737e6a907f0b21b76a1ab18005b056e0fe5",
+    "texte_sha256": "cabd0795f8725704997a096589949a81d536c7a18598dc7c378c6587bf6d4a75",
+    "prompt_sha256": "66a29e53819325e5b825aa1a23e6c75dee90d5fc731680427c2b9905edc19a82",
+    "schema_sha256": "86ff5ce1744c90b5b80ef32c5a989715549e3be14429fd14f07f660ec16ae268",
+    "modele": "llama3.2:3b",
+    "moteur": "ollama",
+    "strategie": "six_rubriques",
+    "origine": "reponses_modele_assemblees",
+    "fichier_source": "09_sarah_da_silva.pdf",
+    "date_utc": "2026-09-27T14:37:43.317588+00:00",
+    "json_sha256": "758a2f4e7cc4ac201b4b334651617d1f652767543221b8df6e7f43c7697af907",
+    "appels": [
+      {
+        "rubrique": "formation",
+        "reponse_sha256": "76f2c5b499c4e107942f609213827f1ed41501f939b2df403b1916c5fec7fc5f",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "5f943809164e88cbd19ba9da1dc80894b0f74f9bdb51913a0e4905caf9a481d0",
+        "arret": "objet_json_complet",
+        "duree_secondes": 28.58
+      },
+      {
+        "rubrique": "competences",
+        "reponse_sha256": "f2bf071255dd9126918eb5c4ce8e32aaa15bfd9c5ec2d29ed06f7c941ffabb26",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "58e524f58ad6705fbecb9e31ef8e279cc211323eed1b5f9fd8b45817bb7b72bc",
+        "arret": "objet_json_complet",
+        "duree_secondes": 14.44
+      },
+      {
+        "rubrique": "langues",
+        "reponse_sha256": "c224211040f44a340a866a8e45237dd94c233eadc4ac6327672ae83e5c159cf8",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "49fe34ccc10e7b03e81fa11adb359572b51f493381b6bf792a91eada16a8546e",
+        "arret": "objet_json_complet",
+        "duree_secondes": 15.05
+      },
+      {
+        "rubrique": "experiences",
+        "reponse_sha256": "6a13f7ce27e0b3ae918483f393d69c0faf266e05a3887f8929aa7afdc9d53b2d",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "bb754cea5074e0d6c6a674fe9da4dc19f564ec1a8e88801a0a28686a93af5455",
+        "arret": "objet_json_complet",
+        "duree_secondes": 24.48
+      },
+      {
+        "rubrique": "engagements",
+        "reponse_sha256": "ff7f9b7f32ba898b4b0ffb7676982b832af9b632680196179f58858df17dd765",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "44ac486e3ba4e5cf992bf602aa90a7e6886825fdcd14ae2b3c0a91c9fafaa783",
+        "arret": "objet_json_complet",
+        "duree_secondes": 21.45
+      },
+      {
+        "rubrique": "international",
+        "reponse_sha256": "c57127f4f9abfbb2b635b47fd79cecbd8602bc20e1aaba168d89f07d431191b9",
+        "tentatives": 1,
+        "normalisations_types": [],
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "384a176910017f4739a96bba45903879d0ea66cc4576ab6024eeb7e23076c2f6",
+        "arret": "objet_json_complet",
+        "duree_secondes": 1.6
+      }
+    ]
+  },
+  "10_kevin_dubreuil": {
+    "pdf_sha256": "09322d694fd7e72e775b092f0cc5dbffc7964cec6d0d15cbed0ab7849f320fe8",
+    "texte_sha256": "5c0ca5583a6f404b277db41d74e29b8c8bb342472badb301ccc5df61538bf8e9",
+    "prompt_sha256": "66a29e53819325e5b825aa1a23e6c75dee90d5fc731680427c2b9905edc19a82",
+    "schema_sha256": "86ff5ce1744c90b5b80ef32c5a989715549e3be14429fd14f07f660ec16ae268",
+    "modele": "llama3.2:3b",
+    "moteur": "ollama",
+    "strategie": "six_rubriques",
+    "origine": "reponses_modele_assemblees",
+    "fichier_source": "10_kevin_dubreuil.pdf",
+    "date_utc": "2026-09-27T14:37:47.665859+00:00",
+    "json_sha256": "b2a53c5213ef961399f11516cf21b38dff3f4d41fb628636c9e0cab9b1a6173e",
+    "appels": [
+      {
+        "rubrique": "formation",
+        "reponse_sha256": "e238ac1cdb02bd39b8bc856216c949e4f7ab38a6e999c685c861280740f5395d",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "62c00ce7d9c03412107015f46beec145a47bd5603c372fc77527b3e67e94291f",
+        "arret": "objet_json_complet",
+        "duree_secondes": 24.75
+      },
+      {
+        "rubrique": "competences",
+        "reponse_sha256": "69b4f2eeece0d09ac8461da9785e1b491adeb708099b3fe9cad579180e492058",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "1d8908985cdc6d2981e0f76cc6897d3245548860647df3982899407437e821e5",
+        "arret": "objet_json_complet",
+        "duree_secondes": 9.94
+      },
+      {
+        "rubrique": "langues",
+        "reponse_sha256": "73a04f9f27901bf2757cb5efa42bb3405d4719f91ae5e9bedcd0818b2aef4880",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "26dba2a37641aaeaee02bb5cf783c5db93a9ef86a0948fd40a63b30478329e3d",
+        "arret": "objet_json_complet",
+        "duree_secondes": 12.64
+      },
+      {
+        "rubrique": "experiences",
+        "reponse_sha256": "f34a4723c8865b8e28b8b5ed8c4074f4e38b97bd563fd8ad5ef54ef4d5f0d76d",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "3ab5cbdb2561efba00ef51d62993ea09eabed26da9a77714314bd0dc2f604767",
+        "arret": "objet_json_complet",
+        "duree_secondes": 34.91
+      },
+      {
+        "rubrique": "engagements",
+        "reponse_sha256": "44ee0d65f3f8660b6ab125ab943387dc30ae2bd331de2812edfde42c2b222348",
+        "tentatives": 1,
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "5bc8a8e37341af61c19853611c65f5661f644469b9d3120c3506996bd4a78bee",
+        "arret": "objet_json_complet",
+        "duree_secondes": 17.03
+      },
+      {
+        "rubrique": "international",
+        "reponse_sha256": "c57127f4f9abfbb2b635b47fd79cecbd8602bc20e1aaba168d89f07d431191b9",
+        "tentatives": 1,
+        "normalisations_types": [],
+        "tokens_entree": null,
+        "tokens_sortie": null,
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_ctx": 4096,
+          "num_predict": 768
+        },
+        "message_sha256": "ff95bdd903fd46e5a542c6ecead44e3f19f71d17ed05d1fb4da0e6fbfe8b455d",
+        "arret": "objet_json_complet",
+        "duree_secondes": 4.23
+      }
+    ]
+  }
+}

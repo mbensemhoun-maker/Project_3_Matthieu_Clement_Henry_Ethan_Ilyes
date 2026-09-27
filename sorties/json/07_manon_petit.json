@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "id_candidat": "07_manon_petit",
+    "fichier_source": "07_manon_petit.pdf"
+  },
+  "formation": {
+    "filiere_bac": "Baccalauréat Général",
+    "mention_bac": "Assez Bien",
+    "etablissement": "Lycée Faidherbe, Lille",
+    "specialites": [
+      "Mathématiques",
+      "NSI",
+      "Physique-Chimie"
+    ],
+    "options": [],
+    "prepa": "Non",
+    "etudes_superieures": [],
+    "anomalies_parcours": null,
+    "concours": [],
+    "resultats": [
+      {
+        "intitule": "Moyenne générale",
+        "note_sur_20": 12.9
+      },
+      {
+        "intitule": "Mathématiques",
+        "note_sur_20": 11.4
+      },
+      {
+        "intitule": "Mathématiques",
+        "note_sur_20": 13.8
+      },
+      {
+        "intitule": "Site web personnel",
+        "note_sur_20": null
+      },
+      {
+        "intitule": "Site vitrine",
+        "note_sur_20": null
+      }
+    ]
+  },
+  "competences": {
+    "langages": [
+      "HTML",
+      "CSS",
+      "Python"
+    ],
+    "outils": [
+      "Suite Office",
+      "Word",
+      "Excel",
+      "PowerPoint"
+    ],
+    "projets": [
+      "Site web personnel (projet NSI)"
+    ],
+    "certifications": []
+  },
+  "langues": [
+    {
+      "langue": "anglais",
+      "niveau": "B1",
+      "certification": "n/a",
+      "score": "n/a"
+    },
+    {
+      "langue": "néerlandais",
+      "niveau": "n/a",
+      "certification": "LV2",
+      "score": "n/a"
+    }
+  ],
+  "experiences": [
+    {
+      "type": "job_etudiant",
+      "poste": "Baby-sitting régulier",
+      "organisation": "Famille",
+      "duree": "2025-2026",
+      "missions": "Préparation des repas, soins aux enfants"
+    },
+    {
+      "type": "stage",
+      "poste": "Stagiaire",
+      "organisation": "Entreprise X",
+      "duree": "2024-2025",
+      "missions": "Aide à la gestion des réseaux sociaux, création de contenu"
+    },
+    {
+      "type": "job_etudiant",
+      "poste": "Job saisonnier étudiant",
+      "organisation": "Entreprise Y",
+      "duree": "2023-2024",
+      "missions": "Aide à la préparation des événements, gestion des relations avec les clients"
+    },
+    {
+      "type": "benevolat",
+      "poste": "Membre du club photo du lycée",
+      "organisation": "Lycée Faidherbe",
+      "duree": "2022-2023",
+      "missions": "Participation à l'exposition de fin d'année, organisation des événements"
+    }
+  ],
+  "engagements": [
+    {
+      "role": "Membre",
+      "organisation": "Club photo du lycée",
+      "description": "Participation à l'exposition de fin d'année, depuis la Seconde"
+    },
+    {
+      "role": "Membre",
+      "organisation": "Équipe de NSI",
+      "description": "Participation à des projets et activités liés à l'NSI"
+    }
+  ],
+  "international": [
+    {
+      "pays": "Belgique",
+      "motif": "études",
+      "duree": "1 an"
+    },
+    {
+      "pays": "Espagne",
+      "motif": "études",
+      "duree": "1 an"
+    },
+    {
+      "pays": "Italie",
+      "motif": "études",
+      "duree": "1 an"
+    },
+    {
+      "pays": "France",
+      "motif": "études",
+      "duree": "1 an"
+    }
+  ],
+  "rubriques_illisibles": []
+}

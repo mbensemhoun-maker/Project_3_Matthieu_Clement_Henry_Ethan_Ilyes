@@ -1,0 +1,12 @@
+fichier_source,id_candidat,note_sur20,points_a_verifier,fichier,note_reference,ecart
+01_lea_vasseur.pdf,01_lea_vasseur,18.5,0.0,01_lea_vasseur.pdf,19.0,-0.5
+02_nathan_girard.pdf,02_nathan_girard,19.0,0.0,02_nathan_girard.pdf,15.5,3.5
+03_camille_roussel.pdf,03_camille_roussel,17.0,0.0,03_camille_roussel.pdf,13.0,4.0
+04_hugo_lefebvre.pdf,04_hugo_lefebvre,11.75,1.5,04_hugo_lefebvre.pdf,11.0,0.75
+05_ines_benali.pdf,05_ines_benali,11.5,1.5,05_ines_benali.pdf,10.5,1.0
+06_theo_barbier.pdf,06_theo_barbier,9.75,0.0,06_theo_barbier.pdf,8.0,1.75
+07_manon_petit.pdf,07_manon_petit,10.5,0.0,07_manon_petit.pdf,8.0,2.5
+08_adam_fontaine.pdf,08_adam_fontaine,11.75,0.0,08_adam_fontaine.pdf,8.5,3.25
+09_sarah_da_silva.pdf,09_sarah_da_silva,9.25,1.5,09_sarah_da_silva.pdf,9.0,0.25
+10_kevin_dubreuil.pdf,10_kevin_dubreuil,4.0,1.5,10_kevin_dubreuil.pdf,4.0,0.0
+11_chloe_renard.pdf,11_chloe_renard,4.5,1.5,11_chloe_renard.pdf,3.5,1.0

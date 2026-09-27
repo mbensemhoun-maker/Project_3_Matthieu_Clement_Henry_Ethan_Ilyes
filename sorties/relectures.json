@@ -1,0 +1,2605 @@
+{
+  "01_lea_vasseur": {
+    "json_sha256": "c2ab9fcfdfb8a968cf12dad4c929a2fdc5331ca227c0c6075221ad3bad653440",
+    "texte_sha256": "bc231e5ffa169487e016d75e5302e32db734e07d69fe6598d0eabb97afaa3469",
+    "methode": "Comparaison manuelle par l’assistant au texte extrait ; validation humaine de l’équipe encore nécessaire.",
+    "corrections": [
+      {
+        "chemin": [
+          "formation",
+          "specialites"
+        ],
+        "avant": [
+          "Mathématiques",
+          "Physique-Chimie",
+          "NSI (+ Maths Expertes)"
+        ],
+        "apres": [
+          "Mathématiques",
+          "Physique-Chimie",
+          "NSI"
+        ],
+        "raison": "Séparer les options des spécialités.",
+        "extraits_source": [
+          "Lycée Henri IV, Paris — Spécialités : Mathématiques, Physique-Chimie, NSI (+ Maths\nExpertes)"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "options"
+        ],
+        "avant": [],
+        "apres": [
+          "Maths Expertes"
+        ],
+        "raison": "Option explicitement citée.",
+        "extraits_source": [
+          "Lycée Henri IV, Paris — Spécialités : Mathématiques, Physique-Chimie, NSI (+ Maths\nExpertes)"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "prepa"
+        ],
+        "avant": "null",
+        "apres": null,
+        "raison": "Aucune prépa mentionnée ; null ne doit pas être une chaîne.",
+        "extraits_source": [
+          "FORMATION\nJuin 2026\nBaccalauréat Général — Mention Très Bien\nLycée Henri IV, Paris — Spécialités : Mathématiques, Physique-Chimie, NSI (+ Maths\nExpertes)\n – Moyenne générale de Terminale : 17,4/20\n– Moyenne en mathématiques : 18,2/20\n– Grand oral : projet sur la modélisation prédictive en sport\n2025\nOlympiades Académiques de Mathématiques\nQualifiée pour la seconde phase — académie de Paris"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "etudes_superieures"
+        ],
+        "avant": [
+          "null"
+        ],
+        "apres": [],
+        "raison": "Aucune étude post-bac mentionnée.",
+        "extraits_source": [
+          "FORMATION\nJuin 2026\nBaccalauréat Général — Mention Très Bien\nLycée Henri IV, Paris — Spécialités : Mathématiques, Physique-Chimie, NSI (+ Maths\nExpertes)\n – Moyenne générale de Terminale : 17,4/20\n– Moyenne en mathématiques : 18,2/20\n– Grand oral : projet sur la modélisation prédictive en sport\n2025\nOlympiades Académiques de Mathématiques\nQualifiée pour la seconde phase — académie de Paris"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "anomalies_parcours"
+        ],
+        "avant": "null",
+        "apres": null,
+        "raison": "Aucune anomalie annoncée.",
+        "extraits_source": [
+          "FORMATION\nJuin 2026\nBaccalauréat Général — Mention Très Bien\nLycée Henri IV, Paris — Spécialités : Mathématiques, Physique-Chimie, NSI (+ Maths\nExpertes)\n – Moyenne générale de Terminale : 17,4/20\n– Moyenne en mathématiques : 18,2/20\n– Grand oral : projet sur la modélisation prédictive en sport\n2025\nOlympiades Académiques de Mathématiques\nQualifiée pour la seconde phase — académie de Paris"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "resultats"
+        ],
+        "avant": [
+          {
+            "intitule": "Moyenne générale de Terminale",
+            "note_sur_20": 17.4
+          },
+          {
+            "intitule": "Moyenne en mathématiques",
+            "note_sur_20": 18.2
+          },
+          {
+            "intitule": "Grand oral",
+            "note_sur_20": null
+          }
+        ],
+        "apres": [
+          {
+            "intitule": "Moyenne générale de Terminale",
+            "note_sur_20": 17.4
+          },
+          {
+            "intitule": "Moyenne en mathématiques",
+            "note_sur_20": 18.2
+          }
+        ],
+        "raison": "Le grand oral ne comporte aucune note.",
+        "extraits_source": [
+          "– Moyenne générale de Terminale : 17,4/20\n– Moyenne en mathématiques : 18,2/20\n– Grand oral : projet sur la modélisation prédictive en sport"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "langages"
+        ],
+        "avant": [
+          "Python",
+          "SQL"
+        ],
+        "apres": [
+          "Python — bon niveau (pandas, matplotlib)",
+          "SQL — requêtes, jointures"
+        ],
+        "raison": "Conserver les niveaux explicites.",
+        "extraits_source": [
+          "COMPÉTENCES TECHNIQUES\n• Python (pandas, matplotlib) —\nbon niveau\n• SQL — requêtes, jointures\n• Power BI — tableaux de bord\n• Excel avancé (TCD,\nrecherchev)\n• Git / GitHub"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "outils"
+        ],
+        "avant": [
+          "Power BI",
+          "Excel",
+          "Git",
+          "GitHub"
+        ],
+        "apres": [
+          "pandas",
+          "matplotlib",
+          "Power BI — tableaux de bord",
+          "Excel — avancé (TCD, recherchev)",
+          "Git",
+          "GitHub"
+        ],
+        "raison": "Restaurer les outils et niveaux omis.",
+        "extraits_source": [
+          "COMPÉTENCES TECHNIQUES\n• Python (pandas, matplotlib) —\nbon niveau\n• SQL — requêtes, jointures\n• Power BI — tableaux de bord\n• Excel avancé (TCD,\nrecherchev)\n• Git / GitHub"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "projets"
+        ],
+        "avant": [
+          "StatsLigue1",
+          "StatsLigue2"
+        ],
+        "apres": [
+          "StatsLigue1 : scraping et traitement de 5 saisons de statistiques ; visualisations et modèle simple de prédiction ; projet open source, environ 40 étoiles sur GitHub"
+        ],
+        "raison": "StatsLigue2 est inventé ; un seul projet est décrit.",
+        "extraits_source": [
+          "PROJETS PERSONNELS\n2025 – 2026\nStatsLigue1 — analyse de données du championnat de\nfootball\nProjet personnel publié en open source sur GitHub\n – Scraping et traitement de 5 saisons de statistiques de match\n– Visualisations et modèle simple de prédiction de résultats\n– environ 40 étoiles sur le dépôt"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "certifications"
+        ],
+        "avant": [
+          "Permis B"
+        ],
+        "apres": [],
+        "raison": "Un permis en cours n’est pas une certification technique obtenue.",
+        "extraits_source": [
+          "Permis B en cours",
+          "COMPÉTENCES TECHNIQUES\n• Python (pandas, matplotlib) —\nbon niveau\n• SQL — requêtes, jointures\n• Power BI — tableaux de bord\n• Excel avancé (TCD,\nrecherchev)\n• Git / GitHub"
+        ]
+      },
+      {
+        "chemin": [
+          "langues"
+        ],
+        "avant": [
+          {
+            "langue": "anglais",
+            "niveau": "B1",
+            "certification": "TOEFL iBT",
+            "score": "112/120"
+          },
+          {
+            "langue": "espagnol",
+            "niveau": "B1",
+            "certification": null,
+            "score": null
+          }
+        ],
+        "apres": [
+          {
+            "langue": "Anglais",
+            "niveau": null,
+            "certification": "TOEFL iBT",
+            "score": "112/120"
+          },
+          {
+            "langue": "Espagnol",
+            "niveau": "B1",
+            "certification": null,
+            "score": null
+          }
+        ],
+        "raison": "Le niveau B1 concerne seulement l’espagnol ; ne pas l’attribuer à l’anglais.",
+        "extraits_source": [
+          "LANGUES\n• Anglais — TOEFL iBT\n112/120\n• Espagnol — niveau B1"
+        ]
+      },
+      {
+        "chemin": [
+          "engagements"
+        ],
+        "avant": [
+          {
+            "role": "Vice-présidente",
+            "organisation": "Club Entrepreneuriat du lycée",
+            "description": "Organisation de 3 conférences et d'un concours de pitch (environ 80 participants)"
+          },
+          {
+            "role": "Étudiante échangee",
+            "organisation": "Northern Secondary School",
+            "description": "Un semestre en immersion"
+          }
+        ],
+        "apres": [
+          {
+            "role": "Vice-présidente",
+            "organisation": "Club Entrepreneuriat du lycée",
+            "description": "Organisation de 3 conférences et d’un concours de pitch (environ 80 participants)"
+          },
+          {
+            "role": "Escalade",
+            "organisation": "club",
+            "description": "4 ans"
+          }
+        ],
+        "raison": "Un séjour scolaire n’est pas un engagement ; restaurer l’escalade en club.",
+        "extraits_source": [
+          "ENGAGEMENT & INTERNATIONAL\n2024 – 2026\nVice-présidente — Club Entrepreneuriat du lycée\nOrganisation de 3 conférences et d'un concours de pitch (environ 80 participants)\n2025\nÉchange scolaire — Toronto, Canada\nUn semestre en immersion, Northern Secondary School",
+          "Escalade (club, 4 ans)"
+        ]
+      },
+      {
+        "chemin": [
+          "international"
+        ],
+        "avant": [
+          {
+            "pays": "Canada",
+            "motif": "Échange scolaire",
+            "duree": "Un semestre"
+          }
+        ],
+        "apres": [
+          {
+            "pays": "Canada",
+            "motif": "Échange scolaire à Toronto, Northern Secondary School",
+            "duree": "Un semestre"
+          }
+        ],
+        "raison": "Conserver le lieu et l’établissement du séjour.",
+        "extraits_source": [
+          "2025\nÉchange scolaire — Toronto, Canada\nUn semestre en immersion, Northern Secondary School"
+        ]
+      }
+    ]
+  },
+  "02_nathan_girard": {
+    "json_sha256": "d6d085325d0b28c41ef6ff91bd6018a96e50f72d687f3cbebb5a9bdce73fc08e",
+    "texte_sha256": "5de3dafa053b0566f9f63d4014566efc4d76e59682a981a2b6253ae421a06125",
+    "methode": "Comparaison manuelle par l’assistant au texte extrait ; validation humaine de l’équipe encore nécessaire.",
+    "corrections": [
+      {
+        "chemin": [
+          "formation",
+          "filiere_bac"
+        ],
+        "avant": "Bachelier 2026 — Profil Business & Data",
+        "apres": "Baccalauréat Général",
+        "raison": "Le titre du CV n’est pas la filière du bac.",
+        "extraits_source": [
+          "Baccalauréat Général — Mention Très Bien"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "resultats"
+        ],
+        "avant": [
+          {
+            "intitule": "Moyenne générale",
+            "note_sur_20": 16.8
+          },
+          {
+            "intitule": "Mathématiques",
+            "note_sur_20": 16.5
+          },
+          {
+            "intitule": "Grand oral",
+            "note_sur_20": null
+          }
+        ],
+        "apres": [
+          {
+            "intitule": "Moyenne générale",
+            "note_sur_20": 16.8
+          },
+          {
+            "intitule": "Mathématiques",
+            "note_sur_20": 16.5
+          }
+        ],
+        "raison": "Le grand oral ne comporte aucune note.",
+        "extraits_source": [
+          "– Moyenne générale : 16,8/20 — Mathématiques : 16,5/20\n– Grand oral : « La donnée personnelle a-t-elle un prix ? »"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "langages"
+        ],
+        "avant": [
+          "SQL",
+          "Python"
+        ],
+        "apres": [
+          "SQL — certification DataCamp",
+          "Python — bases (syntaxe, boucles)"
+        ],
+        "raison": "Conserver les niveaux déclarés.",
+        "extraits_source": [
+          "COMPÉTENCES\n• SQL — certification DataCamp\n• Excel (TCD, formules\nimbriquées)\n• Python — bases (syntaxe,\nboucles)\n• Canva, Google Workspace\n• Prise de parole en public"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "outils"
+        ],
+        "avant": [
+          "Excel",
+          "Canva",
+          "Google Workspace"
+        ],
+        "apres": [
+          "Excel — TCD, formules imbriquées",
+          "Canva",
+          "Google Workspace",
+          "PowerPoint"
+        ],
+        "raison": "Restaurer les précisions et PowerPoint explicitement cité dans le stage.",
+        "extraits_source": [
+          "COMPÉTENCES\n• SQL — certification DataCamp\n• Excel (TCD, formules\nimbriquées)\n• Python — bases (syntaxe,\nboucles)\n• Canva, Google Workspace\n• Prise de parole en public",
+          "Février 2026\nStage d'observation — Cabinet Aurea Conseil\nLyon — conseil en stratégie, structure de 8 consultants\n – Observation de deux réunions de cadrage client\n– Aide à la mise en forme d'une étude de marché (Excel, PowerPoint)"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "projets"
+        ],
+        "avant": [
+          "Stage d'observation - Cabinet Aurea Conseil",
+          "Job d'été - Serveur, Brasserie Le Central"
+        ],
+        "apres": [],
+        "raison": "Le stage et le job sont des expériences professionnelles, pas des projets personnels.",
+        "extraits_source": [
+          "EXPÉRIENCE\nFévrier 2026\nStage d'observation — Cabinet Aurea Conseil\nLyon — conseil en stratégie, structure de 8 consultants\n – Observation de deux réunions de cadrage client\n– Aide à la mise en forme d'une étude de marché (Excel, PowerPoint)\nÉté 2025\nJob d'été — Serveur, Brasserie Le Central\nLyon — service en salle, 6 semaines"
+        ]
+      },
+      {
+        "chemin": [
+          "langues"
+        ],
+        "avant": [
+          {
+            "langue": "anglais",
+            "niveau": "C1 Advanced",
+            "certification": "Cambridge",
+            "score": null
+          },
+          {
+            "langue": "allemand",
+            "niveau": "B1",
+            "certification": "null",
+            "score": null
+          }
+        ],
+        "apres": [
+          {
+            "langue": "Anglais",
+            "niveau": "C1",
+            "certification": "Cambridge C1 Advanced",
+            "score": null
+          },
+          {
+            "langue": "Allemand",
+            "niveau": "B1",
+            "certification": null,
+            "score": null
+          }
+        ],
+        "raison": "Normaliser le certificat et l’absence de certification allemande.",
+        "extraits_source": [
+          "LANGUES\n• Anglais — Cambridge C1\nAdvanced\n• Allemand — niveau B1"
+        ]
+      },
+      {
+        "chemin": [
+          "experiences"
+        ],
+        "avant": [
+          {
+            "type": "stage",
+            "poste": "Observation",
+            "organisation": "Cabinet Aurea Conseil",
+            "duree": "Février 2026",
+            "missions": "Observation de deux réunions de cadrage client, Aide à la mise en forme d'une étude de marché (Excel, PowerPoint)"
+          },
+          {
+            "type": "job_etudiant",
+            "poste": "Serveur",
+            "organisation": "Brasserie Le Central",
+            "duree": "Été 2025",
+            "missions": "Service en salle, 6 semaines"
+          }
+        ],
+        "apres": [
+          {
+            "type": "stage",
+            "poste": "Stage d’observation",
+            "organisation": "Cabinet Aurea Conseil",
+            "duree": "Février 2026",
+            "missions": "Observation de deux réunions de cadrage client ; mise en forme d’une étude de marché (Excel, PowerPoint)"
+          },
+          {
+            "type": "job_etudiant",
+            "poste": "Serveur",
+            "organisation": "Brasserie Le Central",
+            "duree": "Été 2025, 6 semaines",
+            "missions": "Service en salle"
+          }
+        ],
+        "raison": "Conserver la durée explicite du job dans duree.",
+        "extraits_source": [
+          "EXPÉRIENCE\nFévrier 2026\nStage d'observation — Cabinet Aurea Conseil\nLyon — conseil en stratégie, structure de 8 consultants\n – Observation de deux réunions de cadrage client\n– Aide à la mise en forme d'une étude de marché (Excel, PowerPoint)\nÉté 2025\nJob d'été — Serveur, Brasserie Le Central\nLyon — service en salle, 6 semaines"
+        ]
+      },
+      {
+        "chemin": [
+          "engagements"
+        ],
+        "avant": [
+          {
+            "role": "Fondateur & Président",
+            "organisation": "Association Tutorat Parc",
+            "description": "Association de tutorat scolaire bénévole"
+          },
+          {
+            "role": "Immersion linguistique",
+            "organisation": "Famille d'accueil",
+            "description": "Séjour d'échange de 2 semaines en famille d'accueil"
+          },
+          {
+            "role": "Stage d'observation",
+            "organisation": "Cabinet Aurea Conseil",
+            "description": "Conseil en stratégie, observation de deux réunions de cadrage client et aide à la mise en forme d'une étude de marché (Excel, PowerPoint)"
+          },
+          {
+            "role": "Job d'été",
+            "organisation": "Brasserie Le Central",
+            "description": "Service en salle, 6 semaines"
+          }
+        ],
+        "apres": [
+          {
+            "role": "Fondateur & Président",
+            "organisation": "Association Tutorat Parc",
+            "description": "2024–2026 : création de la structure et dépôt des statuts ; animation de 15 bénévoles ; accompagnement d’une soixantaine de collégiens sur deux ans ; 1 200 € de subventions"
+          }
+        ],
+        "raison": "Exclure emplois et séjour ; restaurer les actions et responsabilités de l’association.",
+        "extraits_source": [
+          "ENGAGEMENT ASSOCIATIF\n2024 – 2026\nFondateur & Président — Association Tutorat Parc\nAssociation de tutorat scolaire bénévole\n – Création de la structure et dépôt des statuts en préfecture\n– Animation d'une équipe de 15 bénévoles tuteurs\n– Accompagnement d'une soixantaine de collégiens sur deux ans\n– Recherche de financements : 1 200 € de subventions obtenues"
+        ]
+      },
+      {
+        "chemin": [
+          "international"
+        ],
+        "avant": [
+          {
+            "pays": "Allemagne",
+            "motif": "Immersion linguistique",
+            "duree": "2 semaines"
+          }
+        ],
+        "apres": [
+          {
+            "pays": "Allemagne",
+            "motif": "Immersion linguistique à Hambourg, échange en famille d’accueil",
+            "duree": "2024, 2 semaines"
+          }
+        ],
+        "raison": "Conserver le lieu et le contexte du séjour.",
+        "extraits_source": [
+          "INTERNATIONAL\n2024\nImmersion linguistique — Hambourg, Allemagne\nSéjour d'échange de 2 semaines en famille d'accueil"
+        ]
+      }
+    ]
+  },
+  "03_camille_roussel": {
+    "json_sha256": "2f3a1965bdb9d5496e476216e113af5b497a2566ec24fe4698616266167a4b2f",
+    "texte_sha256": "1eae39645a3644aff5f6fd64b6045a15ecfaa0494bc7b22f88bd298e9f550c5b",
+    "methode": "Comparaison manuelle par l’assistant au texte extrait ; validation humaine de l’équipe encore nécessaire.",
+    "corrections": [
+      {
+        "chemin": [
+          "formation",
+          "filiere_bac"
+        ],
+        "avant": "Bachelière scientifique",
+        "apres": "Baccalauréat Général",
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nJuin 2026\nBaccalauréat Général — Mention Bien\nLycée Kléber, Strasbourg — Spécialités : Mathématiques, Physique-Chimie, Sciences de l'Ingénieur\n • Moyenne générale : 15,6/20 (14,9 au premier trimestre, 16,4 au troisième)\n• Mathématiques : 16,1/20"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "mention_bac"
+        ],
+        "avant": "Mention Bien",
+        "apres": "Bien",
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nJuin 2026\nBaccalauréat Général — Mention Bien\nLycée Kléber, Strasbourg — Spécialités : Mathématiques, Physique-Chimie, Sciences de l'Ingénieur\n • Moyenne générale : 15,6/20 (14,9 au premier trimestre, 16,4 au troisième)\n• Mathématiques : 16,1/20"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "specialites"
+        ],
+        "avant": [
+          "Mathématiques",
+          "Physique-Chimie",
+          "Sciences de l'Ingénieur"
+        ],
+        "apres": [
+          "Mathématiques",
+          "Physique-Chimie",
+          "Sciences de l’Ingénieur"
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nJuin 2026\nBaccalauréat Général — Mention Bien\nLycée Kléber, Strasbourg — Spécialités : Mathématiques, Physique-Chimie, Sciences de l'Ingénieur\n • Moyenne générale : 15,6/20 (14,9 au premier trimestre, 16,4 au troisième)\n• Mathématiques : 16,1/20"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "resultats"
+        ],
+        "avant": [
+          {
+            "intitule": "Moyenne générale",
+            "note_sur_20": null
+          },
+          {
+            "intitule": "Mathématiques",
+            "note_sur_20": null
+          },
+          {
+            "intitule": "Physique-Chimie",
+            "note_sur_20": null
+          },
+          {
+            "intitule": "Sciences de l'Ingénieur",
+            "note_sur_20": null
+          }
+        ],
+        "apres": [
+          {
+            "intitule": "Moyenne générale",
+            "note_sur_20": 15.6
+          },
+          {
+            "intitule": "Moyenne générale, premier trimestre",
+            "note_sur_20": 14.9
+          },
+          {
+            "intitule": "Moyenne générale, troisième trimestre",
+            "note_sur_20": 16.4
+          },
+          {
+            "intitule": "Mathématiques",
+            "note_sur_20": 16.1
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nJuin 2026\nBaccalauréat Général — Mention Bien\nLycée Kléber, Strasbourg — Spécialités : Mathématiques, Physique-Chimie, Sciences de l'Ingénieur\n • Moyenne générale : 15,6/20 (14,9 au premier trimestre, 16,4 au troisième)\n• Mathématiques : 16,1/20"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "langages"
+        ],
+        "avant": [
+          "Python"
+        ],
+        "apres": [
+          "Python — notions"
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "PROJETS & COMPÉTENCES TECHNIQUES\n2026\nCompétition Kaggle « Titanic » (niveau débutant)\nParticipation individuelle, modèle de classification en Python\n • Classement intermédiaire, démarche menée de bout en bout\n• Apprentissage autodidacte via tutoriels en ligne\nOutils\nExcel avancé (TCD, graphiques) — Python (notions) — SolidWorks (cours de SI)"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "outils"
+        ],
+        "avant": [
+          "Excel avancé (TCD, graphiques)",
+          "SolidWorks (cours de SI)"
+        ],
+        "apres": [
+          "Excel — avancé (TCD, graphiques)",
+          "SolidWorks — cours de SI"
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "PROJETS & COMPÉTENCES TECHNIQUES\n2026\nCompétition Kaggle « Titanic » (niveau débutant)\nParticipation individuelle, modèle de classification en Python\n • Classement intermédiaire, démarche menée de bout en bout\n• Apprentissage autodidacte via tutoriels en ligne\nOutils\nExcel avancé (TCD, graphiques) — Python (notions) — SolidWorks (cours de SI)"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "projets"
+        ],
+        "avant": [
+          "Compétition Kaggle « Titanic » (niveau débutant)"
+        ],
+        "apres": [
+          "Kaggle Titanic (2026) : participation individuelle, modèle de classification en Python ; classement intermédiaire, démarche menée de bout en bout, apprentissage autodidacte"
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "PROJETS & COMPÉTENCES TECHNIQUES\n2026\nCompétition Kaggle « Titanic » (niveau débutant)\nParticipation individuelle, modèle de classification en Python\n • Classement intermédiaire, démarche menée de bout en bout\n• Apprentissage autodidacte via tutoriels en ligne\nOutils\nExcel avancé (TCD, graphiques) — Python (notions) — SolidWorks (cours de SI)"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "certifications"
+        ],
+        "avant": [
+          "Niveau B2 en anglais",
+          "Niveau B1 en allemand"
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "PROJETS & COMPÉTENCES TECHNIQUES\n2026\nCompétition Kaggle « Titanic » (niveau débutant)\nParticipation individuelle, modèle de classification en Python\n • Classement intermédiaire, démarche menée de bout en bout\n• Apprentissage autodidacte via tutoriels en ligne\nOutils\nExcel avancé (TCD, graphiques) — Python (notions) — SolidWorks (cours de SI)"
+        ]
+      },
+      {
+        "chemin": [
+          "langues"
+        ],
+        "avant": [
+          {
+            "langue": "anglais",
+            "niveau": "B2",
+            "certification": null,
+            "score": null
+          },
+          {
+            "langue": "allemand",
+            "niveau": "B1",
+            "certification": "section européenne au collège",
+            "score": null
+          }
+        ],
+        "apres": [
+          {
+            "langue": "Anglais",
+            "niveau": "B2 auto-évalué, pas de certification",
+            "certification": null,
+            "score": null
+          },
+          {
+            "langue": "Allemand",
+            "niveau": "B1, section européenne au collège",
+            "certification": null,
+            "score": null
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "LANGUES\nAnglais — niveau B2 (auto-évalué, pas de certification)\nAllemand — niveau B1 (section européenne au collège)"
+        ]
+      },
+      {
+        "chemin": [
+          "experiences"
+        ],
+        "avant": [
+          {
+            "type": "stage",
+            "poste": "service qualité",
+            "organisation": "Hartmann Industries",
+            "duree": "3 jours",
+            "missions": "Saisie et mise en forme d'indicateurs de production sous Excel, Découverte du suivi de performance en atelier"
+          },
+          {
+            "type": "job_etudiant",
+            "poste": "Baby-sitting régulier",
+            "organisation": "Deux familles",
+            "duree": "4 h par semaine sur deux années scolaires",
+            "missions": "Garde de deux familles, 4 h par semaine"
+          },
+          {
+            "type": "job_etudiant",
+            "poste": "Baby-sitting régulier",
+            "organisation": "Deux familles",
+            "duree": "4 h par semaine sur deux années scolaires",
+            "missions": "Garde de deux familles, 4 h par semaine"
+          }
+        ],
+        "apres": [
+          {
+            "type": "stage",
+            "poste": "Stage découverte",
+            "organisation": "Hartmann Industries, service qualité",
+            "duree": "Janvier 2026, 3 jours",
+            "missions": "Saisie et mise en forme d’indicateurs de production sous Excel ; découverte du suivi de performance en atelier"
+          },
+          {
+            "type": "job_etudiant",
+            "poste": "Baby-sitting régulier",
+            "organisation": "Deux familles",
+            "duree": "2024–2026, 4 h par semaine sur deux années scolaires",
+            "missions": null
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "EXPÉRIENCE\nJanvier 2026\nStage découverte — Hartmann Industries\nIllkirch — service qualité, 3 jours\n • Saisie et mise en forme d'indicateurs de production sous Excel\n• Découverte du suivi de performance en atelier\n2024 – 2026\nBaby-sitting régulier\nDeux familles, 4 h par semaine sur deux années scolaires"
+        ]
+      },
+      {
+        "chemin": [
+          "engagements"
+        ],
+        "avant": [
+          {
+            "role": "Trésorière",
+            "organisation": "Conseil de Vie Lycéenne",
+            "description": "Gestion d'un budget annuel de 2 500 € pour les projets élèves"
+          },
+          {
+            "role": "Capitaine",
+            "organisation": "Équipe de basket, ASPTT Strasbourg",
+            "description": "Championnat régional U18, 3 entraînements hebdomadaires"
+          }
+        ],
+        "apres": [
+          {
+            "role": "Trésorière",
+            "organisation": "Conseil de Vie Lycéenne",
+            "description": "2025–2026 : gestion d’un budget annuel de 2 500 € pour les projets élèves"
+          },
+          {
+            "role": "Capitaine",
+            "organisation": "Équipe de basket, ASPTT Strasbourg",
+            "description": "2022–2026 : championnat régional U18, 3 entraînements hebdomadaires"
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "ENGAGEMENT & RESPONSABILITÉS\n2025 – 2026\nTrésorière — Conseil de Vie Lycéenne\nGestion d'un budget annuel de 2 500 € pour les projets élèves\n2022 – 2026\nCapitaine — Équipe de basket, ASPTT Strasbourg\nChampionnat régional U18, 3 entraînements hebdomadaires"
+        ]
+      },
+      {
+        "chemin": [
+          "international"
+        ],
+        "avant": [
+          {
+            "pays": "États-Unis",
+            "motif": "Stage découverte",
+            "duree": "3 jours"
+          },
+          {
+            "pays": "France",
+            "motif": "Famille",
+            "duree": "2 ans"
+          },
+          {
+            "pays": "France",
+            "motif": "Famille",
+            "duree": "2 ans"
+          },
+          {
+            "pays": "États-Unis",
+            "motif": "Compétition Kaggle",
+            "duree": "inconnue"
+          }
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "LANGUES\nAnglais — niveau B2 (auto-évalué, pas de certification)\nAllemand — niveau B1 (section européenne au collège)"
+        ]
+      }
+    ]
+  },
+  "05_ines_benali": {
+    "json_sha256": "d41209d5431cf9f9b78019941e053232f22b2824d0866e03adeea863e71e2717",
+    "texte_sha256": "dda203041509197c102b88fc9c5d6caa6de5b27427f716454cb2c18723eaf9cb",
+    "methode": "Comparaison manuelle par l’assistant au texte extrait ; validation humaine de l’équipe encore nécessaire.",
+    "corrections": [
+      {
+        "chemin": [
+          "formation",
+          "etablissement"
+        ],
+        "avant": "Lycée Marcelin Berthelot",
+        "apres": "Lycée Marcelin Berthelot, Saint-Maur",
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nBaccalauréat Général, mention Assez Bien (2026)\nLycée Marcelin Berthelot, Saint-Maur — Spécialités : Mathématiques, SES, NSI\n - Moyenne générale 13,2/20"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "resultats"
+        ],
+        "avant": [
+          {
+            "intitule": "Moyenne générale",
+            "note_sur_20": 13.2
+          },
+          {
+            "intitule": "Encaissement",
+            "note_sur_20": null
+          },
+          {
+            "intitule": "Gestion des files d'attente",
+            "note_sur_20": null
+          },
+          {
+            "intitule": "Travail en équipe",
+            "note_sur_20": null
+          }
+        ],
+        "apres": [
+          {
+            "intitule": "Moyenne générale",
+            "note_sur_20": 13.2
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nBaccalauréat Général, mention Assez Bien (2026)\nLycée Marcelin Berthelot, Saint-Maur — Spécialités : Mathématiques, SES, NSI\n - Moyenne générale 13,2/20"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "langages"
+        ],
+        "avant": [
+          "Excel",
+          "Python"
+        ],
+        "apres": [
+          "Python — notions vues en NSI"
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nExcel\nTableaux croisés dynamiques réalisés pour un exposé de SES sur les inégalités de revenus\nAutres outils\nWord, PowerPoint, Google Sheets. Notions de Python vues en NSI."
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "outils"
+        ],
+        "avant": [
+          "Word",
+          "PowerPoint",
+          "Google Sheets"
+        ],
+        "apres": [
+          "Excel — tableaux croisés dynamiques",
+          "Word",
+          "PowerPoint",
+          "Google Sheets"
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nExcel\nTableaux croisés dynamiques réalisés pour un exposé de SES sur les inégalités de revenus\nAutres outils\nWord, PowerPoint, Google Sheets. Notions de Python vues en NSI."
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "projets"
+        ],
+        "avant": [
+          "Tableaux croisés dynamiques réalisés pour un exposé de SES sur les inégalités de revenus"
+        ],
+        "apres": [
+          "Exposé de SES sur les inégalités de revenus : tableaux croisés dynamiques sous Excel"
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nExcel\nTableaux croisés dynamiques réalisés pour un exposé de SES sur les inégalités de revenus\nAutres outils\nWord, PowerPoint, Google Sheets. Notions de Python vues en NSI."
+        ]
+      },
+      {
+        "chemin": [
+          "langues"
+        ],
+        "avant": [
+          {
+            "langue": "anglais",
+            "niveau": "B1",
+            "certification": null,
+            "score": null
+          },
+          {
+            "langue": "espagnol",
+            "niveau": "B2",
+            "certification": null,
+            "score": null
+          },
+          {
+            "langue": "arabe",
+            "niveau": null,
+            "certification": null,
+            "score": null
+          }
+        ],
+        "apres": [
+          {
+            "langue": "Anglais",
+            "niveau": "B1",
+            "certification": null,
+            "score": null
+          },
+          {
+            "langue": "Espagnol",
+            "niveau": "B2",
+            "certification": null,
+            "score": null
+          },
+          {
+            "langue": "Arabe",
+            "niveau": "parlé, langue familiale",
+            "certification": null,
+            "score": null
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "LANGUES\nAnglais : niveau B1\nEspagnol : niveau B2\nArabe : parlé (langue familiale)"
+        ]
+      },
+      {
+        "chemin": [
+          "experiences"
+        ],
+        "avant": [
+          {
+            "type": "job_etudiant",
+            "poste": "Hôtesse de caisse",
+            "organisation": "Carrefour Market",
+            "duree": "Étés 2024 et 2025",
+            "missions": "Encaissement, gestion des files d'attente; Travail en équipe sur des horaires variables"
+          },
+          {
+            "type": "stage",
+            "poste": "null",
+            "organisation": "null",
+            "duree": "null",
+            "missions": "null"
+          }
+        ],
+        "apres": [
+          {
+            "type": "job_etudiant",
+            "poste": "Hôtesse de caisse",
+            "organisation": "Carrefour Market",
+            "duree": "Étés 2024 et 2025, deux étés consécutifs",
+            "missions": "Encaissement, gestion des files d’attente, travail en équipe sur des horaires variables"
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "EXPÉRIENCES\nHôtesse de caisse, Carrefour Market (Étés 2024 et 2025)\nSaint-Maur — contrat saisonnier, deux étés consécutifs\n - Encaissement, gestion des files d'attente\n- Travail en équipe sur des horaires variables"
+        ]
+      },
+      {
+        "chemin": [
+          "engagements"
+        ],
+        "avant": [
+          {
+            "role": "Hôtesse de caisse",
+            "organisation": "Carrefour Market",
+            "description": "Encaissement, gestion des files d'attente, travail en équipe sur des horaires variables"
+          },
+          {
+            "role": "Travailleur stagiaire",
+            "organisation": "Lycée Marcelin Berthelot",
+            "description": "Travail en équipe sur des horaires variables"
+          }
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "CENTRES D'INTÉRÊT\nLecture, séries, natation en loisir"
+        ]
+      },
+      {
+        "chemin": [
+          "international"
+        ],
+        "avant": [
+          {
+            "pays": "États-Unis",
+            "motif": "études",
+            "duree": "2026-2030"
+          },
+          {
+            "pays": "Espagne",
+            "motif": "études",
+            "duree": "2026-2030"
+          },
+          {
+            "pays": "Maroc",
+            "motif": "études",
+            "duree": "2026-2030"
+          },
+          {
+            "pays": "France",
+            "motif": "études",
+            "duree": "2026-2030"
+          },
+          {
+            "pays": "États-Unis",
+            "motif": "études",
+            "duree": "2026-2030"
+          },
+          {
+            "pays": "Espagne",
+            "motif": "études",
+            "duree": "2026-2030"
+          },
+          {
+            "pays": "Maroc",
+            "motif": "études",
+            "duree": "2026-2030"
+          },
+          {
+            "pays": "France",
+            "motif": "études",
+            "duree": "2026-2030"
+          }
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "LANGUES\nAnglais : niveau B1\nEspagnol : niveau B2\nArabe : parlé (langue familiale)\nCENTRES D'INTÉRÊT\nLecture, séries, natation en loisir"
+        ]
+      }
+    ]
+  },
+  "06_theo_barbier": {
+    "json_sha256": "c4dadaa835e4a92a58a83d4f09074500a9b34c25c2674111412884a15a8810a1",
+    "texte_sha256": "be355e3ad7143bf2700bcd38f61b77cd89b8268cbcfa48b50b5c261e85de2a4a",
+    "methode": "Comparaison manuelle par l’assistant au texte extrait ; validation humaine de l’équipe encore nécessaire.",
+    "corrections": [
+      {
+        "chemin": [
+          "formation",
+          "mention_bac"
+        ],
+        "avant": "Mention Bien",
+        "apres": "Bien",
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nJuin 2026\nBaccalauréat Général — Mention Bien\nLycée Montaigne, Bordeaux — Spécialités : HGGSP, SES, Mathématiques\n • Moyenne générale : 14,6/20\n• Mathématiques : 12,8/20 — HGGSP : 16,2/20\n• Grand oral : « Les frontières ont-elles encore un sens à l'ère numérique ? »"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "resultats"
+        ],
+        "avant": [
+          {
+            "intitule": "Moyenne générale",
+            "note_sur_20": 14.6
+          },
+          {
+            "intitule": "Mathématiques",
+            "note_sur_20": 12.8
+          },
+          {
+            "intitule": "HGGSP",
+            "note_sur_20": 16.2
+          },
+          {
+            "intitule": "Grand oral",
+            "note_sur_20": null
+          }
+        ],
+        "apres": [
+          {
+            "intitule": "Moyenne générale",
+            "note_sur_20": 14.6
+          },
+          {
+            "intitule": "Mathématiques",
+            "note_sur_20": 12.8
+          },
+          {
+            "intitule": "HGGSP",
+            "note_sur_20": 16.2
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nJuin 2026\nBaccalauréat Général — Mention Bien\nLycée Montaigne, Bordeaux — Spécialités : HGGSP, SES, Mathématiques\n • Moyenne générale : 14,6/20\n• Mathématiques : 12,8/20 — HGGSP : 16,2/20\n• Grand oral : « Les frontières ont-elles encore un sens à l'ère numérique ? »"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "langages"
+        ],
+        "avant": [
+          "Anglais scolaire (LV1)",
+          "Italien scolaire (LV2)"
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nRédaction et synthèse\nAisance à l'écrit, travaux de dissertation et de synthèse documentaire\nInformatique\nWord, PowerPoint, Excel (niveau basique)\nLangues\nAnglais scolaire (LV1) — Italien scolaire (LV2)"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "outils"
+        ],
+        "avant": [
+          "Word",
+          "PowerPoint",
+          "Excel"
+        ],
+        "apres": [
+          "Word",
+          "PowerPoint",
+          "Excel — niveau basique"
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nRédaction et synthèse\nAisance à l'écrit, travaux de dissertation et de synthèse documentaire\nInformatique\nWord, PowerPoint, Excel (niveau basique)\nLangues\nAnglais scolaire (LV1) — Italien scolaire (LV2)"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "projets"
+        ],
+        "avant": [
+          "Bénévole — Banque Alimentaire de Gironde"
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nRédaction et synthèse\nAisance à l'écrit, travaux de dissertation et de synthèse documentaire\nInformatique\nWord, PowerPoint, Excel (niveau basique)\nLangues\nAnglais scolaire (LV1) — Italien scolaire (LV2)"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "certifications"
+        ],
+        "avant": [
+          "aucun"
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nRédaction et synthèse\nAisance à l'écrit, travaux de dissertation et de synthèse documentaire\nInformatique\nWord, PowerPoint, Excel (niveau basique)\nLangues\nAnglais scolaire (LV1) — Italien scolaire (LV2)"
+        ]
+      },
+      {
+        "chemin": [
+          "langues"
+        ],
+        "avant": [
+          {
+            "langue": "anglais",
+            "niveau": "LV1",
+            "certification": "scolaire",
+            "score": null
+          },
+          {
+            "langue": "italien",
+            "niveau": "LV2",
+            "certification": "scolaire",
+            "score": null
+          }
+        ],
+        "apres": [
+          {
+            "langue": "Anglais",
+            "niveau": "scolaire (LV1)",
+            "certification": null,
+            "score": null
+          },
+          {
+            "langue": "Italien",
+            "niveau": "scolaire (LV2)",
+            "certification": null,
+            "score": null
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "Langues\nAnglais scolaire (LV1) — Italien scolaire (LV2)"
+        ]
+      },
+      {
+        "chemin": [
+          "experiences"
+        ],
+        "avant": [
+          {
+            "type": "stage",
+            "poste": "Bénévole",
+            "organisation": "Banque Alimentaire de Gironde",
+            "duree": "2024-2026",
+            "missions": "Participation aux collectes nationales, environ 4 journées par an"
+          },
+          {
+            "type": "job_etudiant",
+            "poste": "Baby-sitter régulier",
+            "organisation": "null",
+            "duree": "2024-2026",
+            "missions": "null"
+          },
+          {
+            "type": "emploi",
+            "poste": "Baccalauréat Général",
+            "organisation": "Lycée Montaigne, Bordeaux",
+            "duree": "Juin 2026",
+            "missions": "Spécialités : HGGSP, SES, Mathématiques"
+          },
+          {
+            "type": "emploi",
+            "poste": "Baccalauréat Général",
+            "organisation": "Lycée Montaigne, Bordeaux",
+            "duree": "Juin 2026",
+            "missions": "Moyenne générale : 14,6/20, Mathématiques : 12,8/20, HGGSP : 16,2/20, Grand oral : « Les frontières ont-elles encore un sens à l'ère numérique ? »"
+          }
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "ENGAGEMENT BÉNÉVOLE\n2024 – 2026\nBénévole — Banque Alimentaire de Gironde\nParticipation aux collectes nationales, environ 4 journées par an"
+        ]
+      },
+      {
+        "chemin": [
+          "engagements"
+        ],
+        "avant": [
+          {
+            "role": "Bénévole",
+            "organisation": "Banque Alimentaire de Gironde",
+            "description": "Participation aux collectes nationales, environ 4 journées par an"
+          },
+          {
+            "role": "Tennis en club",
+            "organisation": "Club de Tennis",
+            "description": "Loisir"
+          }
+        ],
+        "apres": [
+          {
+            "role": "Bénévole",
+            "organisation": "Banque Alimentaire de Gironde",
+            "description": "2024–2026 : participation aux collectes nationales, environ 4 journées par an"
+          },
+          {
+            "role": "Tennis en club",
+            "organisation": null,
+            "description": "Loisir"
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "ENGAGEMENT BÉNÉVOLE\n2024 – 2026\nBénévole — Banque Alimentaire de Gironde\nParticipation aux collectes nationales, environ 4 journées par an",
+          "Tennis en club (loisir)"
+        ]
+      },
+      {
+        "chemin": [
+          "international"
+        ],
+        "avant": [
+          {
+            "pays": "Espagne",
+            "motif": "famille",
+            "duree": "séjour familial"
+          },
+          {
+            "pays": "Portugal",
+            "motif": "famille",
+            "duree": "séjour familial"
+          }
+        ],
+        "apres": [
+          {
+            "pays": "Espagne",
+            "motif": "Séjours familiaux",
+            "duree": null
+          },
+          {
+            "pays": "Portugal",
+            "motif": "Séjours familiaux",
+            "duree": null
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "Voyages\nSéjours familiaux en Espagne et au Portugal\nTennis en club (loisir)"
+        ]
+      }
+    ]
+  },
+  "07_manon_petit": {
+    "json_sha256": "83bccd9228e5504f4a6cc696667dc0910a65627172eade8c25793c2d15d41bc5",
+    "texte_sha256": "a33e045aa20adf53f3c824edea6c11e86c40e8bd1a5e2d7814095595a5d4b3fa",
+    "methode": "Comparaison manuelle par l’assistant au texte extrait ; validation humaine de l’équipe encore nécessaire.",
+    "corrections": [
+      {
+        "chemin": [
+          "formation",
+          "prepa"
+        ],
+        "avant": "Non",
+        "apres": null,
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "PARCOURS SCOLAIRE\nBaccalauréat Général, mention Assez Bien (2026)\nLycée Faidherbe, Lille — Spécialités : Mathématiques, NSI, Physique-Chimie\n - Moyenne générale 12,9/20\n- Mathématiques : 11,4/20 au premier trimestre, 13,8/20 au troisième"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "resultats"
+        ],
+        "avant": [
+          {
+            "intitule": "Moyenne générale",
+            "note_sur_20": 12.9
+          },
+          {
+            "intitule": "Mathématiques",
+            "note_sur_20": 11.4
+          },
+          {
+            "intitule": "Mathématiques",
+            "note_sur_20": 13.8
+          },
+          {
+            "intitule": "Site web personnel",
+            "note_sur_20": null
+          },
+          {
+            "intitule": "Site vitrine",
+            "note_sur_20": null
+          }
+        ],
+        "apres": [
+          {
+            "intitule": "Moyenne générale",
+            "note_sur_20": 12.9
+          },
+          {
+            "intitule": "Mathématiques premier trimestre",
+            "note_sur_20": 11.4
+          },
+          {
+            "intitule": "Mathématiques troisième trimestre",
+            "note_sur_20": 13.8
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "PARCOURS SCOLAIRE\nBaccalauréat Général, mention Assez Bien (2026)\nLycée Faidherbe, Lille — Spécialités : Mathématiques, NSI, Physique-Chimie\n - Moyenne générale 12,9/20\n- Mathématiques : 11,4/20 au premier trimestre, 13,8/20 au troisième"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "langages"
+        ],
+        "avant": [
+          "HTML",
+          "CSS",
+          "Python"
+        ],
+        "apres": [
+          "HTML — notions",
+          "CSS — notions",
+          "Python — bases en NSI"
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "PROJETS\nSite web personnel (projet NSI) (2025)\nSite vitrine en HTML/CSS présentant mes centres d'intérêt. Projet commencé en Première, non finalisé (pas de mise\nen ligne).\nCOMPÉTENCES\nHTML / CSS : notions\nPython : bases vues en cours de NSI\nSuite Office : Word, Excel, PowerPoint"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "outils"
+        ],
+        "avant": [
+          "Suite Office",
+          "Word",
+          "Excel",
+          "PowerPoint"
+        ],
+        "apres": [
+          "Word",
+          "Excel",
+          "PowerPoint"
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "PROJETS\nSite web personnel (projet NSI) (2025)\nSite vitrine en HTML/CSS présentant mes centres d'intérêt. Projet commencé en Première, non finalisé (pas de mise\nen ligne).\nCOMPÉTENCES\nHTML / CSS : notions\nPython : bases vues en cours de NSI\nSuite Office : Word, Excel, PowerPoint"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "projets"
+        ],
+        "avant": [
+          "Site web personnel (projet NSI)"
+        ],
+        "apres": [
+          "Site web personnel NSI (2025) : site vitrine HTML/CSS sur les centres d’intérêt, commencé en Première, non finalisé, pas de mise en ligne"
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "PROJETS\nSite web personnel (projet NSI) (2025)\nSite vitrine en HTML/CSS présentant mes centres d'intérêt. Projet commencé en Première, non finalisé (pas de mise\nen ligne).\nCOMPÉTENCES\nHTML / CSS : notions\nPython : bases vues en cours de NSI\nSuite Office : Word, Excel, PowerPoint"
+        ]
+      },
+      {
+        "chemin": [
+          "langues"
+        ],
+        "avant": [
+          {
+            "langue": "anglais",
+            "niveau": "B1",
+            "certification": "n/a",
+            "score": "n/a"
+          },
+          {
+            "langue": "néerlandais",
+            "niveau": "n/a",
+            "certification": "LV2",
+            "score": "n/a"
+          }
+        ],
+        "apres": [
+          {
+            "langue": "Anglais",
+            "niveau": "B1",
+            "certification": null,
+            "score": null
+          },
+          {
+            "langue": "Néerlandais",
+            "niveau": "notions (LV2)",
+            "certification": null,
+            "score": null
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "LANGUES\nAnglais : niveau B1\nNéerlandais : notions (LV2)"
+        ]
+      },
+      {
+        "chemin": [
+          "experiences"
+        ],
+        "avant": [
+          {
+            "type": "job_etudiant",
+            "poste": "Baby-sitting régulier",
+            "organisation": "Famille",
+            "duree": "2025-2026",
+            "missions": "Préparation des repas, soins aux enfants"
+          },
+          {
+            "type": "stage",
+            "poste": "Stagiaire",
+            "organisation": "Entreprise X",
+            "duree": "2024-2025",
+            "missions": "Aide à la gestion des réseaux sociaux, création de contenu"
+          },
+          {
+            "type": "job_etudiant",
+            "poste": "Job saisonnier étudiant",
+            "organisation": "Entreprise Y",
+            "duree": "2023-2024",
+            "missions": "Aide à la préparation des événements, gestion des relations avec les clients"
+          },
+          {
+            "type": "benevolat",
+            "poste": "Membre du club photo du lycée",
+            "organisation": "Lycée Faidherbe",
+            "duree": "2022-2023",
+            "missions": "Participation à l'exposition de fin d'année, organisation des événements"
+          }
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "PARCOURS SCOLAIRE\nBaccalauréat Général, mention Assez Bien (2026)\nLycée Faidherbe, Lille — Spécialités : Mathématiques, NSI, Physique-Chimie\n - Moyenne générale 12,9/20\n- Mathématiques : 11,4/20 au premier trimestre, 13,8/20 au troisième\nPROJETS\nSite web personnel (projet NSI) (2025)\nSite vitrine en HTML/CSS présentant mes centres d'intérêt. Projet commencé en Première, non finalisé (pas de mise\nen ligne).\nCOMPÉTENCES\nHTML / CSS : notions\nPython : bases vues en cours de NSI\nSuite Office : Word, Excel, PowerPoint"
+        ]
+      },
+      {
+        "chemin": [
+          "engagements"
+        ],
+        "avant": [
+          {
+            "role": "Membre",
+            "organisation": "Club photo du lycée",
+            "description": "Participation à l'exposition de fin d'année, depuis la Seconde"
+          },
+          {
+            "role": "Membre",
+            "organisation": "Équipe de NSI",
+            "description": "Participation à des projets et activités liés à l'NSI"
+          }
+        ],
+        "apres": [
+          {
+            "role": "Membre",
+            "organisation": "Club photo du lycée",
+            "description": "Depuis la Seconde, participation à l’exposition de fin d’année"
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "ACTIVITÉS\nClub photo du lycée\nMembre depuis la Seconde, participation à l'exposition de fin d'année"
+        ]
+      },
+      {
+        "chemin": [
+          "international"
+        ],
+        "avant": [
+          {
+            "pays": "Belgique",
+            "motif": "études",
+            "duree": "1 an"
+          },
+          {
+            "pays": "Espagne",
+            "motif": "études",
+            "duree": "1 an"
+          },
+          {
+            "pays": "Italie",
+            "motif": "études",
+            "duree": "1 an"
+          },
+          {
+            "pays": "France",
+            "motif": "études",
+            "duree": "1 an"
+          }
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "LANGUES\nAnglais : niveau B1\nNéerlandais : notions (LV2)\nACTIVITÉS\nClub photo du lycée\nMembre depuis la Seconde, participation à l'exposition de fin d'année"
+        ]
+      }
+    ]
+  },
+  "08_adam_fontaine": {
+    "json_sha256": "d48c3aed172cccde172c6b742f4a1dda9ae28d52a86110293b7dd762ec7492ec",
+    "texte_sha256": "a0b18221f756f1ab0e2d19f0edd93cfcb34f2a62de81b5a03e4fba6baf20ca79",
+    "methode": "Comparaison manuelle par l’assistant au texte extrait ; validation humaine de l’équipe encore nécessaire.",
+    "corrections": [
+      {
+        "chemin": [
+          "formation",
+          "mention_bac"
+        ],
+        "avant": "Mention Bien",
+        "apres": "Bien",
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nJuin 2026\nBaccalauréat Général — Mention Bien\nLycée Blaise Pascal, Clermont-Ferrand — Spécialités : SES, Mathématiques, Anglais Monde Contemporain\n • Moyenne générale : 14,3/20\n• SES : 15,7/20 — Mathématiques : 12,1/20"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "langages"
+        ],
+        "avant": [
+          "Anglais",
+          "Espagnol"
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES ET ACTIVITÉS\nInformatique\nPack Office. Pas de langage de programmation pratiqué."
+        ]
+      },
+      {
+        "chemin": [
+          "langues"
+        ],
+        "avant": [
+          {
+            "langue": "anglais",
+            "niveau": "B2",
+            "certification": "Aucune",
+            "score": null
+          },
+          {
+            "langue": "espagnol",
+            "niveau": "A2",
+            "certification": "Aucune",
+            "score": null
+          }
+        ],
+        "apres": [
+          {
+            "langue": "Anglais",
+            "niveau": "B2, pas de certification",
+            "certification": null,
+            "score": null
+          },
+          {
+            "langue": "Espagnol",
+            "niveau": "A2",
+            "certification": null,
+            "score": null
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "LANGUES\nAnglais — niveau B2\nEnseignement de spécialité Anglais Monde Contemporain suivi en Première et Terminale. Pas de certification passée.\nEspagnol — niveau A2"
+        ]
+      },
+      {
+        "chemin": [
+          "experiences"
+        ],
+        "avant": [
+          {
+            "type": "stage",
+            "poste": "Stage d'observation",
+            "organisation": "Crédit Agricole, agence de Jaude",
+            "duree": "3 jours",
+            "missions": "Classement et archivage de dossiers clients, Observation de rendez-vous commerciaux (2 demi-journées)"
+          },
+          {
+            "type": "job_etudiant",
+            "poste": "Baby-sitting régulier",
+            "organisation": "null",
+            "duree": "null",
+            "missions": "null"
+          }
+        ],
+        "apres": [
+          {
+            "type": "stage",
+            "poste": "Stage d'observation",
+            "organisation": "Crédit Agricole, agence de Jaude",
+            "duree": "Décembre 2025, 3 jours",
+            "missions": "Classement et archivage de dossiers clients ; observation de rendez-vous commerciaux (2 demi-journées)"
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "EXPÉRIENCE\nDécembre 2025\nStage d'observation — Crédit Agricole, agence de Jaude\nClermont-Ferrand — 3 jours\n • Classement et archivage de dossiers clients\n• Observation de rendez-vous commerciaux (2 demi-journées)"
+        ]
+      },
+      {
+        "chemin": [
+          "engagements"
+        ],
+        "avant": [
+          {
+            "role": "Classement et archivage de dossiers clients",
+            "organisation": "Crédit Agricole",
+            "description": "agence de Jaude, Clermont-Ferrand"
+          },
+          {
+            "role": "Observation de rendez-vous commerciaux",
+            "organisation": "Crédit Agricole",
+            "description": "agence de Jaude, Clermont-Ferrand (2 demi-journées)"
+          },
+          {
+            "role": "Licencié en club de handball",
+            "organisation": "ASM Clermont",
+            "description": "Licencié en club depuis 6 ans, sans responsabilité d'encadrement"
+          }
+        ],
+        "apres": [
+          {
+            "role": "Licencié",
+            "organisation": "ASM Clermont",
+            "description": "Handball 2020–2026, 6 ans en club, sans responsabilité d’encadrement"
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "2020 – 2026\nHandball — ASM Clermont\nLicencié en club depuis 6 ans, sans responsabilité d'encadrement"
+        ]
+      },
+      {
+        "chemin": [
+          "international"
+        ],
+        "avant": [
+          {
+            "pays": "France",
+            "motif": "Famille",
+            "duree": "6 ans"
+          },
+          {
+            "pays": "France",
+            "motif": "Stage",
+            "duree": "3 jours"
+          },
+          {
+            "pays": "Espagne",
+            "motif": "Études",
+            "duree": "6 ans"
+          }
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "LANGUES\nAnglais — niveau B2\nEnseignement de spécialité Anglais Monde Contemporain suivi en Première et Terminale. Pas de certification passée.\nEspagnol — niveau A2\nCOMPÉTENCES ET ACTIVITÉS\nInformatique\nPack Office. Pas de langage de programmation pratiqué.\n2020 – 2026\nHandball — ASM Clermont\nLicencié en club depuis 6 ans, sans responsabilité d'encadrement"
+        ]
+      }
+    ]
+  },
+  "11_chloe_renard": {
+    "json_sha256": "d97b9996118e06bfedea33ebfe5eceaea14d003fc22b61c8c966092b2abfd906",
+    "texte_sha256": "6829dfbb1dc144cf455ee27bd8b8c630ea9fc3c7c2b8f8a6529bf9f7d33c0d02",
+    "methode": "Comparaison manuelle par l’assistant au texte extrait ; validation humaine de l’équipe encore nécessaire.",
+    "corrections": [
+      {
+        "chemin": [
+          "formation",
+          "prepa"
+        ],
+        "avant": "Année de Terminale redoublée - 2024 – 2026",
+        "apres": null,
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "SCOLARITÉ\nBaccalauréat Général - 2026. Lycée Jean-Baptiste Corot, Savigny-sur-Orge. Spécialités : SES,\nHistoire-Géographie, Humanités Littérature et Philosophie. Moyenne 11,4/20, sans mention.\nAnnée de Terminale redoublée - 2024 – 2026. Même établissement"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "anomalies_parcours"
+        ],
+        "avant": "redoublée",
+        "apres": "Année de Terminale redoublée, 2024–2026, même établissement",
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "SCOLARITÉ\nBaccalauréat Général - 2026. Lycée Jean-Baptiste Corot, Savigny-sur-Orge. Spécialités : SES,\nHistoire-Géographie, Humanités Littérature et Philosophie. Moyenne 11,4/20, sans mention.\nAnnée de Terminale redoublée - 2024 – 2026. Même établissement"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "resultats"
+        ],
+        "avant": [
+          {
+            "intitule": "Baccalauréat Général",
+            "note_sur_20": null
+          },
+          {
+            "intitule": "Année de Terminale",
+            "note_sur_20": null
+          }
+        ],
+        "apres": [
+          {
+            "intitule": "Moyenne générale",
+            "note_sur_20": 11.4
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "SCOLARITÉ\nBaccalauréat Général - 2026. Lycée Jean-Baptiste Corot, Savigny-sur-Orge. Spécialités : SES,\nHistoire-Géographie, Humanités Littérature et Philosophie. Moyenne 11,4/20, sans mention.\nAnnée de Terminale redoublée - 2024 – 2026. Même établissement"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "langages"
+        ],
+        "avant": [
+          "Anglais",
+          "Scolaire"
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "DIVERS\nPermis de conduire en cours d'obtention.\nCentres d'intérêt : cinéma, sorties entre amis."
+        ]
+      },
+      {
+        "chemin": [
+          "langues"
+        ],
+        "avant": [
+          {
+            "langue": "anglais",
+            "niveau": "scolaire",
+            "certification": null,
+            "score": null
+          },
+          {
+            "langue": "espagnol",
+            "niveau": null,
+            "certification": "notions",
+            "score": null
+          }
+        ],
+        "apres": [
+          {
+            "langue": "Anglais",
+            "niveau": "scolaire",
+            "certification": null,
+            "score": null
+          },
+          {
+            "langue": "Espagnol",
+            "niveau": "notions",
+            "certification": null,
+            "score": null
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "LANGUES\nAnglais : niveau scolaire.\nEspagnol : notions."
+        ]
+      },
+      {
+        "chemin": [
+          "experiences"
+        ],
+        "avant": [
+          {
+            "type": "job_etudiant",
+            "poste": "Baby-sitter régulier",
+            "organisation": "Famille",
+            "duree": "2024-2026",
+            "missions": "Ferme les enfants, les soins des enfants, les activités avec les enfants"
+          },
+          {
+            "type": "stage",
+            "poste": "Stagiaire",
+            "organisation": "Entreprise X",
+            "duree": "2024-2025",
+            "missions": "Tâches administratives, tâches de réception, tâches de communication"
+          }
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "SCOLARITÉ\nBaccalauréat Général - 2026. Lycée Jean-Baptiste Corot, Savigny-sur-Orge. Spécialités : SES,\nHistoire-Géographie, Humanités Littérature et Philosophie. Moyenne 11,4/20, sans mention.\nAnnée de Terminale redoublée - 2024 – 2026. Même établissement\nLANGUES\nAnglais : niveau scolaire.\nEspagnol : notions.\nDIVERS\nPermis de conduire en cours d'obtention.\nCentres d'intérêt : cinéma, sorties entre amis."
+        ]
+      },
+      {
+        "chemin": [
+          "engagements"
+        ],
+        "avant": [
+          {
+            "role": "Membre",
+            "organisation": "Équipe de handball",
+            "description": "Activités associatives et sportives collectives"
+          },
+          {
+            "role": "Membre",
+            "organisation": "Club de cinéma",
+            "description": "Activités associatives et sportives collectives"
+          },
+          {
+            "role": "Membre",
+            "organisation": "Équipe de football",
+            "description": "Activités associatives et sportives collectives"
+          }
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "DIVERS\nPermis de conduire en cours d'obtention.\nCentres d'intérêt : cinéma, sorties entre amis."
+        ]
+      },
+      {
+        "chemin": [
+          "international"
+        ],
+        "avant": [
+          {
+            "pays": "Espagne",
+            "motif": "études",
+            "duree": "2024-2026"
+          },
+          {
+            "pays": "États-Unis",
+            "motif": "études",
+            "duree": "2024-2026"
+          }
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "LANGUES\nAnglais : niveau scolaire.\nEspagnol : notions.\nDIVERS\nPermis de conduire en cours d'obtention.\nCentres d'intérêt : cinéma, sorties entre amis."
+        ]
+      }
+    ]
+  },
+  "04_hugo_lefebvre": {
+    "json_sha256": "924bd581df880df8792f9c50ef84d7a8624cad249cd810331cd9612e814f26c9",
+    "texte_sha256": "d70c4b9858e1cf7b12c1439e91bd2395a84ffbfda4d1ae41472c4f4ba67a7f15",
+    "methode": "Comparaison manuelle par l’assistant au texte extrait ; validation humaine de l’équipe encore nécessaire.",
+    "corrections": [
+      {
+        "chemin": [
+          "formation",
+          "filiere_bac"
+        ],
+        "avant": "Baccalauréat Général — Mention Bien",
+        "apres": "Baccalauréat Général",
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nJuin 2026\nBaccalauréat Général — Mention Bien\nLycée Jean Moulin, Angers — Spécialités : Mathématiques, SES, Histoire-Géographie\n • Moyenne générale : 14,8/20\n2023\nBrevet des collèges — Mention Bien\nCollège Jean Vilar, Angers"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "mention_bac"
+        ],
+        "avant": "Mention Bien",
+        "apres": "Bien",
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nJuin 2026\nBaccalauréat Général — Mention Bien\nLycée Jean Moulin, Angers — Spécialités : Mathématiques, SES, Histoire-Géographie\n • Moyenne générale : 14,8/20\n2023\nBrevet des collèges — Mention Bien\nCollège Jean Vilar, Angers"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "resultats"
+        ],
+        "avant": [
+          {
+            "intitule": "Moyenne générale",
+            "note_sur_20": 14.8
+          },
+          {
+            "intitule": "Brevet des collèges",
+            "note_sur_20": null
+          }
+        ],
+        "apres": [
+          {
+            "intitule": "Moyenne générale",
+            "note_sur_20": 14.8
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nJuin 2026\nBaccalauréat Général — Mention Bien\nLycée Jean Moulin, Angers — Spécialités : Mathématiques, SES, Histoire-Géographie\n • Moyenne générale : 14,8/20\n2023\nBrevet des collèges — Mention Bien\nCollège Jean Vilar, Angers"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "langages"
+        ],
+        "avant": [
+          "Anglais scolaire (LV1)",
+          "Espagnol scolaire (LV2)"
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nInformatique\nPack Office (Word, Excel, PowerPoint) — niveau courant\nLangues\nAnglais scolaire (LV1) — Espagnol scolaire (LV2)"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "outils"
+        ],
+        "avant": [
+          "Pack Office (Word, Excel, PowerPoint)"
+        ],
+        "apres": [
+          "Word — niveau courant",
+          "Excel — niveau courant",
+          "PowerPoint — niveau courant"
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nInformatique\nPack Office (Word, Excel, PowerPoint) — niveau courant\nLangues\nAnglais scolaire (LV1) — Espagnol scolaire (LV2)"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "projets"
+        ],
+        "avant": [
+          "Vendeur — Boulangerie Le Fournil d'Anjou"
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nInformatique\nPack Office (Word, Excel, PowerPoint) — niveau courant\nLangues\nAnglais scolaire (LV1) — Espagnol scolaire (LV2)"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "certifications"
+        ],
+        "avant": [
+          "Brevet des collèges — Mention Bien"
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nInformatique\nPack Office (Word, Excel, PowerPoint) — niveau courant\nLangues\nAnglais scolaire (LV1) — Espagnol scolaire (LV2)"
+        ]
+      },
+      {
+        "chemin": [
+          "langues"
+        ],
+        "avant": [
+          {
+            "langue": "anglais",
+            "niveau": "LV1",
+            "certification": "scolaire",
+            "score": null
+          },
+          {
+            "langue": "espagnol",
+            "niveau": "LV2",
+            "certification": "scolaire",
+            "score": null
+          }
+        ],
+        "apres": [
+          {
+            "langue": "Anglais",
+            "niveau": "scolaire (LV1)",
+            "certification": null,
+            "score": null
+          },
+          {
+            "langue": "Espagnol",
+            "niveau": "scolaire (LV2)",
+            "certification": null,
+            "score": null
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "Langues\nAnglais scolaire (LV1) — Espagnol scolaire (LV2)"
+        ]
+      },
+      {
+        "chemin": [
+          "experiences"
+        ],
+        "avant": [
+          {
+            "type": "job_etudiant",
+            "poste": "Vendeur",
+            "organisation": "Boulangerie Le Fournil d'Anjou",
+            "duree": "2025-2026",
+            "missions": "Accueil et conseil client, tenue de caisse, gestion de l'affluence du week-end"
+          },
+          {
+            "type": "stage",
+            "poste": "Stage de 3e",
+            "organisation": "Agence immobilière Foncia",
+            "duree": "2022",
+            "missions": "Observation, une semaine"
+          },
+          {
+            "type": "job_etudiant",
+            "poste": "Vendeur",
+            "organisation": "Boulangerie Le Fournil d'Anjou",
+            "duree": "2025-2026",
+            "missions": "Accueil et conseil client, tenue de caisse, gestion de l'affluence du week-end"
+          },
+          {
+            "type": "job_etudiant",
+            "poste": "Vendeur",
+            "organisation": "Boulangerie Le Fournil d'Anjou",
+            "duree": "2025-2026",
+            "missions": "Accueil et conseil client, tenue de caisse, gestion de l'affluence du week-end"
+          }
+        ],
+        "apres": [
+          {
+            "type": "job_etudiant",
+            "poste": "Vendeur",
+            "organisation": "Boulangerie Le Fournil d'Anjou",
+            "duree": "2025–2026, samedis et dimanches matin",
+            "missions": "Accueil et conseil client, tenue de caisse, gestion de l’affluence du week-end"
+          },
+          {
+            "type": "stage",
+            "poste": "Stage de 3e",
+            "organisation": "Agence immobilière Foncia",
+            "duree": "2022, une semaine",
+            "missions": "Observation"
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "EXPÉRIENCE PROFESSIONNELLE\n2025 – 2026\nVendeur — Boulangerie Le Fournil d'Anjou\nAngers — emploi étudiant les samedis et dimanches matin\n • Accueil et conseil client, tenue de caisse\n• Gestion de l'affluence du week-end\n2022\nStage de 3e — Agence immobilière Foncia\nObservation, une semaine"
+        ]
+      },
+      {
+        "chemin": [
+          "engagements"
+        ],
+        "avant": [
+          {
+            "role": "Membre",
+            "organisation": "Club théâtre du lycée",
+            "description": "Participation aux deux représentations annuelles"
+          },
+          {
+            "role": "Licencié",
+            "organisation": "US Angers",
+            "description": "Football en club"
+          }
+        ],
+        "apres": [
+          {
+            "role": "Membre",
+            "organisation": "Club théâtre du lycée",
+            "description": "2024–2026, participation aux deux représentations annuelles"
+          },
+          {
+            "role": "Licencié, catégorie U18",
+            "organisation": "US Angers",
+            "description": "Football en club, 2021–2024"
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "ACTIVITÉS EXTRASCOLAIRES\n2024 – 2026\nClub théâtre du lycée\nMembre, participation aux deux représentations annuelles\n2021 – 2024\nFootball en club — US Angers\nLicencié, catégorie U18"
+        ]
+      }
+    ]
+  },
+  "09_sarah_da_silva": {
+    "json_sha256": "758a2f4e7cc4ac201b4b334651617d1f652767543221b8df6e7f43c7697af907",
+    "texte_sha256": "cabd0795f8725704997a096589949a81d536c7a18598dc7c378c6587bf6d4a75",
+    "methode": "Comparaison manuelle par l’assistant au texte extrait ; validation humaine de l’équipe encore nécessaire.",
+    "corrections": [
+      {
+        "chemin": [
+          "competences",
+          "langages"
+        ],
+        "avant": [
+          "Excel",
+          "Word",
+          "PowerPoint"
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nExcel : niveau intermédiaire\nFormules de base, mise en forme de tableaux de gestion. Formation complémentaire en cours (MOOC).\nWord, PowerPoint : niveau courant\nNotions de comptabilité générale (programme STMG)"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "outils"
+        ],
+        "avant": [
+          "Formules de base",
+          "Mise en forme de tableaux de gestion"
+        ],
+        "apres": [
+          "Excel — niveau intermédiaire, formules de base et tableaux de gestion",
+          "Word — niveau courant",
+          "PowerPoint — niveau courant"
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nExcel : niveau intermédiaire\nFormules de base, mise en forme de tableaux de gestion. Formation complémentaire en cours (MOOC).\nWord, PowerPoint : niveau courant\nNotions de comptabilité générale (programme STMG)"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "projets"
+        ],
+        "avant": [
+          "Stage de Première STMG",
+          "Vendeuse"
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nExcel : niveau intermédiaire\nFormules de base, mise en forme de tableaux de gestion. Formation complémentaire en cours (MOOC).\nWord, PowerPoint : niveau courant\nNotions de comptabilité générale (programme STMG)"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "certifications"
+        ],
+        "avant": [
+          "Notions de comptabilité générale"
+        ],
+        "apres": [
+          "MOOC Excel, formation complémentaire en cours (certification non annoncée)"
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nExcel : niveau intermédiaire\nFormules de base, mise en forme de tableaux de gestion. Formation complémentaire en cours (MOOC).\nWord, PowerPoint : niveau courant\nNotions de comptabilité générale (programme STMG)"
+        ]
+      },
+      {
+        "chemin": [
+          "langues"
+        ],
+        "avant": [
+          {
+            "langue": "anglais",
+            "niveau": "B1",
+            "certification": "test de langue",
+            "score": null
+          },
+          {
+            "langue": "portugais",
+            "niveau": null,
+            "certification": "compréhension orale",
+            "score": null
+          }
+        ],
+        "apres": [
+          {
+            "langue": "Anglais",
+            "niveau": "B1",
+            "certification": null,
+            "score": null
+          },
+          {
+            "langue": "Portugais",
+            "niveau": "compréhension orale, langue familiale",
+            "certification": null,
+            "score": null
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "LANGUES\nAnglais : niveau B1\nPortugais : compréhension orale (langue familiale)"
+        ]
+      },
+      {
+        "chemin": [
+          "experiences"
+        ],
+        "avant": [
+          {
+            "type": "stage",
+            "poste": "Saisie de pièces comptables, classement",
+            "organisation": "Cabinet comptable Ducasse & Associés",
+            "duree": "2 semaines",
+            "missions": "Conseil client et mise en rayon"
+          },
+          {
+            "type": "job_etudiant",
+            "poste": "Vendeuse",
+            "organisation": "Jennyfer",
+            "duree": "5 semaines",
+            "missions": "Conseil client et mise en rayon, Tenue de caisse et opérations de soldes"
+          }
+        ],
+        "apres": [
+          {
+            "type": "job_etudiant",
+            "poste": "Vendeuse",
+            "organisation": "Jennyfer, centre commercial Mériadeck",
+            "duree": "Juillet-août 2025, 5 semaines",
+            "missions": "Conseil client, mise en rayon, tenue de caisse et opérations de soldes"
+          },
+          {
+            "type": "stage",
+            "poste": "Stage de Première STMG",
+            "organisation": "Cabinet comptable Ducasse & Associés",
+            "duree": "2025, 2 semaines",
+            "missions": "Saisie de pièces comptables, classement"
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "EXPÉRIENCE PROFESSIONNELLE\nVendeuse — Jennyfer, centre commercial Mériadeck (Juillet-août 2025)\nBordeaux — contrat saisonnier d'été, 5 semaines\n - Conseil client et mise en rayon\n- Tenue de caisse et opérations de soldes\nStage de Première STMG — Cabinet comptable Ducasse & Associés (2025)\nBordeaux — 2 semaines. Saisie de pièces comptables, classement."
+        ]
+      },
+      {
+        "chemin": [
+          "engagements"
+        ],
+        "avant": [
+          {
+            "role": "Vendeuse",
+            "organisation": "Jennyfer",
+            "description": "centre commercial Mériadeck, Bordeaux - contrat saisonnier d'été, 5 semaines - Conseil client et mise en rayon - Tenue de caisse et opérations de soldes"
+          },
+          {
+            "role": "Stage de Première STMG",
+            "organisation": "Cabinet comptable Ducasse & Associés",
+            "description": "Bordeaux - 2 semaines. Saisie de pièces comptables, classement"
+          }
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nExcel : niveau intermédiaire\nFormules de base, mise en forme de tableaux de gestion. Formation complémentaire en cours (MOOC).\nWord, PowerPoint : niveau courant\nNotions de comptabilité générale (programme STMG)\nLANGUES\nAnglais : niveau B1\nPortugais : compréhension orale (langue familiale)"
+        ]
+      }
+    ]
+  },
+  "10_kevin_dubreuil": {
+    "json_sha256": "b2a53c5213ef961399f11516cf21b38dff3f4d41fb628636c9e0cab9b1a6173e",
+    "texte_sha256": "5c0ca5583a6f404b277db41d74e29b8c8bb342472badb301ccc5df61538bf8e9",
+    "methode": "Comparaison manuelle par l’assistant au texte extrait ; validation humaine de l’équipe encore nécessaire.",
+    "corrections": [
+      {
+        "chemin": [
+          "formation",
+          "specialites"
+        ],
+        "avant": [
+          "Arts Plastiques",
+          "Histoire-Géographie"
+        ],
+        "apres": [
+          "Arts Plastiques",
+          "Histoire-Géographie",
+          "SES"
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nBaccalauréat Général - 2026. Lycée Voltaire, Orléans. Spécialités : Arts Plastiques, Histoire-Géographie,\nSES. Moyenne générale 12,1/20, sans mention.\nBrevet des collèges - 2023. Collège Alain-Fournier, Orléans"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "prepa"
+        ],
+        "avant": "null",
+        "apres": null,
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nBaccalauréat Général - 2026. Lycée Voltaire, Orléans. Spécialités : Arts Plastiques, Histoire-Géographie,\nSES. Moyenne générale 12,1/20, sans mention.\nBrevet des collèges - 2023. Collège Alain-Fournier, Orléans"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "anomalies_parcours"
+        ],
+        "avant": "null",
+        "apres": null,
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nBaccalauréat Général - 2026. Lycée Voltaire, Orléans. Spécialités : Arts Plastiques, Histoire-Géographie,\nSES. Moyenne générale 12,1/20, sans mention.\nBrevet des collèges - 2023. Collège Alain-Fournier, Orléans"
+        ]
+      },
+      {
+        "chemin": [
+          "formation",
+          "resultats"
+        ],
+        "avant": [
+          {
+            "intitule": "Moyenne générale",
+            "note_sur_20": 12.1
+          },
+          {
+            "intitule": "Brevet des collèges",
+            "note_sur_20": null
+          }
+        ],
+        "apres": [
+          {
+            "intitule": "Moyenne générale",
+            "note_sur_20": 12.1
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nBaccalauréat Général - 2026. Lycée Voltaire, Orléans. Spécialités : Arts Plastiques, Histoire-Géographie,\nSES. Moyenne générale 12,1/20, sans mention.\nBrevet des collèges - 2023. Collège Alain-Fournier, Orléans"
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "langages"
+        ],
+        "avant": [
+          "Word",
+          "PowerPoint"
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nInformatique : Word, PowerPoint.\nAnglais : niveau scolaire."
+        ]
+      },
+      {
+        "chemin": [
+          "competences",
+          "outils"
+        ],
+        "avant": [
+          "Anglais",
+          "niveau scolaire"
+        ],
+        "apres": [
+          "Word",
+          "PowerPoint"
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nInformatique : Word, PowerPoint.\nAnglais : niveau scolaire."
+        ]
+      },
+      {
+        "chemin": [
+          "langues"
+        ],
+        "avant": [
+          {
+            "langue": "anglais",
+            "niveau": "scolaire",
+            "certification": "test de langue",
+            "score": null
+          },
+          {
+            "langue": "français",
+            "niveau": null,
+            "certification": "français",
+            "score": null
+          }
+        ],
+        "apres": [
+          {
+            "langue": "Anglais",
+            "niveau": "scolaire",
+            "certification": null,
+            "score": null
+          }
+        ],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "COMPÉTENCES\nInformatique : Word, PowerPoint.\nAnglais : niveau scolaire."
+        ]
+      },
+      {
+        "chemin": [
+          "experiences"
+        ],
+        "avant": [
+          {
+            "type": "stage",
+            "poste": "Stagiaire",
+            "organisation": "Lycée Voltaire",
+            "duree": "2026-2027",
+            "missions": "Travail de projet de dessin, réalisation de projets de jeux vidéo"
+          },
+          {
+            "type": "job_etudiant",
+            "poste": "Baby-sitter régulier",
+            "organisation": "Famille",
+            "duree": "2023-2026",
+            "missions": "Prendre soin d'enfants"
+          },
+          {
+            "type": "emploi",
+            "poste": "Travail étudiant",
+            "organisation": "Entreprise",
+            "duree": "2023",
+            "missions": "Travail de projet de dessin"
+          },
+          {
+            "type": "benevolat",
+            "poste": "Volontariat",
+            "organisation": "Organisation",
+            "duree": "2023",
+            "missions": "Aide à un projet de dessin"
+          }
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "FORMATION\nBaccalauréat Général - 2026. Lycée Voltaire, Orléans. Spécialités : Arts Plastiques, Histoire-Géographie,\nSES. Moyenne générale 12,1/20, sans mention.\nBrevet des collèges - 2023. Collège Alain-Fournier, Orléans\nCOMPÉTENCES\nInformatique : Word, PowerPoint.\nAnglais : niveau scolaire.\nLOISIRS\nDessin, jeux vidéo, musique."
+        ]
+      },
+      {
+        "chemin": [
+          "engagements"
+        ],
+        "avant": [
+          {
+            "role": "Membre",
+            "organisation": "Club de dessin",
+            "description": "Activités associatives et sportives collectives"
+          },
+          {
+            "role": "Membre",
+            "organisation": "Équipe de jeux vidéo",
+            "description": "Activités associatives et sportives collectives"
+          },
+          {
+            "role": "Membre",
+            "organisation": "Orchestre scolaire",
+            "description": "Activités associatives et sportives collectives"
+          }
+        ],
+        "apres": [],
+        "raison": "Relecture du texte : conserver les faits explicitement annoncés, corriger les omissions, ajouts ou classements incorrects et uniformiser les libellés.",
+        "extraits_source": [
+          "LOISIRS\nDessin, jeux vidéo, musique."
+        ]
+      }
+    ]
+  }
+}

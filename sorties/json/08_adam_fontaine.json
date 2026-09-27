@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "id_candidat": "08_adam_fontaine",
+    "fichier_source": "08_adam_fontaine.pdf"
+  },
+  "formation": {
+    "filiere_bac": "Baccalauréat Général",
+    "mention_bac": "Mention Bien",
+    "etablissement": "Lycée Blaise Pascal, Clermont-Ferrand",
+    "specialites": [
+      "SES",
+      "Mathématiques",
+      "Anglais Monde Contemporain"
+    ],
+    "options": [],
+    "prepa": null,
+    "etudes_superieures": [],
+    "anomalies_parcours": null,
+    "concours": [],
+    "resultats": [
+      {
+        "intitule": "Moyenne générale",
+        "note_sur_20": 14.3
+      },
+      {
+        "intitule": "SES",
+        "note_sur_20": 15.7
+      },
+      {
+        "intitule": "Mathématiques",
+        "note_sur_20": 12.1
+      }
+    ]
+  },
+  "competences": {
+    "langages": [
+      "Anglais",
+      "Espagnol"
+    ],
+    "outils": [
+      "Pack Office"
+    ],
+    "projets": [],
+    "certifications": []
+  },
+  "langues": [
+    {
+      "langue": "anglais",
+      "niveau": "B2",
+      "certification": "Aucune",
+      "score": null
+    },
+    {
+      "langue": "espagnol",
+      "niveau": "A2",
+      "certification": "Aucune",
+      "score": null
+    }
+  ],
+  "experiences": [
+    {
+      "type": "stage",
+      "poste": "Stage d'observation",
+      "organisation": "Crédit Agricole, agence de Jaude",
+      "duree": "3 jours",
+      "missions": "Classement et archivage de dossiers clients, Observation de rendez-vous commerciaux (2 demi-journées)"
+    },
+    {
+      "type": "job_etudiant",
+      "poste": "Baby-sitting régulier",
+      "organisation": "null",
+      "duree": "null",
+      "missions": "null"
+    }
+  ],
+  "engagements": [
+    {
+      "role": "Classement et archivage de dossiers clients",
+      "organisation": "Crédit Agricole",
+      "description": "agence de Jaude, Clermont-Ferrand"
+    },
+    {
+      "role": "Observation de rendez-vous commerciaux",
+      "organisation": "Crédit Agricole",
+      "description": "agence de Jaude, Clermont-Ferrand (2 demi-journées)"
+    },
+    {
+      "role": "Licencié en club de handball",
+      "organisation": "ASM Clermont",
+      "description": "Licencié en club depuis 6 ans, sans responsabilité d'encadrement"
+    }
+  ],
+  "international": [
+    {
+      "pays": "France",
+      "motif": "Famille",
+      "duree": "6 ans"
+    },
+    {
+      "pays": "France",
+      "motif": "Stage",
+      "duree": "3 jours"
+    },
+    {
+      "pays": "Espagne",
+      "motif": "Études",
+      "duree": "6 ans"
+    }
+  ],
+  "rubriques_illisibles": []
+}

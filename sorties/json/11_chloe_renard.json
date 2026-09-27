@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "id_candidat": "11_chloe_renard",
+    "fichier_source": "11_chloe_renard.pdf"
+  },
+  "formation": {
+    "filiere_bac": "Baccalauréat Général",
+    "mention_bac": "sans mention",
+    "etablissement": "Lycée Jean-Baptiste Corot, Savigny-sur-Orge",
+    "specialites": [
+      "SES",
+      "Histoire-Géographie",
+      "Humanités Littérature et Philosophie"
+    ],
+    "options": [],
+    "prepa": "Année de Terminale redoublée - 2024 – 2026",
+    "etudes_superieures": [],
+    "anomalies_parcours": "redoublée",
+    "concours": [],
+    "resultats": [
+      {
+        "intitule": "Baccalauréat Général",
+        "note_sur_20": null
+      },
+      {
+        "intitule": "Année de Terminale",
+        "note_sur_20": null
+      }
+    ]
+  },
+  "competences": {
+    "langages": [
+      "Anglais",
+      "Scolaire"
+    ],
+    "outils": [],
+    "projets": [],
+    "certifications": []
+  },
+  "langues": [
+    {
+      "langue": "anglais",
+      "niveau": "scolaire",
+      "certification": null,
+      "score": null
+    },
+    {
+      "langue": "espagnol",
+      "niveau": null,
+      "certification": "notions",
+      "score": null
+    }
+  ],
+  "experiences": [
+    {
+      "type": "job_etudiant",
+      "poste": "Baby-sitter régulier",
+      "organisation": "Famille",
+      "duree": "2024-2026",
+      "missions": "Ferme les enfants, les soins des enfants, les activités avec les enfants"
+    },
+    {
+      "type": "stage",
+      "poste": "Stagiaire",
+      "organisation": "Entreprise X",
+      "duree": "2024-2025",
+      "missions": "Tâches administratives, tâches de réception, tâches de communication"
+    }
+  ],
+  "engagements": [
+    {
+      "role": "Membre",
+      "organisation": "Équipe de handball",
+      "description": "Activités associatives et sportives collectives"
+    },
+    {
+      "role": "Membre",
+      "organisation": "Club de cinéma",
+      "description": "Activités associatives et sportives collectives"
+    },
+    {
+      "role": "Membre",
+      "organisation": "Équipe de football",
+      "description": "Activités associatives et sportives collectives"
+    }
+  ],
+  "international": [
+    {
+      "pays": "Espagne",
+      "motif": "études",
+      "duree": "2024-2026"
+    },
+    {
+      "pays": "États-Unis",
+      "motif": "études",
+      "duree": "2024-2026"
+    }
+  ],
+  "rubriques_illisibles": []
+}

@@ -9,21 +9,21 @@ lea.vasseur@gmail.com
 github.com/leavsr
 Permis B en cours
 COMPÉTENCES TECHNIQUES
- Python (pandas, matplotlib) —
+• Python (pandas, matplotlib) —
 bon niveau
- SQL — requêtes, jointures
- Power BI — tableaux de bord
- Excel avancé (TCD,
+• SQL — requêtes, jointures
+• Power BI — tableaux de bord
+• Excel avancé (TCD,
 recherchev)
- Git / GitHub
+• Git / GitHub
 LANGUES
- Anglais — TOEFL iBT
+• Anglais — TOEFL iBT
 112/120
- Espagnol — niveau B1
+• Espagnol — niveau B1
 CENTRES D'INTÉRÊT
- Analyse de données sportives
- Escalade (club, 4 ans)
- Podcasts économie / tech
+• Analyse de données sportives
+• Escalade (club, 4 ans)
+• Podcasts économie / tech
 FORMATION
 Juin 2026
 Baccalauréat Général — Mention Très Bien

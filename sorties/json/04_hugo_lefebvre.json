@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "id_candidat": "04_hugo_lefebvre",
+    "fichier_source": "04_hugo_lefebvre.pdf"
+  },
+  "formation": {
+    "filiere_bac": "Baccalauréat Général — Mention Bien",
+    "mention_bac": "Mention Bien",
+    "etablissement": "Lycée Jean Moulin, Angers",
+    "specialites": [
+      "Mathématiques",
+      "SES",
+      "Histoire-Géographie"
+    ],
+    "options": [],
+    "prepa": null,
+    "etudes_superieures": [],
+    "anomalies_parcours": null,
+    "concours": [],
+    "resultats": [
+      {
+        "intitule": "Moyenne générale",
+        "note_sur_20": 14.8
+      },
+      {
+        "intitule": "Brevet des collèges",
+        "note_sur_20": null
+      }
+    ]
+  },
+  "competences": {
+    "langages": [
+      "Anglais scolaire (LV1)",
+      "Espagnol scolaire (LV2)"
+    ],
+    "outils": [
+      "Pack Office (Word, Excel, PowerPoint)"
+    ],
+    "projets": [
+      "Vendeur — Boulangerie Le Fournil d'Anjou"
+    ],
+    "certifications": [
+      "Brevet des collèges — Mention Bien"
+    ]
+  },
+  "langues": [
+    {
+      "langue": "anglais",
+      "niveau": "LV1",
+      "certification": "scolaire",
+      "score": null
+    },
+    {
+      "langue": "espagnol",
+      "niveau": "LV2",
+      "certification": "scolaire",
+      "score": null
+    }
+  ],
+  "experiences": [
+    {
+      "type": "job_etudiant",
+      "poste": "Vendeur",
+      "organisation": "Boulangerie Le Fournil d'Anjou",
+      "duree": "2025-2026",
+      "missions": "Accueil et conseil client, tenue de caisse, gestion de l'affluence du week-end"
+    },
+    {
+      "type": "stage",
+      "poste": "Stage de 3e",
+      "organisation": "Agence immobilière Foncia",
+      "duree": "2022",
+      "missions": "Observation, une semaine"
+    },
+    {
+      "type": "job_etudiant",
+      "poste": "Vendeur",
+      "organisation": "Boulangerie Le Fournil d'Anjou",
+      "duree": "2025-2026",
+      "missions": "Accueil et conseil client, tenue de caisse, gestion de l'affluence du week-end"
+    },
+    {
+      "type": "job_etudiant",
+      "poste": "Vendeur",
+      "organisation": "Boulangerie Le Fournil d'Anjou",
+      "duree": "2025-2026",
+      "missions": "Accueil et conseil client, tenue de caisse, gestion de l'affluence du week-end"
+    }
+  ],
+  "engagements": [
+    {
+      "role": "Membre",
+      "organisation": "Club théâtre du lycée",
+      "description": "Participation aux deux représentations annuelles"
+    },
+    {
+      "role": "Licencié",
+      "organisation": "US Angers",
+      "description": "Football en club"
+    }
+  ],
+  "international": [],
+  "rubriques_illisibles": []
+}

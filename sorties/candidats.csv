@@ -1,0 +1,12 @@
+id_candidat,fichier_source,mention_bac,nb_langages,nb_projets,nb_experiences,nb_stages,nb_engagements,note_sur20,points_a_verifier,plafond_apres_verification,origine
+01_lea_vasseur,01_lea_vasseur.pdf,tres bien,2,1,1,1,2,18.5,0.0,18.5,Ollama llama3.2:3b — relu avec corrections
+02_nathan_girard,02_nathan_girard.pdf,tres bien,2,0,2,1,1,19.0,0.0,19.0,Ollama llama3.2:3b — relu avec corrections
+03_camille_roussel,03_camille_roussel.pdf,bien,1,1,2,1,2,17.0,0.0,17.0,Ollama llama3.2:3b — relu avec corrections
+04_hugo_lefebvre,04_hugo_lefebvre.pdf,bien,0,0,2,1,2,11.75,1.5,13.25,Ollama llama3.2:3b — relu avec corrections
+05_ines_benali,05_ines_benali.pdf,assez bien,1,1,1,0,0,11.5,1.5,13.0,Ollama llama3.2:3b — relu avec corrections
+06_theo_barbier,06_theo_barbier.pdf,bien,0,0,0,0,2,9.75,0.0,9.75,Ollama llama3.2:3b — relu avec corrections
+07_manon_petit,07_manon_petit.pdf,assez bien,3,1,0,0,1,10.5,0.0,10.5,Ollama llama3.2:3b — relu avec corrections
+08_adam_fontaine,08_adam_fontaine.pdf,bien,0,0,1,1,1,11.75,0.0,11.75,Ollama llama3.2:3b — relu avec corrections
+09_sarah_da_silva,09_sarah_da_silva.pdf,assez bien,0,0,2,1,0,9.25,1.5,10.75,Ollama llama3.2:3b — relu avec corrections
+10_kevin_dubreuil,10_kevin_dubreuil.pdf,sans mention,0,0,0,0,0,4.0,1.5,5.5,Ollama llama3.2:3b — relu avec corrections
+11_chloe_renard,11_chloe_renard.pdf,sans mention,0,0,0,0,0,4.5,1.5,6.0,Ollama llama3.2:3b — relu avec corrections

@@ -1,7 +1,10 @@
 """Lecture et validation du JSON court. Aucun indicateur n'est demande au LLM."""
 
 import json
+import copy
+import hashlib
 import math
+import re
 import unicodedata
 from pathlib import Path
 
@@ -48,16 +51,38 @@ def valeurs_uniques(valeurs):
 def mention_standard(mention):
     if mention is None:
         return None
-    code = normalise_texte(mention)
+    code = normalise_texte(mention).removeprefix("mention ")
     correspondances = {"tb": "tres bien", "b": "bien", "ab": "assez bien", "passable": "sans mention"}
     return correspondances.get(code, code)
+
+
+def nom_competence(description):
+    """Le niveau reste dans le JSON ; les comptages utilisent le nom seul."""
+    return normalise_texte(re.split(r"\s+[—–-]\s+|\s*\(", description, maxsplit=1)[0])
+
+
+def schema_json(schema=SCHEMA):
+    """Un seul schema pour le controle Python et les sorties structurees Ollama."""
+    if isinstance(schema, dict):
+        return {"type": "object", "properties": {k: schema_json(v) for k, v in schema.items()},
+                "required": list(schema), "additionalProperties": False}
+    if isinstance(schema, list):
+        return {"type": "array", "items": schema_json(schema[0])}
+    types = schema if isinstance(schema, tuple) else (schema,)
+    noms = {str: "string", int: "integer", float: "number", type(None): "null"}
+    resultat = {"type": [noms[t] for t in types]}
+    if str in types:
+        resultat["minLength"] = 1
+    if int in types:
+        resultat.update(minimum=0, maximum=20)
+    return resultat
 
 
 def valide_cv(cv):
     """Retourne les erreurs de structure ; ne garantit pas la fidelite au TXT."""
     erreurs = []
     if isinstance(cv, dict) and "donnees_normalisees" in cv:
-        return ["Ancien format JSON : regenerer avec prompt.md et --force, ou adapter ce fichier."]
+        return ["Ancien format JSON : regenerer avec le notebook et le prompt courant."]
 
     def verifie(valeur, schema, chemin):
         if isinstance(schema, dict):
@@ -125,3 +150,39 @@ def charge_dossier(dossier):
     if erreurs:
         raise ValueError("\n".join(erreurs))
     return candidats
+
+
+def applique_relecture(cv, texte, dossier_sorties):
+    """Corrections de relecture explicites, liees aux empreintes du JSON et du texte.
+
+    Les reponses du modele restent intactes. Une regeneration perime la relecture
+    et impose de la refaire, plutot que d'appliquer d'anciennes corrections.
+    """
+    dossier = Path(dossier_sorties)
+    chemin = dossier / "relectures.json"
+    relectures = json.loads(chemin.read_text(encoding="utf-8")) if chemin.exists() else {}
+    identifiant = cv["meta"]["id_candidat"]
+    revue = relectures.get(identifiant)
+    if revue is None:
+        return cv, "non relu", []
+    contenu_json = (dossier / "json" / f"{identifiant}.json").read_bytes()
+    if revue["json_sha256"] != hashlib.sha256(contenu_json).hexdigest() or revue["texte_sha256"] != hashlib.sha256(texte.encode("utf-8")).hexdigest():
+        raise ValueError(f"{identifiant} : relecture perimee. Revoir les corrections apres regeneration.")
+    resultat = copy.deepcopy(cv)
+    for correction in revue["corrections"]:
+        if not correction["extraits_source"] or not correction["raison"].strip():
+            raise ValueError(f"{identifiant} : correction sans justification")
+        for extrait in correction["extraits_source"]:
+            if not extrait.strip() or normalise_texte(extrait) not in normalise_texte(texte):
+                raise ValueError(f"{identifiant} : citation de relecture absente du texte")
+        cible = resultat
+        for cle in correction["chemin"][:-1]:
+            cible = cible[cle]
+        cle = correction["chemin"][-1]
+        if cible[cle] != correction["avant"]:
+            raise ValueError(f"{identifiant} : correction incompatible avec le JSON courant")
+        cible[cle] = correction["apres"]
+    erreurs = valide_cv(resultat)
+    if erreurs:
+        raise ValueError("Relecture invalide : " + "; ".join(erreurs))
+    return resultat, "relu avec corrections" if revue["corrections"] else "relu sans correction", revue["corrections"]

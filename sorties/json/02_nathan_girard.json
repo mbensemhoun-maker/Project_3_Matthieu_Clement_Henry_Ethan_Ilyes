@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "id_candidat": "02_nathan_girard",
+    "fichier_source": "02_nathan_girard.pdf"
+  },
+  "formation": {
+    "filiere_bac": "Bachelier 2026 — Profil Business & Data",
+    "mention_bac": "Mention Très Bien",
+    "etablissement": "Lycée du Parc, Lyon",
+    "specialites": [
+      "Mathématiques",
+      "SES",
+      "NSI"
+    ],
+    "options": [],
+    "prepa": null,
+    "etudes_superieures": [],
+    "anomalies_parcours": null,
+    "concours": [],
+    "resultats": [
+      {
+        "intitule": "Moyenne générale",
+        "note_sur_20": 16.8
+      },
+      {
+        "intitule": "Mathématiques",
+        "note_sur_20": 16.5
+      },
+      {
+        "intitule": "Grand oral",
+        "note_sur_20": null
+      }
+    ]
+  },
+  "competences": {
+    "langages": [
+      "SQL",
+      "Python"
+    ],
+    "outils": [
+      "Excel",
+      "Canva",
+      "Google Workspace"
+    ],
+    "projets": [
+      "Stage d'observation - Cabinet Aurea Conseil",
+      "Job d'été - Serveur, Brasserie Le Central"
+    ],
+    "certifications": [
+      "DataCamp - Introduction to SQL (2026)",
+      "PIX - niveau 5"
+    ]
+  },
+  "langues": [
+    {
+      "langue": "anglais",
+      "niveau": "C1 Advanced",
+      "certification": "Cambridge",
+      "score": null
+    },
+    {
+      "langue": "allemand",
+      "niveau": "B1",
+      "certification": "null",
+      "score": null
+    }
+  ],
+  "experiences": [
+    {
+      "type": "stage",
+      "poste": "Observation",
+      "organisation": "Cabinet Aurea Conseil",
+      "duree": "Février 2026",
+      "missions": "Observation de deux réunions de cadrage client, Aide à la mise en forme d'une étude de marché (Excel, PowerPoint)"
+    },
+    {
+      "type": "job_etudiant",
+      "poste": "Serveur",
+      "organisation": "Brasserie Le Central",
+      "duree": "Été 2025",
+      "missions": "Service en salle, 6 semaines"
+    }
+  ],
+  "engagements": [
+    {
+      "role": "Fondateur & Président",
+      "organisation": "Association Tutorat Parc",
+      "description": "Association de tutorat scolaire bénévole"
+    },
+    {
+      "role": "Immersion linguistique",
+      "organisation": "Famille d'accueil",
+      "description": "Séjour d'échange de 2 semaines en famille d'accueil"
+    },
+    {
+      "role": "Stage d'observation",
+      "organisation": "Cabinet Aurea Conseil",
+      "description": "Conseil en stratégie, observation de deux réunions de cadrage client et aide à la mise en forme d'une étude de marché (Excel, PowerPoint)"
+    },
+    {
+      "role": "Job d'été",
+      "organisation": "Brasserie Le Central",
+      "description": "Service en salle, 6 semaines"
+    }
+  ],
+  "international": [
+    {
+      "pays": "Allemagne",
+      "motif": "Immersion linguistique",
+      "duree": "2 semaines"
+    }
+  ],
+  "rubriques_illisibles": []
+}
