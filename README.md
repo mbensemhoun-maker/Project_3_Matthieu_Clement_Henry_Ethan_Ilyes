@@ -5,6 +5,11 @@ Le notebook lit les PDF, conserve les textes, utilise Ollama pour les JSON,
 calcule les indicateurs et une **note pédagogique expliquée sur 20**, puis
 exporte une synthèse factuelle par candidat.
 
+Pour préparer une soutenance, consulter la
+**[documentation de présentation orale](DOCUMENTATION_ORAL.md)** : architecture,
+fonctions importantes, choix techniques, limites, déroulé conseillé et questions
+probables du jury.
+
 ## Lancer le projet
 
 Depuis le dossier du projet :
